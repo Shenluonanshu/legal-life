@@ -1,0 +1,141 @@
+{
+  "country_code": "CN",
+  "category": "employment",
+  "scenes": [
+    {
+      "key": "cn-job-001",
+      "title": { "zh": "入职第一天", "en": "First Day at Work" },
+      "life_stage": "young_adult",
+      "min_age": 21,
+      "max_age": 30,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "今天是你在新公司入职的第一天。HR满脸笑容地递给你一份厚厚的劳动合同，催促道：『快签了吧，大家都一样的模板。』\n\n你翻开合同，注意到几个细节：合同期限1年，但试用期写了6个月。旁边工位的同事小声说：『我去年就是没仔细看，试用期被延长了两次...你最好看清楚。』\n\n你的直觉告诉你这不太对劲，但HR已经在旁边等着了。",
+        "en": "It's your first day at the new company. HR hands you a thick employment contract with a smile, urging: 'Just sign it, everyone uses the same template.'\n\nYou flip through and notice: the contract is for 1 year, but the probation period is listed as 6 months. A colleague whispers: 'I didn't read mine carefully last year and they extended my probation twice...'\n\nSomething feels off, but HR is waiting."
+      },
+      "image_prompt": "A young professional sitting at a modern office desk, holding a pen over an employment contract, warm afternoon light streaming through windows, professional illustration style",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "仔细阅读每一条款，礼貌指出试用期不合规（最多2个月），要求修改后再签", "en": "Read every clause carefully, politely point out the probation period is too long, request correction" },
+          "stats_effect": { "legal_awareness": 15, "knowledge": 5, "happiness": 5 },
+          "consequence": { "zh": "HR略显惊讶但保持了专业微笑。她检查后承认确实有误，重新打印了合规的合同。你不仅保护了自己的权益，还给新同事留下了『懂法』的印象。", "en": "HR is surprised but professional. She checks and admits the error, reprinting a compliant contract. You've protected your rights and made a strong first impression." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-LABOR-001"],
+          "branch_tag": "维权达人",
+          "next_scene_hint": "职场站稳脚跟后，新挑战接踵而至"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "觉得大公司应该没问题，直接签字了", "en": "Trust the big company and sign directly" },
+          "stats_effect": { "wealth": 10, "happiness": -3, "legal_awareness": -8, "knowledge": -2 },
+          "consequence": { "zh": "你顺利入职了。但3个月后，公司以『试用期不合格』为由通知你延长试用期。你想起当初那条6个月试用期的条款，但为时已晚——合同上白纸黑字。更糟的是，因为『同一用人单位只能约定一次试用期』，你发现自己处于一个法律灰色地带。", "en": "You started smoothly. But 3 months later, the company extends your probation citing 'unsatisfactory performance.' You recall that 6-month clause but it's too late. Worse, the 'one probation per employer' rule puts you in a legal gray zone." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-LABOR-001"],
+          "branch_tag": "随波逐流",
+          "next_scene_hint": "试用期纠纷即将爆发"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "偷偷用手机拍下合同，说带回去让家人看看再签", "en": "Secretly photograph the contract, say you'll review at home" },
+          "stats_effect": { "knowledge": 8, "wealth": -3, "legal_awareness": 12 },
+          "consequence": { "zh": "HR同意了。你回家查了劳动法，发现试用期远超法定上限。第二天你带着打印好的法条回公司，HR无话可说，当场修改了合同。虽然耽误了一天入职，但你学到了重要一课：花一小时读合同，可能省下半年的麻烦。", "en": "HR agrees. You check labor law at home and confirm the violation. You return with printed legal articles, and HR corrects the contract on the spot. Lesson learned: an hour reading a contract can save months of trouble." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-LABOR-001", "CN-LABOR-003"],
+          "branch_tag": "谨慎策略",
+          "next_scene_hint": "职场之路稳步推进"
+        }
+      ]
+    },
+    {
+      "key": "cn-job-002",
+      "title": { "zh": "加班风波", "en": "Overtime Ordeal" },
+      "life_stage": "young_adult",
+      "min_age": 22,
+      "max_age": 35,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "入职半年后，你发现公司有个『不成文的规定』：每天加班到晚上9点，周末也经常被叫回来。\n\n今天周五下午5点半，你收拾东西准备下班。主管走过来，语气不悦：『项目进度这么紧，你好意思走？其他同事都在加班。』\n\n你看了看周围——确实每个人都在工位上。但你已经连续加班三周了，身心俱疲。更重要的是，你查过劳动法，知道每天加班不能超过3小时，每月不能超过36小时。",
+        "en": "Six months in, you discover the company has an 'unwritten rule': work until 9 PM daily, weekends included. It's 5:30 PM Friday. As you pack up, your manager approaches: 'The project is behind schedule. Everyone else is staying.' You look around — everyone is indeed at their desks. But you've been working overtime for three weeks straight and checked the labor law: overtime can't exceed 3 hours/day or 36 hours/month."
+      },
+      "image_prompt": "An office at dusk, a young employee looking at their watch while a manager stands nearby with crossed arms, warm sunset light through windows, modern Chinese office",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "礼貌但坚定地拒绝：『我连续加班三周了，法律规定的加班上限已远超。明天我会提高效率补上进度。』", "en": "Politely but firmly refuse: 'I've worked overtime for three straight weeks. The legal limit has been exceeded. I'll make up the progress tomorrow.'" },
+          "stats_effect": { "legal_awareness": 15, "happiness": 10, "wealth": -5, "knowledge": 5 },
+          "consequence": { "zh": "主管愣住了——从来没人这样回应过。虽然他的表情不太好，但也没有再强求。第二天你在正常工作时间内高效完成了任务。有趣的是，一周后HR发了一封全员邮件，提醒各部门『合理安排工作时间，遵守劳动法规』。你的勇敢发言可能改变了整个公司的加班文化。", "en": "The manager is stunned — no one has ever responded like this. Though his expression isn't great, he doesn't push further. You complete the work efficiently during normal hours the next day. Interestingly, HR sends a company-wide email a week later reminding departments to 'reasonably arrange work hours and comply with labor laws.' Your courage may have changed the company culture." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-LABOR-005"],
+          "branch_tag": "勇敢维权",
+          "next_scene_hint": "你的原则赢得了尊重"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "默默坐回去继续加班——毕竟还要还房贷/租房", "en": "Silently return to your desk — you have bills to pay" },
+          "stats_effect": { "wealth": 8, "happiness": -12, "health": -8, "legal_awareness": -3 },
+          "consequence": { "zh": "你继续加班到深夜。一个月后，你开始频繁头痛，体检报告显示多项指标异常。你的绩效评分为A，但健康评分为D。某天凌晨回家的路上，你问自己：『我赚钱是为了什么？』", "en": "You keep working late. A month later, you're having frequent headaches. Your performance review is A, but your health is D. On the way home at midnight, you ask yourself: 'What am I earning money for?'" },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-LABOR-005"],
+          "branch_tag": "忍气吞声",
+          "next_scene_hint": "身体发出了警告"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "不直接对抗，而是找HR沟通：『请问公司的加班制度和补偿标准是什么？我想了解一下。』", "en": "Don't confront directly. Ask HR: 'Could you explain the company's overtime policy and compensation standards?'" },
+          "stats_effect": { "legal_awareness": 10, "knowledge": 5, "happiness": 3 },
+          "consequence": { "zh": "HR有些意外，但还是拿出了员工手册。你发现里面写的加班制度和实际执行的完全不一样。你用员工手册的规定和主管进行了沟通，最终达成了合理的加班安排。这种方式既维护了权益，又没有正面冲突。", "en": "HR is surprised but pulls out the employee handbook. You find the written overtime policy is completely different from actual practice. Using the handbook, you negotiate a reasonable overtime arrangement with your manager — protecting your rights without confrontation." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-LABOR-005"],
+          "branch_tag": "智慧周旋",
+          "next_scene_hint": "用规则保护自己"
+        }
+      ]
+    },
+    {
+      "key": "cn-job-003",
+      "title": { "zh": "被辞退的危机", "en": "Facing Termination" },
+      "life_stage": "young_adult",
+      "min_age": 23,
+      "max_age": 40,
+      "difficulty": 3,
+      "narrative": {
+        "zh": "周五下午，你被HR叫进了会议室。里面坐着的除了HR，还有你的主管和一个陌生面孔——后来你才知道是公司法务。\n\nHR表情严肃地说：『经过评估，你在试用期的表现不符合公司要求。根据公司规定，我们将解除与你的劳动合同，你可以现在就收拾东西。』\n\n你的大脑一片空白。你已经工作了4个月（合同期3年），自认为表现不错，上周还刚完成了一个重要项目。你注意到桌上放着一份『解除劳动合同通知书』，上面写着解除原因：『不符合录用条件』。",
+        "en": "Friday afternoon, you're called into a meeting room. Besides HR, your manager and a stranger — the company lawyer — are there. HR says sternly: 'Your performance during probation doesn't meet company standards. Per company policy, we're terminating your contract. You can pack up now.' Your mind goes blank. You've worked 4 months on a 3-year contract, thought you did well, and just completed a major project last week."
+      },
+      "image_prompt": "A tense meeting room scene, a young employee sitting across from HR staff at a table, a termination letter on the desk, dramatic office lighting, illustration style",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "冷静回应：『请问具���哪些录用条件我没有达到？我需要看到书面评估。另外据我所知，试用期最多2个月，我已经工作4个月了，应该已经转正。』", "en": "Respond calmly: 'What specific requirements did I fail to meet? I need to see the written evaluation. Also, probation can't exceed 2 months. I've been here 4 months — I should be a regular employee by now.'" },
+          "stats_effect": { "legal_awareness": 20, "wealth": 10, "knowledge": 10, "happiness": 5 },
+          "consequence": { "zh": "法务的表情变了。HR出去打了个电话，回来时态度明显软化。最终公司同意支付相当于2个月工资的补偿金，并出具了正常的离职证明。你用自己的法律知识避免了一场不公正的辞退。更重要的是——你知道了法条不是用来背诵的，是用来在关键时刻保护自己的。", "en": "The lawyer's expression changes. HR steps out for a call and returns with a softened attitude. The company agrees to pay 2 months' salary as compensation and provide a normal separation certificate. You used legal knowledge to prevent an unjust termination — proving that laws aren't for memorization but for protection." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-LABOR-001", "CN-LABOR-002"],
+          "branch_tag": "法律卫士",
+          "next_scene_hint": "带着尊严离开，新机会已在路上"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "愤怒拍桌：『你们这是违法解除！我干了4个月表现很好！我要去劳动仲裁！』", "en": "Slamming the table: 'This is illegal termination! I've done great work for 4 months! I'm filing for labor arbitration!'" },
+          "stats_effect": { "legal_awareness": 5, "health": -5, "happiness": -10, "wealth": 5 },
+          "consequence": { "zh": "你当场爆发了，但法务冷静地记录下了你的每一句话。虽然你最终通过劳动仲裁拿到了补偿，但因为离职证明上写的是『与公司发生激烈冲突后离职』，找下一份工作时遇到了困难。你的愤怒是正当的，但方式可以更聪明。", "en": "You explode on the spot, but the lawyer calmly records every word. Though you eventually win compensation through labor arbitration, your separation certificate notes 'departed after heated conflict with company,' making your job search harder. Your anger was justified, but the approach could have been smarter." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-LABOR-003"],
+          "branch_tag": "热血维权",
+          "next_scene_hint": "维权成功，但方式值得反思"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "默默接受，签了字开始收拾东西——心里想着『公司要辞退我，我有什么办法』", "en": "Accept silently, sign the paper, and start packing — thinking 'what can I do if the company wants to fire me'" },
+          "stats_effect": { "wealth": -15, "happiness": -20, "legal_awareness": -5, "health": -5 },
+          "consequence": { "zh": "你默默地离开了。因为没拿到补偿金，下个月的房租成了问题。更糟的是，后来你才知道：如果当时提出异议，你完全有权利获得经济补偿。你的沉默让你损失了本应属于你的2万多元——相当于你3个月的工资。", "en": "You leave in silence. Without compensation, next month's rent becomes a problem. Worse, you later learn that if you had objected, you were fully entitled to economic compensation. Your silence cost you over 20,000 yuan — equivalent to 3 months of salary that was rightfully yours." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-LABOR-002", "CN-LABOR-003"],
+          "branch_tag": "沉默羔羊",
+          "next_scene_hint": "失去的不只是工作，还有应得的权利"
+        }
+      ]
+    }
+  ]
+}

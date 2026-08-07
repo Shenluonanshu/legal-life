@@ -1,0 +1,51 @@
+{
+  "country_code": "CN",
+  "category": "traffic",
+  "scenes": [
+    {
+      "key": "cn-traffic-001",
+      "title": { "zh": "同学聚会的代价", "en": "The Cost of Reunion" },
+      "life_stage": "young_adult",
+      "min_age": 20,
+      "max_age": 35,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "高中同学聚会，大家都很开心。你本打算打车回去，但老同学小王喝了几杯啤酒后坚持要开车送你：『就喝了两杯，没事的！这条路我闭着眼都能开。』\n\n你闻到他身上明显的酒气，心里犯嘀咕。其他同学陆续走了，有的上了朋友的车，有的在叫代驾。\n\n小王已经把车发动了，在等你上车。外面下着雨，打车软件显示排队需要40分钟。",
+        "en": "High school reunion — everyone's having a great time. You planned to take a taxi, but your old friend Xiao Wang insists on driving you after a few beers: 'Just two drinks, I'm fine! I could drive this road blindfolded.' You smell alcohol on him. Other classmates are leaving — some with designated drivers, some calling rides. Xiao Wang has already started his car. It's raining. The ride app shows a 40-minute wait."
+      },
+      "image_prompt": "Night scene outside a restaurant, rain falling, a car with engine running, a person hesitating between getting in and calling a ride, neon lights reflecting on wet pavement",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "坚决不上车：『你喝酒了不能开车，我帮你叫代驾，钱我出。』", "en": "Firmly refuse: 'You've been drinking. Let me call you a designated driver — my treat.'" },
+          "stats_effect": { "legal_awareness": 15, "knowledge": 10, "happiness": 5, "wealth": -3 },
+          "consequence": { "zh": "小王开始还有点不高兴，觉得你不信任他。你打开手机给他看了酒驾的处罚标准——暂扣驾照6个月、罚款2000元，如果醉驾还要追究刑责。他沉默了，最后同意了叫代驾。路上他对你说：『谢谢你拦住我。我刚才确实喝了不少，只是自己感觉不到。』你们的友情反而更深厚了。", "en": "Xiao Wang is initially annoyed. You pull up the drunk driving penalties on your phone — 6-month license suspension, 2000 yuan fine, criminal liability if over the legal limit. He goes quiet, then agrees to the designated driver. On the way, he says: 'Thanks for stopping me. I had more than I realized.' Your friendship actually grows stronger." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-TRAFFIC-001"],
+          "branch_tag": "真正的朋友",
+          "next_scene_hint": "友情因此更深"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "虽然担心，但还是上了车——毕竟下雨天打车太难了", "en": "Get in despite the worry — it's raining and rides are scarce" },
+          "stats_effect": { "happiness": -8, "legal_awareness": -10, "health": -15, "wealth": -5 },
+          "consequence": { "zh": "车开了不到10分钟，在一个路口被交警拦下。吹气检测结果显示小王属于饮酒驾车。驾照被暂扣6个月，罚款2000元，还要参加7天的交通安全教育。你虽然只是乘客，但那种后怕一直挥之不去——万一出了事故呢？你甚至都不敢往下想。", "en": "Within 10 minutes, you're pulled over at a checkpoint. Xiao Wang blows over the legal limit. License suspended for 6 months, 2000 yuan fine, 7-day traffic safety course. You were just a passenger, but the fear lingers — what if there had been an accident? You don't even want to think about it." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-TRAFFIC-001"],
+          "branch_tag": "侥幸心理",
+          "next_scene_hint": "有惊无险，但教训深刻"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "建议小王叫代驾，同时表示可以和他一起等，聊聊天", "en": "Suggest calling a designated driver and offer to wait together and chat" },
+          "stats_effect": { "legal_awareness": 10, "happiness": 8, "knowledge": 5, "wealth": -2 },
+          "consequence": { "zh": "你们在车上等代驾的20分钟里，回忆了很多高中往事。代驾来了之后，你坐他的车一起回家。路上你看到前方正好有交警在查酒驾——你们相视一笑，都有一种劫后余生的感觉。有时候，最好的选择不一定是『不喝酒』，而是『喝了酒就绝对不碰方向盘』。", "en": "During the 20-minute wait, you reminisce about high school. When the designated driver arrives, you ride together. Ahead, you spot a DUI checkpoint. You exchange a look of relief. Sometimes the best choice isn't 'don't drink' — it's 'if you drink, absolutely don't touch the wheel.'" },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-TRAFFIC-001"],
+          "branch_tag": "智慧朋友",
+          "next_scene_hint": "陪伴是最温暖的劝阻"
+        }
+      ]
+    }
+  ]
+}

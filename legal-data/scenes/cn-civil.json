@@ -1,0 +1,86 @@
+{
+  "country_code": "CN",
+  "category": "civil",
+  "scenes": [
+    {
+      "key": "cn-civil-001",
+      "title": { "zh": "出租屋押金纠纷", "en": "Rental Deposit Dispute" },
+      "life_stage": "young_adult",
+      "min_age": 20,
+      "max_age": 35,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "你在北京租了一间单间，合同一年，交了两个月押金共6000元。一年后你决定搬家，提前30天通知了房东，还把房间打扫得干干净净。\n\n退房那天，房东来检查。他指着墙上一个不起眼的污渍（搬来时就有）说：『这个要重新刷墙，扣2000。』又指着地板上正常的磨损痕迹说：『地板有划痕，要翻新，扣2000。』\n\n最后他说：『押金只能退你2000。』你清楚地记得租房时这面墙就有污渍——但你没有当时的照片证据。",
+        "en": "You've been renting a studio in Beijing for a year, with a two-month deposit of 6000 yuan. You gave 30 days' notice and cleaned thoroughly before moving out. On inspection day, the landlord points to a faint wall stain (there when you moved in): 'This needs repainting — deduct 2000.' Then at normal floor wear: 'Floor scratches — needs refinishing — deduct 2000.' He concludes: 'I can only return 2000 of your deposit.' You clearly remember that stain was there — but you have no photos from move-in day."
+      },
+      "image_prompt": "A tense scene at an apartment doorway, a landlord pointing at a wall while a young tenant looks frustrated, moving boxes visible, afternoon light, illustration style",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "据理力争：『自然损耗不算损坏，您不能从我押金里扣。如果协商不成，我去住建委投诉。』", "en": "Stand your ground: 'Normal wear and tear is not damage. You can't deduct from my deposit. If we can't agree, I'll file a complaint with the housing authority.'" },
+          "stats_effect": { "legal_awareness": 15, "wealth": 12, "knowledge": 8, "happiness": 3 },
+          "consequence": { "zh": "房东显然没想到你会这么强硬。他犹豫了一下，嘟囔着『年轻人懂什么法律』，但最终不情愿地退还了全额押金。你学到了一课：租房一定要在入住时拍视频存档，拍摄每一个角落的细节！这是保护自己最简单也最有效的方式。", "en": "The landlord clearly didn't expect such firmness. After some grumbling about 'young people thinking they know the law,' he reluctantly returns the full deposit. Lesson learned: ALWAYS film a video walkthrough when moving in — documenting every corner! It's the simplest and most effective self-protection." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CIVIL-004"],
+          "branch_tag": "据理力争",
+          "next_scene_hint": "法律知识帮你守住了押金"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "妥协收下2000元——不想跟房东闹僵，毕竟以后可能还要打交道", "en": "Accept the 2000 yuan — don't want conflict with the landlord, might need a reference later" },
+          "stats_effect": { "wealth": -8, "happiness": -10, "legal_awareness": -5 },
+          "consequence": { "zh": "你拿着2000元离开了。两个月后你得知，同一个房东用同样的手段坑了下一位租户——而且因为没有人反抗，他越来越肆无忌惮。你现在住的房子，每次看到墙上的瑕疵都会心里一紧，默默拍照存档。", "en": "You leave with 2000 yuan. Two months later you hear the same landlord pulled the same trick on the next tenant — and with no resistance, he's getting bolder. In your new place, every wall imperfection makes you nervous. You silently photograph everything." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-CIVIL-004"],
+          "branch_tag": "息事宁人",
+          "next_scene_hint": "忍让并没有换来和平"
+        }
+      ]
+    },
+    {
+      "key": "cn-civil-002",
+      "title": { "zh": "婚前买房写谁的名字", "en": "Whose Name on the Deed" },
+      "life_stage": "adult",
+      "min_age": 25,
+      "max_age": 40,
+      "difficulty": 3,
+      "narrative": {
+        "zh": "你和对象恋爱三年，终于决定买房结婚了。你父母掏出了大半辈子的积蓄120万元作为首付，对象的父母出了30万元。剩下的贷款由你们两个人共同还。\n\n在售楼部签合同的那一刻，售楼小姐问：『房产证写谁的名字？』\n\n空气突然安静了。你对象看着你，你的父母在电话那头紧张地等着你的回答。你知道，这个答案不仅影响感情，还涉及法律上的财产归属问题。\n\n你想起来之前在手机上看到过：婚前一方父母出资买房，房子算谁的？民法典是怎么规定的？",
+        "en": "After three years together, you're finally buying a home before the wedding. Your parents contribute 1.2 million yuan — most of their life savings — as the down payment. Your partner's parents contribute 300,000. You'll share the remaining mortgage. At the sales office, the agent asks: 'Whose name should be on the deed?' The air goes still. Your partner looks at you. Your parents wait nervously on the phone. You know this answer affects more than feelings — it involves legal property rights."
+      },
+      "image_prompt": "A couple sitting at a real estate sales office, looking at a property deed form, thoughtful expressions, modern interior with model building display, warm dramatic lighting",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "坦诚沟通后决定：写两人的名字，但去公证处做婚前财产公证，明确各方出资比例和权益", "en": "After honest discussion: both names on the deed, but get a prenuptial property公证 notarizing each party's contribution ratio and rights" },
+          "stats_effect": { "legal_awareness": 20, "knowledge": 12, "happiness": 8 },
+          "consequence": { "zh": "虽然一开始双方父母都觉得『公证』这个词听起来有些刺耳，但你们耐心解释道：『这不是不信任，而是给双方的保障。万一将来有变化，不会因为财产问题变成仇人。』最终大家都理解并接受了。你们的坦诚反而让这段关系更加稳固——因为所有的事情都摆在桌面上。", "en": "Though both sets of parents initially found 'prenup' uncomfortable, you patiently explained: 'This isn't about distrust — it's protection for both sides. If things change, we won't become enemies over property.' Everyone eventually understands. Your honesty actually strengthens the relationship — everything is on the table." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CIVIL-002"],
+          "branch_tag": "坦诚务实",
+          "next_scene_hint": "坦诚让爱更坚固"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "为了感情，不加思索地说：『当然写两人的名字！』", "en": "For love, answer without hesitation: 'Of course both names!'" },
+          "stats_effect": { "happiness": 5, "legal_awareness": -10, "knowledge": -3 },
+          "consequence": { "zh": "你们开心地签了字，两家人也都满意。但多年后，当你们开始讨论财产问题时，当年的『不假思索』变成了今天争吵的导火索——谁出了多少钱、房子涨了多少应该怎么分，这些问题因为没有提前约定，变得异常复杂。", "en": "You happily sign, both families satisfied. But years later, when property discussions arise, that 'unthinking' decision becomes today's conflict — how much did each contribute, how should the appreciation be split? Without a prior agreement, these questions become incredibly complex." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-CIVIL-002", "CN-CIVIL-003"],
+          "branch_tag": "感情用事",
+          "next_scene_hint": "未来的纠纷在签字时就埋下了"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "提议咨询律师的意见后再决定——毕竟这不是小事", "en": "Suggest consulting a lawyer before deciding — this isn't a small matter" },
+          "stats_effect": { "legal_awareness": 15, "knowledge": 10, "wealth": 5, "happiness": 3 },
+          "consequence": { "zh": "你们一起咨询了一位婚姻家庭方面的律师。律师详细解释了民法典中关于夫妻共同财产的规定，并根据你们的实际情况给出了专业建议。虽然花了2000元咨询费，但避免了将来可能面临的数十万元的财产纠纷。这笔投资，可能是你做过最划算的一笔。", "en": "You consult a family law attorney together. The lawyer thoroughly explains the Civil Code provisions on marital property and gives professional advice based on your situation. Though the consultation cost 2000 yuan, it potentially avoids hundreds of thousands in future property disputes. Best investment ever." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CIVIL-002", "CN-CIVIL-003"],
+          "branch_tag": "专业理性",
+          "next_scene_hint": "花小钱，避大坑"
+        }
+      ]
+    }
+  ]
+}

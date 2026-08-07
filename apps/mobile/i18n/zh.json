@@ -1,0 +1,75 @@
+{
+  "app": {
+    "name": "律途人生",
+    "tagline": "在生活场景中学习法律知识"
+  },
+  "tabs": {
+    "home": "首页",
+    "journey": "旅程",
+    "codex": "图鉴",
+    "profile": "我的"
+  },
+  "home": {
+    "welcome": "欢迎来到律途人生",
+    "subtitle": "每一次选择，都是一堂法律课",
+    "newGame": "开始新游戏",
+    "continueGame": "继续游戏",
+    "loadGame": "读取存档",
+    "noSave": "暂无存档，开始新游戏吧！"
+  },
+  "character": {
+    "title": "创建角色",
+    "name": "角色名称",
+    "namePlaceholder": "输入你的角色名",
+    "gender": "性别",
+    "male": "男",
+    "female": "女",
+    "country": "选择国家/地区",
+    "region": "选择地区",
+    "age": "起始年龄",
+    "stats": "属性分配",
+    "randomize": "随机分配",
+    "pointsLeft": "剩余点数",
+    "startGame": "开始人生",
+    "statsDesc": {
+      "health": "健康 — 影响疾病抵抗和寿命",
+      "wealth": "财富 — 影响消费选项和生活质量",
+      "knowledge": "知识 — 影响学业和职业发展",
+      "happiness": "幸福 — 影响心理健康和社交",
+      "legalAwareness": "法律意识 — 影响法律事件判断"
+    }
+  },
+  "scenario": {
+    "narrative": "场景叙述",
+    "makeChoice": "做出选择",
+    "consequence": "结果",
+    "legalReveal": "法律知识",
+    "viewFullLaw": "查看完整法条",
+    "source": "来源",
+    "continue": "继续",
+    "statsChange": "属性变化",
+    "ageAdvance": "年龄推进 {{years}} 岁"
+  },
+  "codex": {
+    "title": "法律图鉴",
+    "collected": "已收集",
+    "all": "全部",
+    "search": "搜索法条...",
+    "empty": "暂无已发现的法条",
+    "detail": "法条详情",
+    "originalText": "法条原文",
+    "plainSummary": "通俗解读",
+    "relatedScenarios": "相关场景",
+    "discoveredAt": "发现时间"
+  },
+  "common": {
+    "save": "保存",
+    "load": "加载",
+    "back": "返回",
+    "confirm": "确认",
+    "cancel": "取消",
+    "loading": "加载中...",
+    "error": "出错了",
+    "retry": "重试"
+  }
+}

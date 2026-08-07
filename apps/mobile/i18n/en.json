@@ -1,0 +1,75 @@
+{
+  "app": {
+    "name": "LegalLife",
+    "tagline": "Learn laws through life experiences"
+  },
+  "tabs": {
+    "home": "Home",
+    "journey": "Journey",
+    "codex": "Codex",
+    "profile": "Profile"
+  },
+  "home": {
+    "welcome": "Welcome to LegalLife",
+    "subtitle": "Every choice is a law lesson",
+    "newGame": "New Game",
+    "continueGame": "Continue",
+    "loadGame": "Load Save",
+    "noSave": "No save found. Start a new game!"
+  },
+  "character": {
+    "title": "Create Character",
+    "name": "Character Name",
+    "namePlaceholder": "Enter your character's name",
+    "gender": "Gender",
+    "male": "Male",
+    "female": "Female",
+    "country": "Select Country",
+    "region": "Select Region",
+    "age": "Starting Age",
+    "stats": "Attributes",
+    "randomize": "Randomize",
+    "pointsLeft": "Points Left",
+    "startGame": "Start Life",
+    "statsDesc": {
+      "health": "Health — affects illness resistance and lifespan",
+      "wealth": "Wealth — affects spending options and quality of life",
+      "knowledge": "Knowledge — affects education and career",
+      "happiness": "Happiness — affects mental health and social life",
+      "legalAwareness": "Legal Awareness — affects legal judgment"
+    }
+  },
+  "scenario": {
+    "narrative": "Scenario",
+    "makeChoice": "Make Your Choice",
+    "consequence": "Result",
+    "legalReveal": "Legal Knowledge",
+    "viewFullLaw": "View Full Article",
+    "source": "Source",
+    "continue": "Continue",
+    "statsChange": "Stats Change",
+    "ageAdvance": "Age +{{years}} years"
+  },
+  "codex": {
+    "title": "Law Codex",
+    "collected": "Collected",
+    "all": "All",
+    "search": "Search laws...",
+    "empty": "No laws discovered yet",
+    "detail": "Article Detail",
+    "originalText": "Original Text",
+    "plainSummary": "Plain Summary",
+    "relatedScenarios": "Related Scenarios",
+    "discoveredAt": "Discovered"
+  },
+  "common": {
+    "save": "Save",
+    "load": "Load",
+    "back": "Back",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Retry"
+  }
+}

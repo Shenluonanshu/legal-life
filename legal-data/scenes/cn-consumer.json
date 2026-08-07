@@ -1,0 +1,86 @@
+{
+  "country_code": "CN",
+  "category": "consumer_rights",
+  "scenes": [
+    {
+      "key": "cn-shop-001",
+      "title": { "zh": "网购羽绒服的真假迷局", "en": "The Down Jacket Dilemma" },
+      "life_stage": "young_adult",
+      "min_age": 18,
+      "max_age": 45,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "你在网上花800元买了一件羽绒服，图片上蓬松柔软，评论区一片好评。收到货后你傻眼了——充绒量严重不足，标签字迹模糊，连拉链都是歪的。\n\n你拍照联系商家要求退货退款。客服回复：『亲，特价商品不支持退换哦～页面写了的哈～』然后就不回消息了。\n\n朋友劝你：『算了，800块就当买个教训。』但你觉得这不仅仅是钱的问题——商家明显在坑人。",
+        "en": "You bought a down jacket online for $120. The photos looked great, reviews were glowing. When it arrives — it's barely filled, the label is blurry, and the zipper is crooked. You contact the seller for a refund. They reply: 'Dear, special-priced items are non-returnable as stated on the page~' then go silent. A friend says: 'Let it go, $120 is a cheap lesson.' But you feel this is about more than money — the seller is clearly scamming people."
+      },
+      "image_prompt": "A person holding a low-quality puffy jacket with disappointment, smartphone showing a shopping app on the table, warm evening light in a modern apartment",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "截图所有证据，在平台申请『仅退款』并注明『商家欺诈，根据消法第55条要求退一赔三』", "en": "Screenshot all evidence, file for refund on the platform citing 'seller fraud, requesting refund + triple compensation per Consumer Law Article 55'" },
+          "stats_effect": { "legal_awareness": 18, "wealth": 15, "knowledge": 10, "happiness": 12 },
+          "consequence": { "zh": "平台客服介入后，核实到该商家有多次类似投诉。平台判定商家存在欺诈行为，你不仅拿回了800元，还额外获得了2400元赔偿！更让人欣慰的是，这家店被平台下架整改——你不仅保护了自己，还保护了后来的消费者。", "en": "After platform intervention, they find multiple similar complaints against this seller. They rule it as fraud. You get back your $120 AND receive $360 in compensation. Even better — the store gets delisted for review. You protected not just yourself but future consumers too." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CONSUMER-001"],
+          "branch_tag": "维权斗士",
+          "next_scene_hint": "消费者权益意识全面觉醒"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "在社交媒体上发帖曝光卖家，号召大家抵制", "en": "Expose the seller on social media, calling for a boycott" },
+          "stats_effect": { "happiness": 5, "legal_awareness": 6, "knowledge": 3 },
+          "consequence": { "zh": "你发了一篇详细的曝光帖，配上真假对比图，很快获得了上千转发。商家迫于舆论压力主动联系你全额退款并道歉。需要注意：你只是如实陈述了你的经历，这是合法的。但如果添油加醋、夸大甚至捏造，就可能构成侵犯名誉权。", "en": "Your detailed expose post with comparison photos goes viral with thousands of shares. The seller, under public pressure, contacts you for a full refund and apology. Note: you stuck to factual statements, which is legal. But embellishing or fabricating details could constitute defamation." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CONSUMER-001"],
+          "branch_tag": "舆论力量",
+          "next_scene_hint": "社交媒体成了你的维权工具"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "算了800块不多，懒得折腾。直接扔了买件新的", "en": "Forget it, 800 yuan isn't much. Toss it and buy a new one" },
+          "stats_effect": { "wealth": -10, "happiness": -8, "legal_awareness": -5 },
+          "consequence": { "zh": "你放弃了维权。那个商家继续以同样的方式欺骗其他消费者——因为没有人投诉，他们的店铺评分仍然很高。后来你发现你的同事也在这家店被骗了，损失了1200元。你突然意识到：沉默不只是伤害自己，更纵容了恶。", "en": "You give up. The seller continues scamming others — with no complaints, their store rating stays high. Later, you discover a colleague was also scammed by the same store for $180. You realize: silence doesn't just hurt yourself — it enables bad actors." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-CONSUMER-001"],
+          "branch_tag": "忍气吞声",
+          "next_scene_hint": "骗局仍在继续"
+        }
+      ]
+    },
+    {
+      "key": "cn-shop-002",
+      "title": { "zh": "健身房跑路了", "en": "Gym Membership Gone" },
+      "life_stage": "young_adult",
+      "min_age": 20,
+      "max_age": 50,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "三个月前，你在小区新开的健身房办了张年卡，花了3000元。昨天你去健身时发现——大门紧锁，里面空空如也，门口贴了一张『内部装修，暂停营业』的告示。\n\n你联系了当初办卡的销售，电话已经停机。你去物业打听，才知道老板连夜把设备都搬走了。\n\n周围聚集了一群同样被骗的会员，有人骂街、有人报警、有人叹气说认倒霉。你现在很矛盾——3000元说多不多说少不少，但咽不下这口气。",
+        "en": "Three months ago, you bought a 3000 yuan annual gym membership. Yesterday you showed up to find the doors locked, the place emptied, and a sign saying 'Under renovation, temporarily closed.' The salesperson's phone is dead. Property management says the owner moved all equipment overnight. A crowd of scammed members has gathered — some cursing, some calling the police, some resigned to their fate."
+      },
+      "image_prompt": "A person standing in front of a closed gym with a 'closed' sign, looking at their membership card, disappointed, urban street scene, illustration style",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "联系其他会员集体报案，同时向市场监督管理局投诉预付卡违规", "en": "Contact other members to file a joint police report, also complain to Market Supervision Administration about prepaid card violations" },
+          "stats_effect": { "legal_awareness": 12, "happiness": 5, "knowledge": 8, "wealth": -3 },
+          "consequence": { "zh": "你们组成一个20人的维权群，收集了所有缴费凭证和合同。警方立案后，通过转账记录追踪到了老板的下落。虽然过程花了两个月，但最终追回了大部分款项。这次经历让你学到：预售卡消费要谨慎，超过一定金额的预付卡必须有备案。", "en": "You form a 20-person rights protection group, collecting all receipts and contracts. Police track down the owner through bank transfers. Though it takes two months, most of the money is recovered. You learn: be cautious with prepaid cards — amounts above certain thresholds require government registration." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CONSUMER-001", "CN-CONSUMER-004"],
+          "branch_tag": "集体维权",
+          "next_scene_hint": "团结就是力量"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "自认倒霉，但吸取教训：以后不办长期预付卡", "en": "Accept the loss but learn the lesson: no more long-term prepaid cards" },
+          "stats_effect": { "wealth": -8, "knowledge": 5, "legal_awareness": 3 },
+          "consequence": { "zh": "你损失了3000元。虽然吃一堑长一智，但看到群里其他人追回了款项，心里挺不是滋味。不过你的谨慎确实让你在未来避免了一个更大的理财陷阱——这可能是另一种形式的『维权』吧。", "en": "You lost 3000 yuan. Though you learned a lesson, seeing others recover their money stings. But your caution does help you avoid an even bigger financial trap later — perhaps this is another form of 'self-protection.'" },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-CONSUMER-004"],
+          "branch_tag": "吃堑长智",
+          "next_scene_hint": "谨慎成为你的保护色"
+        }
+      ]
+    }
+  ]
+}

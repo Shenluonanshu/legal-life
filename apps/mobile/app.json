@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "律途人生",
+    "slug": "legal-life",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "legal-life",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "backgroundColor": "#1a1a2e"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.shenluonanshu.legallife"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#1a1a2e"
+      },
+      "package": "com.shenluonanshu.legallife"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-localization",
+      "expo-font",
+      "expo-splash-screen"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "updates": {
+      "enabled": false
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "version": "0.1.0",
+  "total_scenes": 14,
+  "countries": {
+    "CN": 14
+  },
+  "life_stages": {
+    "childhood": 0,
+    "teen": 2,
+    "young_adult": 10,
+    "adult": 2,
+    "middle_age": 0,
+    "senior": 0
+  },
+  "categories": {
+    "employment": 4,
+    "consumer_rights": 3,
+    "traffic": 2,
+    "criminal": 2,
+    "civil": 2,
+    "cyber_security": 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "legal-life",
+  "version": "0.1.0",
+  "private": true,
+  "description": "律途人生 — 人生模拟普法游戏",
+  "scripts": {
+    "dev:mobile": "turbo dev --filter=@legal-life/mobile",
+    "dev:admin": "turbo dev --filter=@legal-life/admin",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck",
+    "clean": "turbo clean",
+    "db:migrate": "cd supabase && supabase db push",
+    "db:seed": "npx tsx scripts/import-legal-data.ts",
+    "legal:validate": "npx tsx scripts/validate-legal-data.ts",
+    "images:pregenerate": "npx tsx scripts/pregenerate-images.ts"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@9.15.0"
+}
