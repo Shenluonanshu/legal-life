@@ -2,7 +2,11 @@
  * 游戏数据 API 服务层
  *
  * 封装所有与 Supabase 的数据交互，
- * 支持在线查询 + 离线缓存降级
+ * 支持在线查询 + 离线缓存降级。
+ *
+ * 字段映射：Supabase 返回 snake_case 列名（如 law_name），
+ * 而前端类型统一用 camelCase（lawName）。所有读操作在返回前
+ * 经 snakeToCamel 转换；写操作经 camelToSnake 反向转换。
  */
 import { supabase } from '../supabase';
 import type {
@@ -18,6 +22,55 @@ import type {
 } from '../shared';
 
 // ============================================================
+// 字段映射工具
+// ============================================================
+
+function snakeToCamelKey(key: string): string {
+  return key.replace(/_([a-z])/g, (_, c: string) => c.toUpperCase());
+}
+
+function camelToSnakeKey(key: string): string {
+  return key.replace(/([A-Z])/g, (_, c: string) => `_${c.toLowerCase()}`);
+}
+
+/** 递归把 snake_case 对象转换为 camelCase（含嵌套 JSONB、数组） */
+function snakeToCamel<T = unknown>(value: unknown): T {
+  if (Array.isArray(value)) {
+    return value.map((v) => snakeToCamel(v)) as unknown as T;
+  }
+  if (value !== null && typeof value === 'object' && !(value instanceof Date)) {
+    const result: Record<string, unknown> = {};
+    for (const [k, v] of Object.entries(value)) {
+      result[snakeToCamelKey(k)] = snakeToCamel(v);
+    }
+    return result as T;
+  }
+  return value as T;
+}
+
+/** 递归把 camelCase 对象转换为 snake_case（写入数据库用） */
+function camelToSnake<T = unknown>(value: unknown): T {
+  if (Array.isArray(value)) {
+    return value.map((v) => camelToSnake(v)) as unknown as T;
+  }
+  if (value !== null && typeof value === 'object' && !(value instanceof Date)) {
+    const result: Record<string, unknown> = {};
+    for (const [k, v] of Object.entries(value)) {
+      result[camelToSnakeKey(k)] = camelToSnake(v);
+    }
+    return result as T;
+  }
+  return value as T;
+}
+
+/** 解析 Postgres INT4RANGE 字符串 "[a,b)" → [a, b] */
+function parseAgeRange(raw: unknown): [number, number] {
+  const s = String(raw ?? '');
+  const m = s.match(/\[(\d+),(\d+)\)/);
+  return m ? [Number(m[1]), Number(m[2])] : [0, 100];
+}
+
+// ============================================================
 // 存档管理
 // ============================================================
 
@@ -29,19 +82,19 @@ export async function fetchGameSaves(): Promise<GameSave[]> {
     .order('updated_at', { ascending: false });
 
   if (error) throw new Error(`加载存档失败: ${error.message}`);
-  return data as GameSave[];
+  return snakeToCamel<GameSave[]>(data);
 }
 
 /** 保存/更新游戏存档 */
 export async function saveGame(save: Partial<GameSave>): Promise<GameSave> {
   const { data, error } = await supabase
     .from('game_saves')
-    .upsert(save, { onConflict: 'id' })
+    .upsert(camelToSnake<Record<string, unknown>>(save), { onConflict: 'id' })
     .select()
     .single();
 
   if (error) throw new Error(`保存失败: ${error.message}`);
-  return data as GameSave;
+  return snakeToCamel<GameSave>(data);
 }
 
 /** 删除存档 */
@@ -67,7 +120,7 @@ export async function fetchCountries(): Promise<Country[]> {
     .order('code');
 
   if (error) throw new Error(`加载国家数据失败: ${error.message}`);
-  return data as Country[];
+  return snakeToCamel<Country[]>(data);
 }
 
 /** 获取某国家的地区列表 */
@@ -79,7 +132,7 @@ export async function fetchRegions(countryId: string): Promise<Region[]> {
     .eq('is_active', true);
 
   if (error) throw new Error(`加载地区数据失败: ${error.message}`);
-  return data as Region[];
+  return snakeToCamel<Region[]>(data);
 }
 
 // ============================================================
@@ -94,7 +147,7 @@ export async function fetchLawCategories(): Promise<LawCategory[]> {
     .order('sort_order');
 
   if (error) throw new Error(`加载法律分类失败: ${error.message}`);
-  return data as LawCategory[];
+  return snakeToCamel<LawCategory[]>(data);
 }
 
 /** 获取某国家的法律列表（分页） */
@@ -125,7 +178,7 @@ export async function fetchLaws(
     .range(from, to);
 
   if (error) throw new Error(`加载法律数据失败: ${error.message}`);
-  return { laws: data as Law[], total: count ?? 0 };
+  return { laws: snakeToCamel<Law[]>(data), total: count ?? 0 };
 }
 
 /** 获取单条法律详情 */
@@ -137,7 +190,7 @@ export async function fetchLawDetail(lawId: string): Promise<Law | null> {
     .single();
 
   if (error) return null;
-  return data as Law;
+  return snakeToCamel<Law>(data);
 }
 
 // ============================================================
@@ -152,13 +205,16 @@ export async function fetchLifeStages(): Promise<LifeStage[]> {
     .order('sort_order');
 
   if (error) throw new Error(`加载人生阶段失败: ${error.message}`);
-  return data as LifeStage[];
+
+  // ageRange 是 INT4RANGE 字符串，需解析成 [number, number]
+  const stages = snakeToCamel<LifeStage[]>(data);
+  return stages.map((s) => ({ ...s, ageRange: parseAgeRange(s.ageRange) }));
 }
 
 /** 获取符合条件的场景列表 */
 export async function fetchScenarios(params: {
   countryId: string;
-  lifeStageId: string;
+  lifeStageId?: string;
   excludeCompleted?: string[];
   limit?: number;
 }): Promise<Scenario[]> {
@@ -168,9 +224,12 @@ export async function fetchScenarios(params: {
     .from('scenarios')
     .select('*')
     .eq('country_id', countryId)
-    .eq('life_stage_id', lifeStageId)
     .eq('is_published', true)
     .limit(limit);
+
+  if (lifeStageId) {
+    query = query.eq('life_stage_id', lifeStageId);
+  }
 
   if (excludeCompleted.length > 0) {
     query = query.not('id', 'in', `(${excludeCompleted.join(',')})`);
@@ -178,7 +237,7 @@ export async function fetchScenarios(params: {
 
   const { data, error } = await query;
   if (error) throw new Error(`加载场景失败: ${error.message}`);
-  return data as Scenario[];
+  return snakeToCamel<Scenario[]>(data);
 }
 
 /** 获取场景完整数据（含选项和关联法条） */
@@ -209,9 +268,9 @@ export async function fetchScenarioFull(scenarioId: string): Promise<{
   if (scenarioResult.error || !scenarioResult.data) return null;
 
   return {
-    scenario: scenarioResult.data as Scenario,
-    choices: (choicesResult.data ?? []) as ScenarioChoice[],
-    linkedLawIds: (lawsResult.data ?? []).map((l: any) => l.law_id as string),
+    scenario: snakeToCamel<Scenario>(scenarioResult.data),
+    choices: snakeToCamel<ScenarioChoice[]>(choicesResult.data ?? []),
+    linkedLawIds: (lawsResult.data ?? []).map((l: { law_id: string }) => l.law_id),
   };
 }
 
@@ -226,7 +285,7 @@ export async function fetchAchievements(): Promise<Achievement[]> {
     .select('*');
 
   if (error) throw new Error(`加载成就数据失败: ${error.message}`);
-  return data as Achievement[];
+  return snakeToCamel<Achievement[]>(data);
 }
 
 /** 解锁成就 */
@@ -271,7 +330,7 @@ export async function fetchCollectedLaws(saveId: string): Promise<string[]> {
     .eq('save_id', saveId);
 
   if (error) return [];
-  return (data ?? []).map((d: any) => d.law_id as string);
+  return (data ?? []).map((d: { law_id: string }) => d.law_id);
 }
 
 // ============================================================

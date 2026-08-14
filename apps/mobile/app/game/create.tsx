@@ -56,7 +56,7 @@ export default function CreateCharacterPage() {
 
     store.setCharacterName(name.trim());
     store.setCharacterGender(gender);
-    store.setCharacterAge(18);
+    store.setCharacterAge(22);
     store.setCharacterCountry(country);
 
     // 应用手动分配的属性

@@ -51,6 +51,10 @@ export interface GameStore {
   makeChoice: (choice: ScenarioChoice) => void;
   clearScenario: () => void;
 
+  // 已完成的场景（用于场景去重）
+  completedScenarioIds: string[];
+  markScenarioCompleted: (scenarioId: string) => void;
+
   // 法律收集
   collectedLawIds: string[];
   addCollectedLaw: (lawId: string) => void;
@@ -144,6 +148,14 @@ export const useGameStore = create<GameStore>((set, get) => ({
       currentScenario: null,
       currentChoices: [],
     }),
+
+  completedScenarioIds: [],
+  markScenarioCompleted: (scenarioId) =>
+    set((state) => ({
+      completedScenarioIds: state.completedScenarioIds.includes(scenarioId)
+        ? state.completedScenarioIds
+        : [...state.completedScenarioIds, scenarioId],
+    })),
 
   // 法律收集
   collectedLawIds: [],

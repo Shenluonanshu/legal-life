@@ -2,6 +2,9 @@
 -- 律途人生 — 数据库函数、触发器和全文搜索
 -- ============================================================
 
+-- ---------- 启用 pg_trgm 扩展（中文全文搜索索引用） ----------
+CREATE EXTENSION IF NOT EXISTS pg_trgm;
+
 -- ---------- 增加法条查看次数 ----------
 CREATE OR REPLACE FUNCTION increment_law_view_count(law_id UUID)
 RETURNS void

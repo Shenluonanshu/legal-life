@@ -19,7 +19,11 @@ config.resolver.nodeModulesPaths = [
   path.resolve(workspaceRoot, 'node_modules'),
 ];
 
-// 支持从 workspace 包中导入 .ts/.tsx 文件
-config.resolver.sourceExts = ['jsx', 'js', 'ts', 'tsx', 'json'];
+// 支持从 workspace 包中导入 .ts/.tsx 文件。
+// 注意：必须用追加而非覆盖，否则会丢掉默认的 css 等扩展名，
+// 导致 @expo/log-box 的 CSS Modules 无法解析（dev 模式白屏/500）。
+config.resolver.sourceExts = [
+  ...new Set([...(config.resolver.sourceExts || []), 'ts', 'tsx', 'css']),
+];
 
 module.exports = config;
