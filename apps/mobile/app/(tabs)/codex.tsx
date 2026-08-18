@@ -21,6 +21,7 @@ import type { Law, LawCategory } from '../../lib/shared';
 export default function CodexPage() {
   const { t } = useTranslation();
   const collectedLawIds = useGameStore((s) => s.collectedLawIds);
+  const characterCountry = useGameStore((s) => s.characterCountry);
 
   const [categories, setCategories] = useState<LawCategory[]>([]);
   const [laws, setLaws] = useState<Law[]>([]);
@@ -39,15 +40,15 @@ export default function CodexPage() {
         setLoading(true);
         setError(null);
 
-        // 1. 拿 CN 的国家 id
+        // 1. 拿角色所属国家的 id
         const countries = await fetchCountries();
-        const cn = countries.find((c) => c.code === 'CN');
-        if (!cn) throw new Error('未找到中国国家数据');
+        const country = countries.find((c) => c.code === characterCountry);
+        if (!country) throw new Error(`未找到国家数据: ${characterCountry}`);
 
         // 2. 并行加载分类 + 法条
         const [cats, lawResult] = await Promise.all([
           fetchLawCategories(),
-          fetchLaws(cn.id, { pageSize: 200 }),
+          fetchLaws(country.id, { pageSize: 200 }),
         ]);
 
         if (cancelled) return;
@@ -63,7 +64,7 @@ export default function CodexPage() {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [characterCountry]);
 
   // 加载中
   if (loading) {

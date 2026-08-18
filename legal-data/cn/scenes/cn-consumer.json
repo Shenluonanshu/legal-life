@@ -23,7 +23,8 @@
           "is_legally_correct": true,
           "laws_revealed": ["CN-CONSUMER-001"],
           "branch_tag": "维权斗士",
-          "next_scene_hint": "消费者权益意识全面觉醒"
+          "next_scene_hint": "消费者权益意识全面觉醒",
+          "next_scene_key": "cn-shop-002"
         },
         {
           "id": "b",
@@ -33,7 +34,8 @@
           "is_legally_correct": true,
           "laws_revealed": ["CN-CONSUMER-001"],
           "branch_tag": "舆论力量",
-          "next_scene_hint": "社交媒体成了你的维权工具"
+          "next_scene_hint": "社交媒体成了你的维权工具",
+          "next_scene_key": "cn-shop-002"
         },
         {
           "id": "c",
@@ -79,6 +81,51 @@
           "laws_revealed": ["CN-CONSUMER-004"],
           "branch_tag": "吃堑长智",
           "next_scene_hint": "谨慎成为你的保护色"
+        }
+      ]
+    },
+    {
+      "key": "cn-adult-003",
+      "title": { "zh": "培训班跑路了", "en": "The Training School Vanished" },
+      "life_stage": "adult",
+      "min_age": 32,
+      "max_age": 45,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "你花2万元给孩子报了一个英语培训班，才上了3节课，机构突然关门了。门口贴着『内部装修，暂停营业』的告示，但销售的电话已经打不通，微信群也解散了。\n\n你带着孩子去讨说法，发现门口已经聚集了几十个同样被骗的家长，大家有的骂街、有的叹气、有的不知所措。\n\n这2万块，对普通家庭不是小数目。",
+        "en": "You paid 20000 yuan for your child's English training class, but after just three lessons the school suddenly closed. The door says 'under renovation, temporarily closed', but the salesperson's phone is dead and the WeChat group is dissolved. You bring your child to demand answers, only to find dozens of similarly scammed parents gathered — some cursing, some sighing, some at a loss. For an ordinary family, 20000 yuan isn't a small amount."
+      },
+      "image_prompt": "Parents gathered outside a closed training school with a 'closed' sign, a child looking confused, frustration and anxiety on the parents' faces, daytime street scene, illustration style",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "联系其他家长组建维权群，收集合同和缴费凭证，向市场监管和公安集体报案", "en": "Contact other parents to form a rights-protection group, collect contracts and payment records, and file a joint report with market regulators and police" },
+          "stats_effect": { "legal_awareness": 15, "wealth": 12, "knowledge": 10, "happiness": 8 },
+          "consequence": { "zh": "你牵头组建了家长维权群，大家整理了所有合同和缴费凭证，集体向市场监管部门和公安报了案。因为人数多、证据全，引起了重视，最终追回了大部分学费。你深刻体会到：团结起来，维权才有力量。预付式消费，一定要保留好合同和凭证。", "en": "You take the lead in forming a parents' rights-protection group. Everyone organizes contracts and payment records, and files a joint report with market regulators and police. Because of the numbers and complete evidence, it draws attention, and most of the tuition is recovered. You deeply appreciate: unity gives rights protection its strength. For prepaid consumption, always keep contracts and receipts." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CONSUMER-004", "CN-CONSUMER-001"],
+          "branch_tag": "集体维权",
+          "next_scene_hint": "团结起来，维权才有力量"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "自认倒霉，想着『就当买个教训』，以后再也不报长期班了", "en": "Accept the loss, thinking 'just a lesson learned', never signing up for long-term classes again" },
+          "stats_effect": { "wealth": -12, "happiness": -10, "legal_awareness": -5, "knowledge": -3 },
+          "consequence": { "zh": "你自认倒霉，放弃了追讨。但那个机构老板卷走了几百万学费后跑路，因为没有足够的受害者报案，案件迟迟没能立案。你后来听说，如果当初大家一起报案，本可以更快追回。沉默，不仅让自己受损，也在客观上纵容了违法者。", "en": "You accept the loss and give up pursuing it. But the school owner fled with millions in tuition, and because too few victims reported it, the case stalled. Later you hear that if everyone had reported together, the money could have been recovered sooner. Silence not only hurts yourself but also implicitly enables the wrongdoer." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-CONSUMER-004"],
+          "branch_tag": "自认倒霉",
+          "next_scene_hint": "沉默在客观上纵容了违法者"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "向消协和12315投诉，要求退还预付款，并了解预付卡消费的监管规定", "en": "Complain to the consumer association and 12315, demand a refund of the prepayment, and learn the regulations on prepaid-card consumption" },
+          "stats_effect": { "legal_awareness": 13, "knowledge": 10, "wealth": 8, "happiness": 6 },
+          "consequence": { "zh": "你拨打了12315投诉，并了解到：预付式消费中，商家不按约定提供服务，消费者有权要求退还预付款。市场监管部门介入后，约谈了机构负责人。虽然过程花了些时间，但你最终拿回了大部分学费。依法投诉，是每个消费者都该掌握的武器。", "en": "You call 12315 to complain and learn that in prepaid consumption, if a business fails to provide services as agreed, consumers have the right to a refund of the prepayment. After market regulators intervene and interview the school's head, you eventually get back most of the tuition. Filing complaints by law is a weapon every consumer should master." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CONSUMER-004", "CN-CONSUMER-001"],
+          "branch_tag": "依法投诉",
+          "next_scene_hint": "依法投诉，是消费者的武器"
         }
       ]
     }

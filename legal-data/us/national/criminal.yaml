@@ -1,0 +1,66 @@
+# ============================================================
+# 美国刑事法律（一般原则，具体量刑以各州为准）
+# ============================================================
+law_name: U.S. Criminal Law (General Principles)
+law_name_en: U.S. Criminal Law (General Principles)
+category: criminal
+country_code: US
+effective_date: null
+source_url: https://www.justice.gov/
+source_name: U.S. Department of Justice
+articles:
+  - ref: "Theft / Larceny"
+    ref_en: "Theft / Larceny"
+    title: 盗窃罪
+    full_text: |
+      Theft (larceny) is the unlawful taking of another's property with the
+      intent to permanently deprive. Penalties range from misdemeanor to
+      felony based on the value stolen.
+    summary: |
+      盗窃在美国是犯罪：
+      • 非法占有他人财物 + 意图永久剥夺 → 构成盗窃
+      • 金额小是轻罪（misdemeanor），金额大是重罪（felony）
+      现实提醒：商店里"顺手牵羊"（shoplifting）也是盗窃，会被起诉并留下犯罪记录，
+      影响求职、签证。勿以恶小而为之。
+    keywords: [theft, 盗窃, larceny, shoplifting, 犯罪记录]
+    tags: [财产犯罪, 盗窃]
+    life_stage_tags: [teen, young_adult, adult]
+    difficulty: 1
+
+  - ref: "Fraud"
+    ref_en: "Fraud"
+    title: 诈骗罪
+    full_text: |
+      Fraud is the intentional deception for financial or personal gain,
+      including wire fraud, identity theft, and investment scams, and is
+      prosecutable at both state and federal levels.
+    summary: |
+      诈骗在美国同样严惩：
+      • 通过欺骗获取财物或利益 → 构成诈骗
+      • 包括电信诈骗（wire fraud）、身份盗用、投资骗局等
+      • 州和联邦都可以追诉
+      现实提醒：美国的"杀猪盘"、冒充 IRS/移民局的电话诈骗很猖獗。
+      政府机构不会打电话索要礼品卡或要求立即转账，遇到要警惕。
+    keywords: [fraud, 诈骗, wire fraud, 身份盗用, 投资骗局]
+    tags: [财产犯罪, 诈骗]
+    life_stage_tags: [young_adult, adult, middle_age, senior]
+    difficulty: 2
+
+  - ref: "Domestic Violence"
+    ref_en: "Domestic Violence"
+    title: 家庭暴力
+    full_text: |
+      Domestic violence — physical harm, threats, or coercive control between
+      family or household members — is a crime, and victims may obtain
+      protective orders restraining the abuser.
+    summary: |
+      家暴不是"家务事"，是犯罪：
+      • 家庭成员间的身体伤害、威胁、精神控制 → 构成家暴
+      • 受害者可以申请"保护令"（protective order / restraining order），禁止施暴者靠近
+      • 施暴者会被逮捕、起诉
+      现实提醒：如果你或你认识的人遭遇家暴，可以拨打全国家暴热线
+      1-800-799-SAFE（7233），并寻求警方帮助。安全第一。
+    keywords: [domestic violence, 家暴, 保护令, restraining order, 求助]
+    tags: [人身安全, 家暴]
+    life_stage_tags: [young_adult, adult, middle_age]
+    difficulty: 2

@@ -1,0 +1,80 @@
+# ============================================================
+# 美国劳动法（联邦层面）
+# ============================================================
+law_name: Fair Labor Standards Act & Civil Rights Act
+law_name_en: Fair Labor Standards Act & Civil Rights Act
+category: employment
+country_code: US
+effective_date: 1938-06-25
+source_url: https://www.dol.gov/agencies/whd/flsa
+source_name: U.S. Department of Labor
+articles:
+  - ref: "FLSA §206"
+    ref_en: "FLSA §206"
+    title: 最低工资
+    full_text: |
+      The federal minimum wage is $7.25 per hour. Where state and federal
+      minimum wage laws differ, the higher rate applies. Tipped employees may
+      be paid a lower cash wage if their tips bring total pay to the federal minimum.
+    summary: |
+      美国联邦最低时薪是 7.25 美元。
+      • 州政府可以定更高的最低工资，取两者中较高者
+      • 拿小费的员工（如服务员）基础时薪可更低，但小费加上后必须达到最低工资
+      记住：雇主按低于最低时薪付你工资是违法的。
+    keywords: [minimum wage, 最低工资, federal, FLSA, 时薪]
+    tags: [劳动者权利, 工资]
+    life_stage_tags: [teen, young_adult, adult]
+    difficulty: 1
+
+  - ref: "FLSA §207"
+    ref_en: "FLSA §207"
+    title: 加班费
+    full_text: |
+      Nonexempt employees must receive overtime pay at one and a half times
+      their regular rate for hours worked over 40 in a workweek.
+    summary: |
+      加班费规则（非豁免员工）：
+      • 每周工作超过 40 小时的部分 → 按正常时薪的 1.5 倍支付
+      • 这是联邦法律的强制要求，不能用调休抵消
+      现实提醒：很多"白领"岗位被错误归类为"豁免"（不付加班费），
+      如果你每周超时工作却没加班费，可以查查自己是否被错误分类了。
+    keywords: [overtime, 加班, 加班费, FLSA, 1.5倍, 40小时]
+    tags: [劳动者权利, 加班, 工资]
+    life_stage_tags: [young_adult, adult, middle_age]
+    difficulty: 2
+
+  - ref: "FLSA §212"
+    ref_en: "FLSA §212"
+    title: 童工保护
+    full_text: |
+      Minors aged 14-15 may work limited hours in non-hazardous jobs outside
+      school hours; ages 16-17 may work in non-hazardous jobs; hazardous
+      occupations are prohibited for anyone under 18.
+    summary: |
+      美国童工规定：
+      • 14-15 岁 → 只能做非危险工作，且有时间限制、不能影响上学
+      • 16-17 岁 → 可做非危险工作
+      • 18 岁以下 → 禁止从事危险职业（如采矿、高空作业）
+      记住：未成年人的工作时间和工作内容都受法律严格限制。
+    keywords: [child labor, 童工, 未成年人, FLSA, 危险工作]
+    tags: [未成年人保护, 劳动者权利]
+    life_stage_tags: [teen, young_adult]
+    difficulty: 1
+
+  - ref: "Title VII"
+    ref_en: "Title VII"
+    title: 就业歧视禁止
+    full_text: |
+      It is unlawful to discriminate in hiring, firing, pay, or terms of
+      employment based on race, color, religion, sex, or national origin
+      (Title VII of the Civil Rights Act of 1964).
+    summary: |
+      就业歧视是违法的：
+      • 不能因种族、肤色、宗教、性别、国籍而在招聘、解雇、薪酬上区别对待
+      • 这是 1964 年《民权法案》第七章的核心规定
+      现实提醒：面试时被问婚育、宗教等问题，或同工不同酬，都可能构成歧视，
+      可以向美国平等就业机会委员会（EEOC）投诉。
+    keywords: [discrimination, 就业歧视, 民权法案, EEOC, 招聘]
+    tags: [劳动者权利, 平等, 歧视]
+    life_stage_tags: [young_adult, adult, middle_age]
+    difficulty: 2

@@ -30,7 +30,8 @@ export interface GameSave {
 }
 
 export interface Scenario {
-  id: string; title: Record<string, string>; narrative: Record<string, string>;
+  id: string; key: string | null;
+  title: Record<string, string>; narrative: Record<string, string>;
   lifeStageId: string; categoryId: string; countryId: string; regionId: string | null;
   difficulty: number; minAge: number | null; maxAge: number | null;
   triggerTags: string[]; imagePrompt: string | null;
@@ -43,6 +44,7 @@ export interface ScenarioChoice {
   choiceText: Record<string, string>; consequenceText: Record<string, string>;
   statsEffect: StatsEffect; legalOutcome: Record<string, string> | null;
   isLegallyCorrect: boolean; isBestEnding: boolean; sortOrder: number;
+  branchTag: string | null; nextSceneHint: string | null; nextSceneKey: string | null;
 }
 
 // ---------- 法律类型 ----------
@@ -85,6 +87,8 @@ export interface Achievement {
 // ---------- 常量 ----------
 export const COUNTRIES: Omit<Country, 'id'>[] = [
   { code: 'CN', name: { zh: '中国', en: 'China' }, legalSystem: 'civil_law', currency: 'CNY', defaultLanguage: 'zh', isActive: true },
+  { code: 'US', name: { zh: '美国', en: 'United States' }, legalSystem: 'common_law', currency: 'USD', defaultLanguage: 'en', isActive: true },
+  { code: 'EU', name: { zh: '欧盟', en: 'European Union' }, legalSystem: 'civil_law', currency: 'EUR', defaultLanguage: 'en', isActive: true },
 ];
 
 export const DEFAULT_COUNTRY = 'CN';

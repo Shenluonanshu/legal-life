@@ -1,0 +1,254 @@
+# ============================================================
+# 欧盟通用数据保护条例（GDPR）核心条款
+# ============================================================
+law_name: General Data Protection Regulation (GDPR)
+law_name_en: General Data Protection Regulation (GDPR)
+category: cyber_security
+country_code: EU
+effective_date: 2018-05-25
+source_url: https://gdpr-info.eu/
+source_name: European Union
+articles:
+  - ref: "Art. 5"
+    ref_en: "Art. 5"
+    title: 数据最小化原则
+    full_text: |
+      Personal data must be processed lawfully, fairly, and transparently;
+      collected for specified, explicit, and legitimate purposes; and be
+      adequate, relevant, and limited to what is necessary.
+    summary: |
+      数据处理的基本原则（第5条）：
+      • 合法、公平、透明
+      • 目的明确、合法
+      • ★ 数据最小化——只收集必要的数据，不能"宁多勿少"
+      现实意义：APP 要你的通讯录、位置、麦克风权限，如果和功能无关，就违反了数据最小化原则。
+    keywords: [data minimization, 数据最小化, GDPR, 原则, 必要性]
+    tags: [数据保护, 原则]
+    life_stage_tags: [young_adult, adult, middle_age]
+    difficulty: 1
+
+  - ref: "Art. 7"
+    ref_en: "Art. 7"
+    title: 同意的条件
+    full_text: |
+      Consent must be freely given, specific, informed, and unambiguous,
+      expressed by a clear affirmative action. The data subject may withdraw
+      consent at any time.
+    summary: |
+      处理数据的"同意"必须满足四个条件：
+      • 自由（不能被强迫）
+      • 具体（针对特定目的）
+      • 知情（明确告知用途）
+      • 明确（清晰肯定的行动，不能默认勾选）
+      • 且随时可以撤回
+      现实意义："不勾选就不能用 APP"、默认打勾的隐私协议，都可能违反 GDPR 的同意要求。
+    keywords: [consent, 同意, GDPR, 撤回, 知情]
+    tags: [数据保护, 同意]
+    life_stage_tags: [young_adult, adult, middle_age]
+    difficulty: 1
+
+  - ref: "Art. 8"
+    ref_en: "Art. 8"
+    title: 儿童同意年龄
+    full_text: |
+      For online services offered to children, consent for processing a child's
+      personal data is lawful only if the child is at least 16 years old; below
+      that age, parental consent is required (member states may lower to 13).
+    summary: |
+      儿童的数据同意：
+      • 16 岁以下儿童使用在线服务 → 需要父母/监护人同意
+      • 各成员国可下调至 13 岁
+      现实意义：面向儿童的 APP、游戏、社交平台，收集数据必须征得家长同意。
+      这就是为什么很多平台会问"你是否年满 13/16 岁"。
+    keywords: [children, 儿童, GDPR, 同意年龄, 父母同意]
+    tags: [数据保护, 未成年人]
+    life_stage_tags: [childhood, teen, young_adult]
+    difficulty: 1
+
+  - ref: "Art. 15"
+    ref_en: "Art. 15"
+    title: 访问权
+    full_text: |
+      The data subject has the right to obtain confirmation of whether personal
+      data is being processed and to access that data, including purposes,
+      categories, and recipients.
+    summary: |
+      访问权（Right of Access）：
+      • 你有权知道：谁在处理你的数据、处理什么、为什么、给了谁
+      • 你有权要求查看自己的数据副本
+      现实意义：你可以向任何公司发"数据访问请求"（DSAR），要求他们告诉你掌握了你的哪些信息。
+    keywords: [right of access, 访问权, GDPR, 数据副本, DSAR]
+    tags: [数据保护, 用户权利]
+    life_stage_tags: [young_adult, adult, middle_age]
+    difficulty: 1
+
+  - ref: "Art. 16"
+    ref_en: "Art. 16"
+    title: 更正权
+    full_text: |
+      The data subject has the right to have inaccurate personal data rectified
+      without undue delay, and to have incomplete data completed.
+    summary: |
+      更正权（Right to Rectification）：
+      • 你的数据有误 → 有权要求公司及时更正
+      • 数据不完整 → 有权要求补全
+      现实意义：信用报告、账户信息、联系方式有错，都可以要求平台更正。
+    keywords: [rectification, 更正权, GDPR, 数据错误]
+    tags: [数据保护, 用户权利]
+    life_stage_tags: [young_adult, adult, middle_age]
+    difficulty: 1
+
+  - ref: "Art. 17"
+    ref_en: "Art. 17"
+    title: 被遗忘权（删除权）
+    full_text: |
+      The data subject has the right to obtain erasure of personal data without
+      undue delay where the data is no longer necessary, consent is withdrawn,
+      or the data was unlawfully processed.
+    summary: |
+      "被遗忘权"（Right to Erasure）：
+      • 数据不再需要、你撤回同意、数据被非法处理 → 有权要求删除
+      • 公司必须在合理时间内删除，且要通知已共享给的其他方
+      现实意义：想让某个网站彻底删掉你的账号和数据，可以依据此条要求"被遗忘"。
+    keywords: [right to be forgotten, 被遗忘权, 删除, GDPR, erasure]
+    tags: [数据保护, 用户权利, 删除]
+    life_stage_tags: [young_adult, adult, middle_age]
+    difficulty: 2
+
+  - ref: "Art. 20"
+    ref_en: "Art. 20"
+    title: 数据可携带权
+    full_text: |
+      The data subject has the right to receive personal data in a structured,
+      commonly used, machine-readable format and to transmit it to another
+      controller without hindrance.
+    summary: |
+      数据可携带权（Right to Portability）：
+      • 你有权要求公司把你的数据以通用格式（如 JSON、CSV）导出
+      • 可以无障碍地把数据迁移到另一家公司
+      现实意义：想从一个云盘/社交平台换到另一个，可以要求导出自己的数据带走。
+    keywords: [portability, 数据可携带, GDPR, 导出, 迁移]
+    tags: [数据保护, 用户权利]
+    life_stage_tags: [young_adult, adult, middle_age]
+    difficulty: 2
+
+  - ref: "Art. 21"
+    ref_en: "Art. 21"
+    title: 反对权
+    full_text: |
+      The data subject has the right to object to processing based on legitimate
+      interests or for direct marketing, and processing must stop unless
+      compelling legitimate grounds override.
+    summary: |
+      反对权（Right to Object）：
+      • 你可以反对基于"正当利益"的数据处理
+      • ★ 尤其是直接营销（广告推送）——你一反对，就必须停止
+      现实意义：不想再收到某公司的营销邮件/广告，可以依据此条要求停止。
+    keywords: [right to object, 反对权, GDPR, 营销, 停止]
+    tags: [数据保护, 用户权利]
+    life_stage_tags: [young_adult, adult, middle_age]
+    difficulty: 1
+
+  - ref: "Art. 22"
+    ref_en: "Art. 22"
+    title: 自动化决策限制
+    full_text: |
+      The data subject has the right not to be subject to a decision based solely
+      on automated processing (including profiling) that produces legal or
+      similarly significant effects.
+    summary: |
+      自动化决策（如算法）不能随意决定你的命运：
+      • 纯算法做出的、对你产生法律或重大影响的决定 → 你有权不受其约束
+      • 比如：算法自动拒绝贷款、自动筛选简历，你都有权要求人工介入
+      现实意义：被算法"一刀切"拒绝时，你可以要求人工复核、要求解释逻辑。
+    keywords: [automated decision, 自动化决策, 算法, GDPR, 人工复核]
+    tags: [数据保护, 算法, 自动化决策]
+    life_stage_tags: [young_adult, adult, middle_age]
+    difficulty: 2
+
+  - ref: "Art. 33"
+    ref_en: "Art. 33"
+    title: 数据泄露通知
+    full_text: |
+      In case of a personal data breach, the controller must notify the
+      supervisory authority within 72 hours, and inform affected individuals
+      without undue delay where the breach is likely to result in high risk.
+    summary: |
+      数据泄露必须通知：
+      • 公司发生数据泄露 → 必须在 72 小时内向监管机构报告
+      • 如果泄露可能对个人造成高风险 → 必须及时通知受影响的用户
+      现实意义：如果某平台泄露了你的数据却不告诉你，它就违反了 GDPR，
+      你可以投诉并主张赔偿。
+    keywords: [breach, 数据泄露, GDPR, 72小时, 通知]
+    tags: [数据保护, 数据泄露, 通知]
+    life_stage_tags: [young_adult, adult, middle_age, senior]
+    difficulty: 2
+
+  - ref: "Art. 83"
+    ref_en: "Art. 83"
+    title: 罚款
+    full_text: |
+      Violations may be fined up to €20 million or 4% of annual global turnover,
+      whichever is higher, depending on the nature and severity of the breach.
+    summary: |
+      GDPR 的罚款有多狠：
+      • 最高 2000 万欧元，或全球年营业额的 4%（取较高者）
+      • 这就是为什么大公司（如 Google、Meta）因违规被罚数亿欧元
+      现实意义：GDPR 让公司不敢轻视你的数据。违规收集、泄露不报，代价极高。
+    keywords: [fines, 罚款, GDPR, 2000万欧元, 4%]
+    tags: [数据保护, 罚款, 处罚]
+    life_stage_tags: [young_adult, adult, middle_age]
+    difficulty: 1
+
+  - ref: "Art. 25"
+    ref_en: "Art. 25"
+    title: 隐私设计
+    full_text: |
+      The controller must implement appropriate technical and organizational
+      measures designed to implement data-protection principles (privacy by
+      design and by default).
+    summary: |
+      "隐私设计"（Privacy by Design）：
+      • 产品/服务在设计阶段就要内置隐私保护，而不是事后补救
+      • 默认设置应最保护隐私（如默认不公开、默认最少收集）
+      现实意义：一个 APP 如果默认公开你的信息、默认收集大量数据，
+      可能就违反了"隐私设计"原则。
+    keywords: [privacy by design, 隐私设计, GDPR, 默认, 内置]
+    tags: [数据保护, 隐私设计]
+    life_stage_tags: [young_adult, adult, middle_age]
+    difficulty: 2
+
+  - ref: "Art. 37"
+    ref_en: "Art. 37"
+    title: 数据保护官
+    full_text: |
+      Organizations whose core activities involve large-scale regular monitoring
+      or processing of sensitive data must appoint a Data Protection Officer (DPO).
+    summary: |
+      数据保护官（DPO）：
+      • 大规模监控、处理敏感数据的组织 → 必须设一名 DPO
+      • DPO 独立监督组织的数据处理合规性
+      现实意义：如果你觉得某公司处理你的数据有问题，可以向他们的 DPO 投诉，
+      也可以向监管机构（如欧盟成员国的数据保护局）投诉。
+    keywords: [DPO, 数据保护官, GDPR, 监督, 投诉]
+    tags: [数据保护, 合规, 投诉]
+    life_stage_tags: [young_adult, adult, middle_age]
+    difficulty: 2
+
+  - ref: "Art. 44-49"
+    ref_en: "Art. 44-49"
+    title: 跨境数据传输
+    full_text: |
+      Personal data may only be transferred outside the EU/EEA where the
+      destination ensures an adequate level of protection (e.g., adequacy
+      decision, standard contractual clauses, or other safeguards).
+    summary: |
+      你的数据不能随便"出海"：
+      • 数据传出欧盟/欧洲经济区 → 目的地必须提供"充分保护"
+      • 合法方式：充分性认定、标准合同条款（SCC）等
+      现实意义：欧盟公司把数据传到美国，必须满足严格条件，
+      否则就是违规。这也是很多跨国公司在数据合规上头疼的问题。
+    keywords: [transfer, 跨境传输, GDPR, 数据出境, 充分保护]
+    tags: [数据保护, 跨境传输]
+    life_stage_tags: [young_adult, adult, middle_age]
+    difficulty: 3

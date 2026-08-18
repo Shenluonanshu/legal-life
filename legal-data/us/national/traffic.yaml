@@ -1,0 +1,47 @@
+# ============================================================
+# 美国交通法规（一般原则，具体以各州为准）
+# ============================================================
+law_name: U.S. Traffic Laws (General Principles)
+law_name_en: U.S. Traffic Laws (General Principles)
+category: traffic
+country_code: US
+effective_date: null
+source_url: https://www.nhtsa.gov/
+source_name: National Highway Traffic Safety Administration
+articles:
+  - ref: "DUI / DWI"
+    ref_en: "DUI / DWI"
+    title: 酒驾醉驾
+    full_text: |
+      Driving with a blood alcohol concentration (BAC) of 0.08% or higher is
+      illegal in all 50 states (lower for under-21 and commercial drivers).
+      Penalties include license suspension, fines, and possible jail time.
+    summary: |
+      美国酒驾（DUI/DWI）红线：
+      • 血液酒精浓度 ≥ 0.08% → 全美 50 州都违法
+      • 21 岁以下更低（很多州是 0.02% 甚至零容忍）
+      • 处罚：吊销驾照、罚款、甚至入狱，且留下犯罪记录
+      现实提醒：酒驾的代价远不止罚款——保费暴涨、影响求职和签证。
+      喝酒后叫 Uber/Lyft 或让没喝酒的朋友开车。
+    keywords: [DUI, DWI, 酒驾, BAC, 0.08, 驾照]
+    tags: [交通安全, 酒驾, 刑事责任]
+    life_stage_tags: [young_adult, adult, middle_age]
+    difficulty: 1
+
+  - ref: "Seat Belt"
+    ref_en: "Seat Belt"
+    title: 安全带强制
+    full_text: |
+      Seat belt use is mandatory for drivers and passengers in most states
+      (primary or secondary enforcement). Child passengers must use proper
+      car seats or booster seats by age, weight, and height.
+    summary: |
+      安全带是强制要求：
+      • 绝大多数州要求司机和乘客必须系安全带
+      • 儿童必须按年龄、体重、身高使用安全座椅或增高垫
+      • 不系安全带会被罚款（有些州是"首要执法"，可直接开罚单）
+      现实提醒：美国警察真的会查安全带和儿童座椅，别心存侥幸。
+    keywords: [seat belt, 安全带, 儿童座椅, 交通]
+    tags: [交通安全, 安全带]
+    life_stage_tags: [young_adult, adult, middle_age]
+    difficulty: 1

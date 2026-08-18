@@ -1,0 +1,231 @@
+{
+  "country_code": "EU",
+  "category": "cyber_security",
+  "scenes": [
+    {
+      "key": "eu-data-001",
+      "title": { "zh": "删除我的数据", "en": "Delete My Data" },
+      "life_stage": "young_adult",
+      "min_age": 18,
+      "max_age": 40,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "你决定彻底注销一个社交平台的账号，并删除自己的所有数据。你在设置里找了半天，只有「停用账号」，没有「删除数据」的选项。\n\n你发邮件给客服，客服回复：『您的数据我们最长会保留五年，用于合法业务目的。』\n\n你很困惑：我已经不用这个平台了，凭什么我的数据还要被保存五年？你隐约想起，GDPR 好像有个「被遗忘权」。",
+        "en": "You decide to permanently delete your account on a social platform and erase all your data. You search the settings but only find 'deactivate account', no 'delete data' option. You email support, and they reply: 'Your data may be retained for up to five years for legitimate business purposes.' You're confused: you no longer use the platform, so why is your data kept for five years? You vaguely recall GDPR has a 'right to be forgotten'."
+      },
+      "image_prompt": "A person at a laptop looking at a deactivate-only account settings page, a support email about data retention, frustration, modern desk, flat illustration",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "依据 GDPR 第17条「被遗忘权」正式要求删除，并说明平台保留已无必要", "en": "Formally request deletion under GDPR Article 17 (right to erasure), explaining the data is no longer necessary" },
+          "stats_effect": { "legal_awareness": 16, "happiness": 8, "knowledge": 10, "health": 5 },
+          "consequence": { "zh": "你向平台正式发出了删除请求，援引 GDPR 第17条：数据已无处理必要，且你已不再使用该服务。平台在 30 天内删除了你的账号和数据，并书面确认。你体会到：在欧盟，你的数据你有权做主，「被遗忘权」是实打实的权利。", "en": "You formally request deletion, citing GDPR Article 17: the data is no longer necessary and you no longer use the service. The platform deletes your account and data within 30 days and confirms in writing. You learn: in the EU, your data is yours to control, and the 'right to be forgotten' is a real, enforceable right." },
+          "is_legally_correct": true,
+          "laws_revealed": ["EU-CYBER-006"],
+          "branch_tag": "依法主张",
+          "next_scene_hint": "被遗忘权让你拿回了数据自主权"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "算了，停用账号就停用吧，数据留着就留着", "en": "Forget it — just deactivate the account and let the data stay" },
+          "stats_effect": { "legal_awareness": -8, "happiness": -5, "knowledge": -3 },
+          "consequence": { "zh": "你选择了停用账号，但数据仍然留在平台上。几年后，这个平台发生了数据泄露，你的旧数据被曝光，还收到了各种骚扰信息。你后悔当初没有行使「被遗忘权」——数据留着，风险就一直存在。", "en": "You deactivate the account but the data remains. Years later, the platform suffers a data breach, your old data is exposed, and you get harassed by spam. You regret not exercising the 'right to be forgotten' — keeping the data means keeping the risk." },
+          "is_legally_correct": false,
+          "laws_revealed": ["EU-CYBER-006"],
+          "branch_tag": "不了了之",
+          "next_scene_hint": "数据留着，风险就一直存在"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "先查 GDPR 关于删除权的具体规定，再向平台或监管机构提出正式请求", "en": "First check GDPR's specific rules on erasure, then make a formal request to the platform or supervisory authority" },
+          "stats_effect": { "legal_awareness": 14, "knowledge": 10, "happiness": 6, "health": 5 },
+          "consequence": { "zh": "你查了 GDPR 第17条，了解了「被遗忘权」的适用情形，也知道了如果平台不配合，可以向欧盟成员国的数据保护机构（DPA）投诉。你向平台提交了正式请求，平台很快响应。你知道：权利要主动行使，而且要懂得投诉渠道。", "en": "You check GDPR Article 17, learn when the right to erasure applies, and find that you can complain to a national Data Protection Authority if the platform refuses. You submit a formal request, and the platform responds quickly. You know: rights must be actively exercised, and you should know the complaint channels." },
+          "is_legally_correct": true,
+          "laws_revealed": ["EU-CYBER-006"],
+          "branch_tag": "先查后行",
+          "next_scene_hint": "懂规则、知渠道，维权更有效"
+        }
+      ]
+    },
+    {
+      "key": "eu-data-002",
+      "title": { "zh": "不同意就别用", "en": "Agree or Don't Use It" },
+      "life_stage": "young_adult",
+      "min_age": 18,
+      "max_age": 40,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "你下载了一款手电筒 APP，打开时弹出一个授权框，要求访问你的通讯录、位置、麦克风和相册。\n\n你点「不同意」，APP 直接退出了。再打开，还是那个弹窗，而且没有「仅使用必要权限」的选项。\n\n你意识到：一个手电筒 APP 根本不需要我的通讯录和位置。这不合理，但你也不知道该怎么办。",
+        "en": "You download a flashlight app. On opening, a permission popup asks for your contacts, location, microphone, and photo library. You tap 'Disagree', and the app quits. Reopening shows the same popup, with no 'essential permissions only' option. You realize a flashlight app doesn't need your contacts or location. This is unreasonable, but you don't know what to do."
+      },
+      "image_prompt": "A person holding a phone showing a flashlight app with an aggressive permission popup listing contacts and location, confusion, flat illustration",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "卸载这个 APP，意识到它违反 GDPR 的数据最小化和同意原则，举报它", "en": "Uninstall the app, recognize it violates GDPR's data minimization and consent principles, and report it" },
+          "stats_effect": { "legal_awareness": 15, "happiness": 8, "knowledge": 10, "health": 5 },
+          "consequence": { "zh": "你卸载了这个 APP，并向监管机构举报了它过度索取权限、强制同意的问题。你意识到：一个手电筒 APP 要通讯录和位置，明显违反了 GDPR 的「数据最小化」和「自由同意」原则。宁可换个干净的 APP，也不把隐私交给不守规矩的应用。", "en": "You uninstall the app and report its excessive permissions and forced consent to regulators. You realize a flashlight app demanding contacts and location clearly violates GDPR's data minimization and free-consent principles. Better to switch to a clean app than hand your privacy to one that doesn't play by the rules." },
+          "is_legally_correct": true,
+          "laws_revealed": ["EU-CYBER-001", "EU-CYBER-002"],
+          "branch_tag": "果断拒绝",
+          "next_scene_hint": "你的举报让违规 APP 无处遁形"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "虽然不情愿，但为了用这个 APP，还是全点了同意", "en": "Reluctantly click agree to everything just to use the app" },
+          "stats_effect": { "legal_awareness": -8, "happiness": -5, "knowledge": -3, "health": -3 },
+          "consequence": { "zh": "你全点了同意，APP 正常使用了。但没过多久，你的通讯录好友开始收到各种推广短信，你的位置信息也被用于精准广告。你才意识到：当初贪图方便点的「同意」，代价是你的隐私被滥用。", "en": "You click agree to everything and the app works. But soon your contacts start receiving spam texts, and your location is used for targeted ads. Only then do you realize: the convenience of that 'agree' cost you your privacy." },
+          "is_legally_correct": false,
+          "laws_revealed": ["EU-CYBER-002"],
+          "branch_tag": "贪图方便",
+          "next_scene_hint": "贪图方便，代价是隐私被滥用"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "了解 GDPR 的「数据最小化」原则，换一个只索取必要权限的同类 APP", "en": "Learn GDPR's data-minimization principle, and switch to a similar app that only asks for essential permissions" },
+          "stats_effect": { "legal_awareness": 12, "knowledge": 10, "happiness": 8, "health": 5 },
+          "consequence": { "zh": "你了解了 GDPR 的「数据最小化」原则：APP 只能收集实现功能所必需的数据。一个手电筒 APP 索取通讯录和位置，明显违规。你换了一个只要求相机权限的干净 APP。你学会了：下载 APP 前，看看它要什么权限，权限越多越可疑。", "en": "You learn GDPR's data-minimization principle: an app may only collect data necessary for its function. A flashlight app demanding contacts and location clearly violates it. You switch to a clean app that only asks for the camera. You learn: before installing an app, check its permissions — the more it asks, the more suspicious it is." },
+          "is_legally_correct": true,
+          "laws_revealed": ["EU-CYBER-001", "EU-CYBER-002"],
+          "branch_tag": "理性选择",
+          "next_scene_hint": "权限越多，越可疑"
+        }
+      ]
+    },
+    {
+      "key": "eu-data-003",
+      "title": { "zh": "数据泄露了却没通知", "en": "A Breach Kept Quiet" },
+      "life_stage": "adult",
+      "min_age": 25,
+      "max_age": 50,
+      "difficulty": 3,
+      "narrative": {
+        "zh": "你在一家电商平台购物多年，绑定了银行卡和个人信息。最近你发现自己的信息出现在了一个「数据泄露查询」网站上，疑似该平台去年被黑客攻击，泄露了数千万用户的邮箱、地址甚至支付信息。\n\n但你从没收到过平台的任何通知。你登录平台，发现一切如常，仿佛什么都没发生过。\n\n你想起 GDPR 规定：数据泄露必须在 72 小时内报告监管机构，并通知可能受影响的用户。",
+        "en": "You've shopped on an e-commerce platform for years, with your card and personal info saved. Recently you find your data listed on a 'breach check' website — the platform was apparently hacked last year, leaking tens of millions of users' emails, addresses, and even payment info. But you never received any notice. You log in and everything looks normal, as if nothing happened. You recall GDPR requires breaches to be reported to authorities within 72 hours and to notify affected users."
+      },
+      "image_prompt": "A person looking at a laptop showing a data breach check website with their info exposed, an email inbox with no notice, concern, flat illustration",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "收集泄露证据，向数据保护机构投诉平台未履行 GDPR 泄露通知义务，并主张赔偿", "en": "Gather breach evidence, file a complaint that the platform failed its GDPR breach-notification duty, and claim compensation" },
+          "stats_effect": { "legal_awareness": 18, "wealth": 10, "knowledge": 12, "happiness": 5 },
+          "consequence": { "zh": "你收集了数据泄露的证据，向监管机构投诉平台违反了 GDPR 第33条的泄露通知义务。监管机构调查后认定平台违规，处以高额罚款，并责令其通知所有受影响用户。你还通过集体诉讼主张了赔偿。你体会到：GDPR 的「72小时通知」不是说说而已，违规是要付出代价的。", "en": "You gather breach evidence and complain that the platform violated GDPR Article 33's notification duty. The authority investigates, finds the platform in violation, imposes a heavy fine, and orders it to notify all affected users. You also claim compensation through a class action. You learn: GDPR's '72-hour notification' isn't just talk — violations carry real consequences." },
+          "is_legally_correct": true,
+          "laws_revealed": ["EU-CYBER-010", "EU-CYBER-011"],
+          "branch_tag": "依法追责",
+          "next_scene_hint": "违规不报，终要付出代价"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "觉得麻烦，只是改了密码，没再追究", "en": "Think it's too much trouble, just change your password and let it go" },
+          "stats_effect": { "wealth": -5, "happiness": -5, "legal_awareness": -8, "knowledge": -3 },
+          "consequence": { "zh": "你只是改了密码，没有进一步追究。但泄露的支付信息已经开始被不法分子利用，你陆续遭遇了盗刷和钓鱼诈骗。你后悔没有及时主张权利——平台隐瞒泄露事实，让更多用户蒙受损失。沉默，让违规者更加肆无忌惮。", "en": "You just change your password and drop it. But the leaked payment info is already being exploited by criminals, and you soon face card fraud and phishing scams. You regret not asserting your rights — the platform's concealment left more users harmed. Silence makes violators bolder." },
+          "is_legally_correct": false,
+          "laws_revealed": ["EU-CYBER-010"],
+          "branch_tag": "不了了之",
+          "next_scene_hint": "沉默让违规者更肆无忌惮"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "先冻结可能泄露的支付方式、开启双重验证，再向监管机构咨询如何维权", "en": "First freeze potentially leaked payment methods and enable two-factor authentication, then consult authorities on how to seek recourse" },
+          "stats_effect": { "legal_awareness": 14, "knowledge": 10, "wealth": 8, "happiness": 5 },
+          "consequence": { "zh": "你第一时间采取了止损措施：冻结可能泄露的银行卡、开启双重验证、修改密码。然后你向数据保护机构咨询了维权途径，得知可以投诉平台未履行通知义务。你的及时应对，避免了更大的损失。你知道：遇到数据泄露，先止损，再维权。", "en": "You act immediately to limit damage: freeze possibly-leaked cards, enable two-factor authentication, and change passwords. Then you consult the authority about recourse and learn you can complain that the platform failed to notify. Your prompt response prevents greater loss. You know: in a breach, limit damage first, then seek justice." },
+          "is_legally_correct": true,
+          "laws_revealed": ["EU-CYBER-010"],
+          "branch_tag": "及时止损",
+          "next_scene_hint": "先止损，再维权"
+        }
+      ]
+    },
+    {
+      "key": "eu-data-004",
+      "title": { "zh": "带走我的数据", "en": "Take My Data With Me" },
+      "life_stage": "young_adult",
+      "min_age": 18,
+      "max_age": 40,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "你想从一个云存储服务换到另一个，希望把自己的文件、照片和笔记都导出来带走。你在设置里找了半天，发现平台只提供「下载单个文件」，不支持一键导出全部数据。\n\n你联系客服，客服说：『我们暂不支持数据批量导出。』\n\n你想起 GDPR 有个「数据可携带权」——你有权要求平台把你的数据以通用格式导出，并迁移到别的服务。",
+        "en": "You want to switch from one cloud storage service to another, taking your files, photos, and notes with you. You search the settings but find only 'download single file', no one-click export of everything. You contact support, who says: 'We don't currently support bulk data export.' You recall GDPR has a 'right to data portability' — you have the right to receive your data in a common format and transfer it to another service."
+      },
+      "image_prompt": "A person at a computer trying to export files from a cloud service, a support chat saying no bulk export, frustration, flat illustration",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "依据 GDPR 第20条「数据可携带权」要求导出，并说明平台无权限制", "en": "Demand export under GDPR Article 20 (right to portability), explaining the platform has no right to restrict it" },
+          "stats_effect": { "legal_awareness": 16, "happiness": 8, "knowledge": 10, "wealth": 5 },
+          "consequence": { "zh": "你向平台正式提出了数据导出请求，援引 GDPR 第20条。平台起初还想推脱，但在你坚持下，最终给你提供了一个通用格式（如 JSON/ZIP）的数据包。你顺利把数据迁移到了新服务。你体会到：在欧盟，你的数据是「你的」，平台不能拿它当「人质」锁定你。", "en": "You formally request a data export, citing GDPR Article 20. The platform initially resists, but with your persistence, it eventually provides your data in a common format (JSON/ZIP). You successfully migrate to the new service. You learn: in the EU, your data is yours — platforms can't hold it 'hostage' to lock you in." },
+          "is_legally_correct": true,
+          "laws_revealed": ["EU-CYBER-007"],
+          "branch_tag": "依法主张",
+          "next_scene_hint": "数据可携带权打破了平台锁定"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "嫌麻烦，手动一个个下载文件，或者干脆放弃迁移", "en": "Find it too troublesome, manually download files one by one, or just give up migrating" },
+          "stats_effect": { "happiness": -8, "wealth": -5, "legal_awareness": -6, "knowledge": -3 },
+          "consequence": { "zh": "你手动下载了几个重要文件，剩下的照片和笔记就放弃了。你被「锁定」在了原来的平台，继续付费，即使它的体验越来越差。你后来才知道，你本可以一键导出全部数据——平台的「不支持导出」，其实是在利用你的嫌麻烦。", "en": "You manually download a few important files and abandon the rest. You stay 'locked in' to the old platform, continuing to pay even as its experience worsens. You later learn you could have exported everything with one click — the platform's 'no bulk export' was just exploiting your reluctance to bother." },
+          "is_legally_correct": false,
+          "laws_revealed": ["EU-CYBER-007"],
+          "branch_tag": "嫌麻烦",
+          "next_scene_hint": "平台在利用你的嫌麻烦"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "查 GDPR 数据可携带权的规定，了解平台必须提供的导出格式和响应时限", "en": "Check GDPR's portability rules, and learn the required export formats and response deadlines" },
+          "stats_effect": { "legal_awareness": 13, "knowledge": 10, "happiness": 6, "wealth": 5 },
+          "consequence": { "zh": "你查了 GDPR 第20条，了解到平台必须在收到请求后一个月内提供结构化、通用、机器可读格式的数据，且不得收取不合理费用。你据此向平台提出请求，平台按时提供了数据。你知道：懂规则，才能不被平台随意打发。", "en": "You check GDPR Article 20 and learn the platform must provide structured, commonly-used, machine-readable data within one month, without unreasonable fees. You request it citing this, and the platform delivers on time. You know: knowing the rules keeps platforms from brushing you off." },
+          "is_legally_correct": true,
+          "laws_revealed": ["EU-CYBER-007"],
+          "branch_tag": "先查后行",
+          "next_scene_hint": "懂规则，才不会被随意打发"
+        }
+      ]
+    },
+    {
+      "key": "eu-data-005",
+      "title": { "zh": "被算法拒绝之后", "en": "Rejected by an Algorithm" },
+      "life_stage": "adult",
+      "min_age": 25,
+      "max_age": 50,
+      "difficulty": 3,
+      "narrative": {
+        "zh": "你申请了一笔贷款，几天后收到一封邮件：「很抱歉，经系统综合评估，您的申请未通过。」\n\n没有原因，没有人工联系方式，只有一个冷冰冰的「系统自动判定」。\n\n你明明信用记录良好、收入稳定，怎么就被拒了？你打电话去问，对方只说：「这是系统算法自动审批的结果，我们无法人工干预。」\n\n你想起 GDPR 第22条：你有权不让自己受制于纯算法做出的、有重大影响的决定。",
+        "en": "You apply for a loan. Days later you get an email: 'Sorry, after the system's comprehensive assessment, your application was not approved.' No reason, no human contact, just a cold 'automated system decision'. Your credit is good and your income stable — so why rejected? You call, and they only say: 'This is an automated algorithm result; we cannot intervene.' You recall GDPR Article 22: you have the right not to be subject to a purely automated decision with significant effects."
+      },
+      "image_prompt": "A person looking at a loan rejection email on a laptop, no reason given, frustration and confusion, flat illustration",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "依据 GDPR 第22条要求人工复核，并索要算法决策的合理解释", "en": "Demand human review under GDPR Article 22, and request a reasonable explanation of the algorithmic decision" },
+          "stats_effect": { "legal_awareness": 18, "wealth": 12, "knowledge": 12, "happiness": 8 },
+          "consequence": { "zh": "你依据 GDPR 第22条，要求人工复核你的贷款申请，并索要算法决策的依据。对方见你懂法，安排了人工重新审核，最终发现是系统误判了你的某项信息，贷款获批了。你体会到：算法不是「不可质疑」的，你有权要求人工介入和解释。", "en": "You invoke GDPR Article 22, demanding human review of your loan application and an explanation of the algorithmic decision. Seeing you know the law, they arrange a manual re-review, which finds the system misjudged one of your details — and the loan is approved. You learn: algorithms aren't beyond challenge; you have the right to human review and explanation." },
+          "is_legally_correct": true,
+          "laws_revealed": ["EU-CYBER-009"],
+          "branch_tag": "据理力争",
+          "next_scene_hint": "算法不是不可质疑的"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "算了，换一家银行试试，反正被拒了也没办法", "en": "Forget it, try another bank — there's nothing you can do about a rejection" },
+          "stats_effect": { "wealth": -8, "happiness": -10, "legal_awareness": -8, "knowledge": -3 },
+          "consequence": { "zh": "你放弃了这家，但没想到的是，这个算法决策被共享到了其他金融机构，你处处碰壁。你这才意识到：一个错误的算法判定，如果不纠正，会持续影响你的生活。你后悔没有坚持要求人工复核。", "en": "You give up on this bank, only to find the algorithmic decision was shared with other institutions — you're rejected everywhere. Only then do you realize: an erroneous algorithmic judgment, if uncorrected, keeps affecting your life. You regret not insisting on human review." },
+          "is_legally_correct": false,
+          "laws_revealed": ["EU-CYBER-009"],
+          "branch_tag": "被动接受",
+          "next_scene_hint": "错误的算法判定会持续影响你"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "先了解 GDPR 关于自动化决策的规定，再向机构正式提出异议和人工复核请求", "en": "First learn GDPR's rules on automated decisions, then formally object and request human review" },
+          "stats_effect": { "legal_awareness": 15, "knowledge": 12, "wealth": 8, "happiness": 6 },
+          "consequence": { "zh": "你查了 GDPR 第22条，明确了「纯自动化决策」的适用条件，也知道了自己有权提出异议、要求人工介入。你向机构提交了正式的异议申请，对方安排了人工复核，纠正了错误判定。你知道：面对算法，主动行使权利，才能不被「黑箱」摆布。", "en": "You check GDPR Article 22, clarify when 'purely automated decisions' apply, and learn you have the right to object and demand human intervention. You submit a formal objection, and the institution arranges a human review that corrects the error. You know: with algorithms, actively exercising your rights keeps you from being ruled by a 'black box'." },
+          "is_legally_correct": true,
+          "laws_revealed": ["EU-CYBER-009"],
+          "branch_tag": "主动维权",
+          "next_scene_hint": "主动行使权利，不被黑箱摆布"
+        }
+      ]
+    }
+  ]
+}

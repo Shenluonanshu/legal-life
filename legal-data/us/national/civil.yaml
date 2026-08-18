@@ -1,0 +1,64 @@
+# ============================================================
+# 美国民事法律（一般原则，具体规则以各州为准）
+# ============================================================
+law_name: U.S. Landlord-Tenant & Tort Law (General Principles)
+law_name_en: U.S. Landlord-Tenant & Tort Law (General Principles)
+category: civil
+country_code: US
+effective_date: null
+source_url: https://www.usa.gov/housing
+source_name: USA.gov
+articles:
+  - ref: "Security Deposit"
+    ref_en: "Security Deposit"
+    title: 押金返还
+    full_text: |
+      Landlords must return security deposits within a reasonable time
+      (typically 14-30 days, varying by state) and may deduct only for
+      damages beyond normal wear and tear, with itemized receipts.
+    summary: |
+      租房押金规则：
+      • 退房后，房东必须在合理时间内（各州 14-30 天不等）退还押金
+      • 只能扣除"超出正常损耗"的损坏（正常磨损不能扣）
+      • 扣款必须提供明细清单和收据
+      现实提醒：入住时拍视频存档、记录房屋初始状态，退房时对照，
+      是保护押金最有效的方式。房东无理扣押金，可以去小额法庭起诉。
+    keywords: [security deposit, 押金, 房东, 租客, 正常损耗]
+    tags: [住房, 租赁, 押金]
+    life_stage_tags: [young_adult, adult]
+    difficulty: 2
+
+  - ref: "Right to Entry"
+    ref_en: "Right to Entry"
+    title: 房东进入权
+    full_text: |
+      Landlords generally must give advance notice (commonly 24-48 hours)
+      before entering a tenant's unit, except in emergencies.
+    summary: |
+      房东不能随便进你的房子：
+      • 一般情况下，房东进入出租房需要提前通知（各州通常 24-48 小时）
+      • 除非紧急情况（如漏水、火灾），否则不能随意闯入
+      • 你有"安静享用"的权利
+      现实提醒：房东频繁骚扰、无通知闯入，属于侵犯租客权利，
+      可以书面抗议甚至报警。
+    keywords: [right to entry, 进入权, 房东, 隐私, 通知]
+    tags: [住房, 租赁, 隐私]
+    life_stage_tags: [young_adult, adult]
+    difficulty: 1
+
+  - ref: "Negligence"
+    ref_en: "Negligence"
+    title: 过失侵权
+    full_text: |
+      A person who fails to exercise reasonable care and thereby causes
+      foreseeable harm to another may be liable for damages (negligence).
+    summary: |
+      过失侵权（negligence）：
+      • 没有尽到"合理注意"义务，造成他人可预见的伤害 → 要承担赔偿责任
+      • 比如：遛狗不拴绳咬伤人、商店地板湿滑不提醒导致顾客摔倒
+      现实提醒：在美国，人身伤害（personal injury）索赔很常见。
+      如果因他人过失受伤，保留医疗记录和现场证据，可主张医疗费、误工费等赔偿。
+    keywords: [negligence, 过失, 侵权, 人身伤害, 赔偿]
+    tags: [侵权责任, 赔偿]
+    life_stage_tags: [young_adult, adult, middle_age]
+    difficulty: 2

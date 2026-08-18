@@ -1,0 +1,96 @@
+{
+  "country_code": "US",
+  "category": "employment",
+  "scenes": [
+    {
+      "key": "us-job-001",
+      "title": { "zh": "没有加班费的打工", "en": "No Overtime Pay" },
+      "life_stage": "young_adult",
+      "min_age": 18,
+      "max_age": 30,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "你在一家餐厅打工，时薪 12 美元。最近生意忙，经理让你每周上 50 小时班，但发工资时，你发现多出来的 10 小时还是按 12 美元算的。\n\n你向经理提出来，经理耸耸肩：『我们是小本生意，没有加班费这一说。』\n\n你有点疑惑：美国法律不是规定每周超过 40 小时要付 1.5 倍工资吗？",
+        "en": "You work at a restaurant earning $12 an hour. Recently business is busy, and the manager has you working 50 hours a week. But on payday, you notice those extra 10 hours are still paid at $12. You bring it up, and the manager shrugs: 'We're a small business, we don't do overtime.' You're puzzled: doesn't U.S. law require time-and-a-half for hours over 40 per week?"
+      },
+      "image_prompt": "A young restaurant worker looking at a paycheck with confusion, a manager shrugging nearby, restaurant kitchen background, warm light, flat illustration",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "向经理指出 FLSA 规定：每周超过 40 小时的加班必须按 1.5 倍支付，并保留工时记录", "en": "Point out to the manager that FLSA requires 1.5x pay for hours over 40 per week, and keep your time records" },
+          "stats_effect": { "legal_awareness": 18, "wealth": 15, "knowledge": 10, "happiness": 5 },
+          "consequence": { "zh": "你向经理说明了 FLSA 的加班规定，并出示了自己的工时记录。经理这才意识到问题的严重性，补发了你的加班费。你学会了：在美国，加班费是你的法定权利，不是老板的「恩惠」。保留工时记录是维权的关键。", "en": "You explain the FLSA overtime rules to the manager and show your time records. Only then does the manager realize the seriousness and pays you the back overtime. You learn: in the U.S., overtime pay is a legal right, not the boss's favor. Keeping time records is key to protecting your rights." },
+          "is_legally_correct": true,
+          "laws_revealed": ["US-LABOR-002", "US-LABOR-001"],
+          "branch_tag": "依法维权",
+          "next_scene_hint": "法律知识帮你拿回了加班费"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "怕丢了工作，默默接受，不敢再提", "en": "Afraid of losing the job, silently accept it and don't bring it up again" },
+          "stats_effect": { "wealth": -12, "happiness": -10, "legal_awareness": -8, "health": -5 },
+          "consequence": { "zh": "你选择了沉默。此后的几个月，你每周都被安排超时工作却拿不到加班费，长期疲惫不堪。直到同事向劳工部（DOL）投诉，你才拿回了补发的加班费。你后悔没有早点主张自己的权利——沉默只会让老板变本加厉。", "en": "You choose silence. For months after, you're scheduled overtime every week without extra pay, growing exhausted. It's only when a coworker files a complaint with the Department of Labor that you finally get your back overtime. You regret not asserting your rights sooner — silence only emboldens the boss." },
+          "is_legally_correct": false,
+          "laws_revealed": ["US-LABOR-002"],
+          "branch_tag": "忍气吞声",
+          "next_scene_hint": "沉默让老板变本加厉"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "先查清楚 FLSA 的加班规定和投诉渠道（劳工部 DOL），再和经理正式沟通", "en": "First check the FLSA overtime rules and complaint channels (DOL), then talk to the manager formally" },
+          "stats_effect": { "legal_awareness": 15, "knowledge": 12, "wealth": 10, "happiness": 5 },
+          "consequence": { "zh": "你先查了劳工部官网，确认了加班费的规定和投诉渠道，还了解了可以匿名投诉。有了底气后，你和经理正式沟通，经理同意补发加班费并调整排班。你知道：美国有完善的劳动维权渠道，关键是你要去用。", "en": "You first check the Department of Labor website, confirming the overtime rules and complaint channels, and learn you can file anonymously. Armed with this, you formally talk to the manager, who agrees to pay back overtime and adjust scheduling. You know the U.S. has solid labor-protection channels — the key is using them." },
+          "is_legally_correct": true,
+          "laws_revealed": ["US-LABOR-002"],
+          "branch_tag": "知己知彼",
+          "next_scene_hint": "查清楚再沟通，底气十足"
+        }
+      ]
+    },
+    {
+      "key": "us-job-002",
+      "title": { "zh": "面试中的歧视", "en": "Discrimination in the Interview" },
+      "life_stage": "adult",
+      "min_age": 25,
+      "max_age": 45,
+      "difficulty": 3,
+      "narrative": {
+        "zh": "你面试一家公司的职位，资历和能力都很匹配。面试官聊得不错，最后却话锋一转：『你结婚了吗？有要孩子的计划吗？我们这个岗位经常出差，女性可能不太方便。』\n\n你心里一沉，感觉自己不是因为能力，而是因为性别和婚育被排除了。\n\n你想起来，美国《民权法案》禁止基于性别等的就业歧视。",
+        "en": "You interview for a position where your qualifications and skills are a strong match. The interview goes well, but the interviewer suddenly shifts: 'Are you married? Do you plan to have children? This role travels a lot, which might be inconvenient for a woman.' Your heart sinks — you feel you're being excluded not for ability but for gender and family status. You recall the Civil Rights Act bans employment discrimination based on sex and other traits."
+      },
+      "image_prompt": "A job candidate across from an interviewer in an office, a tense expression, resume on the table, flat illustration",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "礼貌指出这类婚育问题与岗位无关，涉嫌性别歧视，并向 EEOC 咨询投诉渠道", "en": "Politely point out that such marriage/pregnancy questions are job-irrelevant and may be sex discrimination, and consult the EEOC about complaint channels" },
+          "stats_effect": { "legal_awareness": 18, "happiness": 10, "knowledge": 12, "wealth": 5 },
+          "consequence": { "zh": "你冷静地指出这些问题与岗位要求无关，涉嫌违反《民权法案》第七章的性别歧视规定。面试官明显慌了，草草结束了面试。虽然这份工作没成，但你把情况反映给了 EEOC。你明白：维护平等就业权利，也是在为所有求职者发声。", "en": "You calmly point out that these questions are irrelevant to the job and may violate Title VII's ban on sex discrimination. The interviewer is visibly flustered and ends the interview hastily. Though the job didn't work out, you report the matter to the EEOC. You understand: defending equal-opportunity rights also speaks up for all job seekers." },
+          "is_legally_correct": true,
+          "laws_revealed": ["US-LABOR-004"],
+          "branch_tag": "勇敢发声",
+          "next_scene_hint": "你的发声为更多人争取公平"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "为了拿到工作，违心地回答『暂时不考虑结婚生子』", "en": "To get the job, reluctantly answer 'not planning to marry or have children anytime soon'" },
+          "stats_effect": { "happiness": -10, "legal_awareness": -8, "knowledge": -3 },
+          "consequence": { "zh": "你违心地回答了这些本不该被问的问题。虽然拿到了 offer，但心里很不是滋味，而且入职后发现公司对女性员工确实不友好。你意识到：当你不反抗歧视，歧视就会一直存在。有些底线，不能因为一份工作就放弃。", "en": "You reluctantly answer questions that should never have been asked. Though you get the offer, it leaves a bad taste — and you later find the company is indeed unfriendly to female employees. You realize: when you don't push back against discrimination, it persists. Some bottom lines shouldn't be abandoned for a job." },
+          "is_legally_correct": false,
+          "laws_revealed": ["US-LABOR-004"],
+          "branch_tag": "违心妥协",
+          "next_scene_hint": "不反抗歧视，歧视就会一直存在"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "记录下这次面试的问题和时间，之后咨询 EEOC 了解什么是就业歧视", "en": "Document the interview questions and time, and later consult the EEOC to learn what counts as employment discrimination" },
+          "stats_effect": { "legal_awareness": 14, "knowledge": 12, "happiness": 5, "wealth": 5 },
+          "consequence": { "zh": "你没有当场争执，而是记下了面试的问题和时间。之后你咨询了 EEOC，了解到询问婚育、宗教、年龄等与岗位无关的问题，都可能构成歧视的证据。虽然这份工作没成，但你学到了如何识别和应对就业歧视，下次遇到类似情况更有底气。", "en": "You don't argue on the spot but document the questions and time. Later you consult the EEOC and learn that asking about marriage, pregnancy, religion, age, or other job-irrelevant topics can be evidence of discrimination. Though this job didn't work out, you learn to recognize and handle discrimination, giving you more confidence next time." },
+          "is_legally_correct": true,
+          "laws_revealed": ["US-LABOR-004"],
+          "branch_tag": "理性取证",
+          "next_scene_hint": "学会识别歧视，下次更有底气"
+        }
+      ]
+    }
+  ]
+}

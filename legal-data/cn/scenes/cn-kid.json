@@ -1,0 +1,186 @@
+{
+  "country_code": "CN",
+  "category": "education",
+  "scenes": [
+    {
+      "key": "cn-kid-001",
+      "title": { "zh": "压岁钱归谁", "en": "Whose New Year Money Is It" },
+      "life_stage": "childhood",
+      "min_age": 8,
+      "max_age": 12,
+      "difficulty": 1,
+      "narrative": {
+        "zh": "过年了，你收到了亲戚们给的压岁钱，一共3000元。妈妈帮你收起来，说：『我帮你存着，等你上学用。』\n\n开学后，你特别想买一个200元的拼装玩具，妈妈却说：『你的压岁钱要省着花，别乱买东西。』\n\n你有点委屈，也有点疑惑：这压岁钱明明是给我的，为什么我想用一点却这么难？它到底是我的，还是爸妈的？",
+        "en": "It's the New Year, and you've received 3000 yuan in lucky money from relatives. Your mom takes it for safekeeping: 'I'll save it for your education.' After school starts, you really want a 200-yuan building toy, but your mom says: 'Your lucky money should be spent carefully — no wasteful purchases.' You feel wronged and puzzled: this money was clearly given to me, so why is it so hard to use a little of it? Is it mine, or my parents'?"
+      },
+      "image_prompt": "A Chinese child holding red envelopes during New Year, a parent nearby, warm festive setting, thoughtful expression, illustration style",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "和妈妈好好商量：一部分压岁钱自己支配买文具和玩具，大部分存起来，学会记账", "en": "Talk it over with mom: use a small part for stationery and toys, save most of it, and learn to keep accounts" },
+          "stats_effect": { "knowledge": 10, "happiness": 8, "wealth": 5, "legal_awareness": 5 },
+          "consequence": { "zh": "你心平气和地和妈妈商量，妈妈同意了：每个月给你一部分零花钱自由支配，大部分压岁钱存在你的账户里。你还学会了记账。妈妈夸你『长大了，会理财了』。原来，好好沟通比哭闹管用得多。", "en": "You calmly talk it over, and your mom agrees: a monthly allowance for you to spend freely, with most of the lucky money saved in your account. You also learn to keep accounts. Your mom praises you: 'You've grown up — you know how to manage money.' Turns out, calm communication works far better than tantrums." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CIVIL-019", "CN-EDU-004"],
+          "branch_tag": "好好沟通",
+          "next_scene_hint": "沟通让你学会了理财"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "躺在地上哭闹，非要把压岁钱全部拿回来自己花", "en": "Throw a tantrum on the floor, demanding all the lucky money back to spend" },
+          "stats_effect": { "happiness": -10, "knowledge": -3, "legal_awareness": -5, "wealth": -5 },
+          "consequence": { "zh": "你哭闹了半天，妈妈不仅没给，还很失望。最后玩具也没买成，你还被批评了一顿。你慢慢明白：哭闹解决不了问题，反而让爸妈更不放心把钱交给你。学会用道理沟通，才能得到信任。", "en": "You cry and fuss for ages, but your mom doesn't give in — she's just disappointed. In the end you don't get the toy and you get scolded. You gradually understand: tantrums solve nothing and make your parents trust you less with money. Learning to reason gets you further." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-EDU-004"],
+          "branch_tag": "哭闹索取",
+          "next_scene_hint": "哭闹换不来信任"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "好奇地问妈妈：『压岁钱法律上算谁的呀？』让妈妈讲讲，然后一起商量怎么管理", "en": "Curiously ask mom: 'Legally, whose money is the lucky money?' Have her explain, then discuss how to manage it together" },
+          "stats_effect": { "legal_awareness": 10, "knowledge": 8, "happiness": 5, "wealth": 5 },
+          "consequence": { "zh": "妈妈告诉你：压岁钱是亲戚赠送给你的，法律上就是你的财产，但你还小，由父母代为保管和管理。你似懂非懂，但第一次知道了『我的东西』和『爸妈帮我管』的区别。你和妈妈一起制定了压岁钱计划。", "en": "Your mom explains: the lucky money is a gift from relatives — legally it's your property — but since you're young, your parents manage it on your behalf. You sort of understand, but for the first time you grasp the difference between 'my things' and 'my parents managing them for me'. Together you make a lucky-money plan." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CIVIL-019", "CN-EDU-004"],
+          "branch_tag": "好奇求知",
+          "next_scene_hint": "好奇让你更懂法"
+        }
+      ]
+    },
+    {
+      "key": "cn-kid-002",
+      "title": { "zh": "被欺负之后", "en": "After Being Bullied" },
+      "life_stage": "childhood",
+      "min_age": 8,
+      "max_age": 12,
+      "difficulty": 1,
+      "narrative": {
+        "zh": "班里有几个同学总爱欺负你：给你起难听的外号，趁你不注意抢走你的文具，还把你的作业本扔到地上。\n\n你试过反抗，但他们人多，你害怕被报复，一直不敢告诉老师和家长。\n\n最近你越来越不想上学了，早上总是找借口说肚子疼。",
+        "en": "A few classmates keep bullying you: calling you mean nicknames, snatching your stationery when you're not looking, and throwing your homework on the floor. You've tried to resist, but they outnumber you. Afraid of retaliation, you've never told your teacher or parents. Lately you dread going to school, making up stomachaches every morning."
+      },
+      "image_prompt": "A sad child sitting alone at a school desk, scattered stationery on the floor, dim classroom after school, loneliness and worry, illustration style",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "鼓起勇气告诉班主任和家长，记住学校有法定义务制止校园欺凌", "en": "Gather courage to tell your teacher and parents — remember the school has a legal duty to stop bullying" },
+          "stats_effect": { "legal_awareness": 15, "happiness": 12, "health": 8, "knowledge": 8 },
+          "consequence": { "zh": "你鼓起勇气告诉了老师和家长。老师很重视，立即找那几名同学谈话，并联系了他们的家长。学校还专门开了一次『反校园欺凌』班会。那几名同学道了歉，再也没有欺负你。你发现：当你勇敢说出来，很多人都会帮你。求助不是软弱，是保护自己的第一步。", "en": "You gather courage and tell your teacher and parents. The teacher takes it seriously, talks to those students immediately, and contacts their parents. The school even holds an anti-bullying class meeting. Those students apologize and never bother you again. You discover: when you speak up bravely, many people will help. Asking for help isn't weakness — it's the first step to protecting yourself." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-EDU-001", "CN-EDU-008"],
+          "branch_tag": "勇敢求助",
+          "next_scene_hint": "说出来，你就赢了"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "继续忍着，觉得『告诉老师也没用，他们只会更凶』", "en": "Keep enduring, thinking 'telling the teacher won't help, they'll only get worse'" },
+          "stats_effect": { "happiness": -15, "health": -10, "legal_awareness": -5, "knowledge": -3 },
+          "consequence": { "zh": "你选择了沉默，欺凌却变本加厉。他们见你不敢反抗，越来越过分。你越来越孤僻，成绩也下滑了。直到有一天老师发现你手臂上的淤青，事情才曝光。你后悔没有早点说——沉默不会让欺凌消失，只会让它更嚣张。", "en": "You choose silence, but the bullying only escalates. Seeing you won't resist, they go further. You become withdrawn and your grades slip. It's only when the teacher notices the bruises on your arm that it comes to light. You regret not speaking up sooner — silence doesn't make bullying disappear, it only emboldens it." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-EDU-001"],
+          "branch_tag": "沉默忍受",
+          "next_scene_hint": "沉默让欺凌变本加厉"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "叫来高年级的表哥，放学后『教训』那几个欺负你的同学", "en": "Bring your older cousin after school to 'teach a lesson' to those bullies" },
+          "stats_effect": { "happiness": -5, "legal_awareness": -12, "health": -8, "knowledge": -3 },
+          "consequence": { "zh": "你让表哥『教训』了他们，对方是老实了，但事情闹大了——打架的事传到了学校，双方家长都来了。你从『被欺凌者』变成了『参与打架的人』，也被老师批评了。你明白：以暴制暴解决不了问题，反而让自己也犯了错。", "en": "You have your cousin 'teach them a lesson', and they quiet down — but it blows up. The fight reaches the school and both sets of parents are called in. You go from 'victim' to 'someone involved in a fight', and you get criticized too. You understand: meeting violence with violence solves nothing, and drags you into wrongdoing yourself." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-EDU-001"],
+          "branch_tag": "以暴制暴",
+          "next_scene_hint": "以暴制暴让你也犯了错"
+        }
+      ]
+    },
+    {
+      "key": "cn-kid-003",
+      "title": { "zh": "防沉迷的烦恼", "en": "The Anti-Addiction Dilemma" },
+      "life_stage": "childhood",
+      "min_age": 8,
+      "max_age": 12,
+      "difficulty": 1,
+      "narrative": {
+        "zh": "你用爸爸的手机玩一款游戏，正玩得起劲，晚上10点到了，游戏突然弹窗：『根据防沉迷规定，未成年人晚上10点到次日8点不能玩游戏。』\n\n你有点扫兴。同学小明悄悄告诉你：『用你爷爷的身份证实名认证，就能随便玩了，我一直这么干！』\n\n你有点心动，又隐约觉得哪里不对。",
+        "en": "You're playing a game on your dad's phone, in the middle of the fun, when 10 PM arrives and a popup appears: 'Per anti-addiction rules, minors cannot play games from 10 PM to 8 AM.' You're disappointed. Your classmate Xiaoming whispers: 'Use your grandpa's ID for real-name registration and you can play anytime — I always do!' You're tempted, but something feels off."
+      },
+      "image_prompt": "A child playing a phone game in the evening, a popup blocking the screen, another child whispering nearby, warm room light, temptation and hesitation, illustration style",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "遵守防沉迷规定，到点就下线，合理安排游戏和休息时间", "en": "Follow the anti-addiction rules, log off on time, and balance gaming with rest" },
+          "stats_effect": { "health": 10, "happiness": 5, "knowledge": 5, "legal_awareness": 8 },
+          "consequence": { "zh": "你遵守了规定，到点就放下手机。起初有点不习惯，但渐渐地，你发现按时睡觉后，白天上课更有精神，视力也没那么累了。你还把省下的游戏时间用来看书和运动。防沉迷不是『刁难你』，而是保护你的健康。", "en": "You follow the rules and put down the phone on time. At first it's hard, but gradually you find you're more energetic in class and your eyes feel better. You even spend the saved time on reading and exercise. Anti-addiction isn't 'making things hard for you' — it's protecting your health." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-EDU-002"],
+          "branch_tag": "遵守规定",
+          "next_scene_hint": "自律让你更健康"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "用爷爷的身份证实名认证，绕过防沉迷，想玩多久玩多久", "en": "Use grandpa's ID for real-name registration to bypass anti-addiction and play as long as you want" },
+          "stats_effect": { "health": -12, "happiness": -5, "legal_awareness": -10, "knowledge": -5 },
+          "consequence": { "zh": "你用爷爷的身份证绕过了防沉迷，一开始玩得很爽，但很快就沉迷其中，作业不写、觉也不睡，成绩直线下滑，还因为长期熬夜生了病。更糟的是，爷爷的身份信息被泄露，收到了各种骚扰电话。你后悔莫及：违规绕过的『自由』，代价太大了。", "en": "You bypass anti-addiction with grandpa's ID. At first it's fun, but soon you're addicted — homework undone, no sleep, grades plummeting, and you get sick from staying up late. Worse, grandpa's identity info leaks and he starts getting spam calls. You regret it deeply: the 'freedom' of cheating the rules comes at too high a cost." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-EDU-002"],
+          "branch_tag": "违规破解",
+          "next_scene_hint": "绕过的自由代价沉重"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "和爸爸约定每天的游戏时间，比如写完作业玩30分钟，到点自觉交回手机", "en": "Agree with dad on daily game time — e.g. 30 minutes after homework, returning the phone on time" },
+          "stats_effect": { "health": 8, "happiness": 8, "knowledge": 8, "legal_awareness": 5 },
+          "consequence": { "zh": "你和爸爸认真谈了谈，约定了每天的游戏规则：先写完作业，再玩30分钟，到点自觉交回。爸爸很欣慰你的自觉。你发现，主动沟通得到的『约定』，比偷偷摸摸的『破解』踏实多了，学习游戏两不误。", "en": "You have a serious talk with dad and set daily rules: homework first, then 30 minutes of gaming, returning the phone on time. Dad is pleased with your self-discipline. You find that a negotiated 'agreement' through honest communication feels far better than sneaky 'bypassing' — and you keep both studies and games in balance." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-EDU-002"],
+          "branch_tag": "约定规则",
+          "next_scene_hint": "约定让学习游戏两不误"
+        }
+      ]
+    },
+    {
+      "key": "cn-kid-004",
+      "title": { "zh": "马路上的选择", "en": "The Choice on the Road" },
+      "life_stage": "childhood",
+      "min_age": 6,
+      "max_age": 12,
+      "difficulty": 1,
+      "narrative": {
+        "zh": "放学路上，你和同学小刚一边走一边追着玩，跑到了马路边。前面是一个路口，正好红灯亮了，但路上好像没什么车。\n\n小刚拉着你的胳膊喊：『现在没车，快冲过去！』你看到马路对面有个卖冰淇淋的小店，也有点心动。\n\n可是你想起老师说过：过马路要走斑马线、看红绿灯。",
+        "en": "On the way home from school, you and your classmate Xiaogang chase each other and end up at the roadside. Ahead is a crossing — the light is red, but there don't seem to be many cars. Xiaogang grabs your arm and shouts: 'No cars now, run across!' You spot an ice-cream shop across the street and feel tempted. But you remember the teacher saying: cross at the zebra crossing and watch the lights."
+      },
+      "image_prompt": "Two children at a crosswalk with a red light, one pulling the other to run, cars in the distance, after-school street scene, illustration style",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "拉住小刚：『红灯了，我们等绿灯走斑马线，安全第一！』", "en": "Hold Xiaogang back: 'The light is red, let's wait for green and use the zebra crossing — safety first!'" },
+          "stats_effect": { "health": 10, "knowledge": 8, "happiness": 5, "legal_awareness": 8 },
+          "consequence": { "zh": "你拉住了小刚，一起等绿灯。就在等红灯的几秒里，一辆车从你们面前疾驰而过——如果不是停下来，后果不堪设想。你们俩都吓出一身冷汗。你第一次真切体会到：交通规则不是束缚，而是保护生命的『护身符』。", "en": "You hold Xiaogang back and wait for the green light. In those few seconds, a car speeds past right in front of you — if you hadn't stopped, the consequences would have been unthinkable. You both break into a cold sweat. For the first time you truly feel: traffic rules aren't a constraint, but a 'talisman' protecting your life." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-TRAFFIC-004"],
+          "branch_tag": "守规则",
+          "next_scene_hint": "规则守护了你的生命"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "跟着小刚一起冲过去，想着『就这一次，应该没事』", "en": "Run across with Xiaogang, thinking 'just this once, it'll be fine'" },
+          "stats_effect": { "health": -15, "happiness": -8, "legal_awareness": -8, "knowledge": -3 },
+          "consequence": { "zh": "你跟着小刚冲了出去，结果一辆转弯的车避让不及，差点撞到你。司机紧急刹车，喇叭声刺耳，你吓得摔倒在地，膝盖擦破了皮。虽然没出大事，但你后怕极了：马路上的『就这一次』，可能就是最后一次。", "en": "You dash out with Xiaogang, but a turning car can't stop in time and nearly hits you. The driver slams the brakes, horns blare, and you fall, scraping your knee. It's not serious, but you're terrified: on the road, 'just this once' could be your last." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-TRAFFIC-004"],
+          "branch_tag": "心存侥幸",
+          "next_scene_hint": "侥幸差点酿成大祸"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "劝小刚别闯红灯：『我们一起去走斑马线，等绿灯吧，不差这一分钟』", "en": "Persuade Xiaogang not to jaywalk: 'Let's go to the zebra crossing and wait for green — one more minute won't hurt'" },
+          "stats_effect": { "health": 8, "knowledge": 8, "happiness": 8, "legal_awareness": 10 },
+          "consequence": { "zh": "你不仅自己没闯红灯，还劝住了小刚。你们一起等绿灯、走斑马线，安全到了对面。小刚说：『谢谢你，我刚才真不该拉你。』你发现，带动别人一起守规则，比一个人守规则更有意义。", "en": "Not only do you not jaywalk, you persuade Xiaogang too. Together you wait for green and cross at the zebra crossing, safely reaching the other side. Xiaogang says: 'Thanks — I shouldn't have pulled you.' You discover that bringing others to follow the rules matters even more than following them alone." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-TRAFFIC-004"],
+          "branch_tag": "带动他人",
+          "next_scene_hint": "你带动了朋友一起守规则"
+        }
+      ]
+    }
+  ]
+}

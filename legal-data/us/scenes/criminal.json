@@ -1,0 +1,51 @@
+{
+  "country_code": "US",
+  "category": "criminal",
+  "scenes": [
+    {
+      "key": "us-teen-001",
+      "title": { "zh": "商店里的诱惑", "en": "Temptation in the Store" },
+      "life_stage": "teen",
+      "min_age": 14,
+      "max_age": 18,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "你和朋友杰森在商场闲逛，杰森看中了一个蓝牙耳机，但他没带够钱。他凑到你耳边小声说：『这店人多，监控也不严，我把它塞进兜里，你帮我打掩护。』\n\n你愣住了。杰森接着说：『别怂啊，就一个几十块的耳机，被抓到也不会怎样。』\n\n但你知道，在美国，商店偷窃（shoplifting）是犯罪，会留下犯罪记录，影响上大学和找工作。",
+        "en": "You're wandering a mall with your friend Jason, who eyes a pair of Bluetooth earbuds but doesn't have enough money. He leans in and whispers: 'The store is crowded and the cameras are weak. I'll slip them in my pocket — you keep watch.' You freeze. Jason continues: 'Don't chicken out, it's just a few dozen bucks. Even if caught, it's no big deal.' But you know: in the U.S., shoplifting is a crime that leaves a record, affecting college and job prospects."
+      },
+      "image_prompt": "Two teenagers in a store, one holding earbuds and glancing around nervously, the other hesitating, bright store interior, flat illustration",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "坚决拒绝：『偷窃是犯罪，会留案底，别因小失大』，劝杰森别做", "en": "Firmly refuse: 'Shoplifting is a crime that leaves a record — don't lose big over something small', and talk Jason out of it" },
+          "stats_effect": { "legal_awareness": 15, "happiness": 8, "knowledge": 10, "wealth": 5 },
+          "consequence": { "zh": "你坚决拒绝了，还劝住了杰森。他起初不以为然，但你给他看了手机里搜到的「商店偷窃后果」——轻则罚款、留案底，重则影响大学申请和求职。杰森这才打消了念头。你庆幸自己守住了底线：为几十块的东西赌上前途，太不值了。", "en": "You firmly refuse and talk Jason out of it. At first he dismisses it, but you show him what you found on your phone about the consequences of shoplifting — fines, a criminal record, and damage to college and job applications. Jason backs down. You're glad you held your ground: risking your future over a few dozen bucks isn't worth it." },
+          "is_legally_correct": true,
+          "laws_revealed": ["US-CRIM-001"],
+          "branch_tag": "守住底线",
+          "next_scene_hint": "你守住了底线，也拉住了朋友"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "碍于面子，帮杰森打掩护，看着他偷走耳机", "en": "Out of face-saving, help Jason keep watch and watch him steal the earbuds" },
+          "stats_effect": { "legal_awareness": -12, "happiness": -8, "knowledge": -5, "wealth": -5 },
+          "consequence": { "zh": "你帮杰森打了掩护，他「成功」偷走了耳机。但几天后，商场保安根据监控找到了你们，通知了学校和家长。你们不仅要赔偿，还留下了不良记录。你后悔莫及：一时的面子和侥幸，换来了抹不掉的污点。", "en": "You help Jason keep watch and he 'successfully' steals the earbuds. But days later, mall security tracks you both down via cameras and notifies the school and parents. You must pay restitution and are left with a bad record. You regret it deeply: a moment of face-saving and taking chances left a stain you can't erase." },
+          "is_legally_correct": false,
+          "laws_revealed": ["US-CRIM-001"],
+          "branch_tag": "碍于面子",
+          "next_scene_hint": "一时的面子，换来抹不掉的污点"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "提醒杰森偷窃的法律后果，并建议他存钱或等打折再买", "en": "Remind Jason of the legal consequences of theft, and suggest saving up or waiting for a sale" },
+          "stats_effect": { "legal_awareness": 12, "knowledge": 8, "happiness": 8, "wealth": 5 },
+          "consequence": { "zh": "你没有配合，而是认真提醒了杰森偷窃的后果，还建议他存钱或等打折。杰森想了想，把耳机放了回去。他后来攒钱在打折时买到了耳机，还感谢你当时拦住了他。你知道：真正的朋友，是帮你做对的选择，而不是陪你犯错。", "en": "You don't cooperate but seriously remind Jason of the consequences of theft, and suggest saving up or waiting for a sale. Jason thinks it over and puts the earbuds back. He later saves up and buys them on sale, and thanks you for stopping him. You know: a true friend helps you make the right choice, not join you in making a mistake." },
+          "is_legally_correct": true,
+          "laws_revealed": ["US-CRIM-001"],
+          "branch_tag": "善意提醒",
+          "next_scene_hint": "真正的朋友帮你做对的选择"
+        }
+      ]
+    }
+  ]
+}

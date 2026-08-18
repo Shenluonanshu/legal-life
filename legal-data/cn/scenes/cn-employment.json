@@ -23,7 +23,8 @@
           "is_legally_correct": true,
           "laws_revealed": ["CN-LABOR-001"],
           "branch_tag": "维权达人",
-          "next_scene_hint": "职场站稳脚跟后，新挑战接踵而至"
+          "next_scene_hint": "职场站稳脚跟后，新挑战接踵而至",
+          "next_scene_key": "cn-job-002"
         },
         {
           "id": "b",
@@ -43,7 +44,8 @@
           "is_legally_correct": true,
           "laws_revealed": ["CN-LABOR-001", "CN-LABOR-003"],
           "branch_tag": "谨慎策略",
-          "next_scene_hint": "职场之路稳步推进"
+          "next_scene_hint": "职场之路稳步推进",
+          "next_scene_key": "cn-job-002"
         }
       ]
     },
@@ -66,9 +68,10 @@
           "stats_effect": { "legal_awareness": 15, "happiness": 10, "wealth": -5, "knowledge": 5 },
           "consequence": { "zh": "主管愣住了——从来没人这样回应过。虽然他的表情不太好，但也没有再强求。第二天你在正常工作时间内高效完成了任务。有趣的是，一周后HR发了一封全员邮件，提醒各部门『合理安排工作时间，遵守劳动法规』。你的勇敢发言可能改变了整个公司的加班文化。", "en": "The manager is stunned — no one has ever responded like this. Though his expression isn't great, he doesn't push further. You complete the work efficiently during normal hours the next day. Interestingly, HR sends a company-wide email a week later reminding departments to 'reasonably arrange work hours and comply with labor laws.' Your courage may have changed the company culture." },
           "is_legally_correct": true,
-          "laws_revealed": ["CN-LABOR-005"],
+          "laws_revealed": ["CN-LABOR-006"],
           "branch_tag": "勇敢维权",
-          "next_scene_hint": "你的原则赢得了尊重"
+          "next_scene_hint": "你的原则赢得了尊重",
+          "next_scene_key": "cn-job-003"
         },
         {
           "id": "b",
@@ -76,7 +79,7 @@
           "stats_effect": { "wealth": 8, "happiness": -12, "health": -8, "legal_awareness": -3 },
           "consequence": { "zh": "你继续加班到深夜。一个月后，你开始频繁头痛，体检报告显示多项指标异常。你的绩效评分为A，但健康评分为D。某天凌晨回家的路上，你问自己：『我赚钱是为了什么？』", "en": "You keep working late. A month later, you're having frequent headaches. Your performance review is A, but your health is D. On the way home at midnight, you ask yourself: 'What am I earning money for?'" },
           "is_legally_correct": false,
-          "laws_revealed": ["CN-LABOR-005"],
+          "laws_revealed": ["CN-LABOR-006"],
           "branch_tag": "忍气吞声",
           "next_scene_hint": "身体发出了警告"
         },
@@ -86,9 +89,10 @@
           "stats_effect": { "legal_awareness": 10, "knowledge": 5, "happiness": 3 },
           "consequence": { "zh": "HR有些意外，但还是拿出了员工手册。你发现里面写的加班制度和实际执行的完全不一样。你用员工手册的规定和主管进行了沟通，最终达成了合理的加班安排。这种方式既维护了权益，又没有正面冲突。", "en": "HR is surprised but pulls out the employee handbook. You find the written overtime policy is completely different from actual practice. Using the handbook, you negotiate a reasonable overtime arrangement with your manager — protecting your rights without confrontation." },
           "is_legally_correct": true,
-          "laws_revealed": ["CN-LABOR-005"],
+          "laws_revealed": ["CN-LABOR-006"],
           "branch_tag": "智慧周旋",
-          "next_scene_hint": "用规则保护自己"
+          "next_scene_hint": "用规则保护自己",
+          "next_scene_key": "cn-job-003"
         }
       ]
     },
@@ -134,6 +138,51 @@
           "laws_revealed": ["CN-LABOR-002", "CN-LABOR-003"],
           "branch_tag": "沉默羔羊",
           "next_scene_hint": "失去的不只是工作，还有应得的权利"
+        }
+      ]
+    },
+    {
+      "key": "cn-adult-004",
+      "title": { "zh": "职场中年的降薪危机", "en": "The Mid-Career Pay Cut" },
+      "life_stage": "adult",
+      "min_age": 40,
+      "max_age": 55,
+      "difficulty": 3,
+      "narrative": {
+        "zh": "你在这家公司干了15年，从基层一路做到部门骨干。最近公司换了新领导，以『业务调整』为由，把你调到一个边缘岗位，工资也降了一大截。\n\n新领导话里有话：『现在大环境不好，很多公司都在优化，你年纪也不小了，要不考虑一下自己的规划？』\n\n你心里明白，这是想逼你主动辞职——这样公司就不用支付15年工龄的经济补偿金了。",
+        "en": "You've worked at this company for 15 years, rising from entry level to a backbone of your department. Recently a new leader, citing 'business restructuring', transferred you to a marginal role with a big pay cut. The new leader hints: 'The market is tough now, many companies are optimizing. You're not young — maybe consider your own plans?' You understand this is meant to push you to resign voluntarily — so the company won't have to pay 15 years' worth of severance."
+      },
+      "image_prompt": "A middle-aged employee in a meeting room facing a manager, a reassignment notice and reduced salary on the desk, tense and resigned atmosphere, office setting, illustration style",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "明确拒绝不合理调岗降薪，要求公司依法处理，并收集好工龄、工资、调岗通知等证据", "en": "Clearly refuse the unreasonable transfer and pay cut, demand the company handle it by law, and collect evidence of your tenure, salary, and the transfer notice" },
+          "stats_effect": { "legal_awareness": 18, "wealth": 15, "knowledge": 12, "happiness": 5 },
+          "consequence": { "zh": "你没有冲动辞职，而是明确表示调岗降薪需协商一致，并保留了所有证据。公司见你不好糊弄，态度软了下来，最终和你协商解除合同，支付了15个月工资的经济补偿金（N+1）。你用自己的法律意识，守住了应得的权益。", "en": "You don't resign impulsively but state clearly that transfer and pay cuts require mutual agreement, and keep all evidence. Seeing you're not easily fooled, the company softens and eventually negotiates a termination, paying 15 months' salary as severance (N+1). With your legal awareness, you protected the rights you deserved." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-LABOR-003", "CN-LABOR-014"],
+          "branch_tag": "依法维权",
+          "next_scene_hint": "法律意识守住了你的权益"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "咽不下这口气，一气之下提交了辞职信，什么都没要", "en": "Unable to swallow the insult, impulsively submit a resignation letter, asking for nothing" },
+          "stats_effect": { "wealth": -15, "happiness": -15, "legal_awareness": -8, "health": -5 },
+          "consequence": { "zh": "你一气之下裸辞了，什么都没要。但冷静下来你才发现，主动辞职不仅拿不到一分钱补偿，连15年工龄的经济补偿金也打了水漂——这本该是十几万的数额。你后悔莫及：冲动的代价，是放弃了法律赋予你的权利。", "en": "You resign in anger, asking for nothing. But once you calm down you realize: resigning voluntarily means no severance at all, and the 15-year tenure compensation you were entitled to — potentially hundreds of thousands — is gone. You regret it deeply: the cost of impulsiveness was giving up the rights the law gave you." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-LABOR-003"],
+          "branch_tag": "冲动辞职",
+          "next_scene_hint": "冲动的代价，是放弃了应得的权利"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "先咨询劳动法律，搞清『调岗降薪』『经济补偿金』的规定，再决定怎么应对", "en": "First consult labor law to understand the rules on 'transfer and pay cut' and 'severance', then decide how to respond" },
+          "stats_effect": { "legal_awareness": 15, "knowledge": 12, "wealth": 10, "happiness": 5 },
+          "consequence": { "zh": "你没有急着做决定，而是咨询了劳动法律：调岗降薪属于变更劳动合同，需双方协商一致；公司若想无过失性辞退你，必须支付经济补偿金（N或N+1）。有了这些知识，你在和公司谈判时游刃有余，最终拿到了合理的补偿。知己知彼，才能不吃亏。", "en": "You don't rush to decide but consult labor law: transfer and pay cuts are changes to the labor contract requiring mutual agreement; if the company wants to dismiss you without cause, it must pay severance (N or N+1). Armed with this knowledge, you negotiate with confidence and ultimately get fair compensation. Knowing your rights keeps you from being shortchanged." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-LABOR-003", "CN-LABOR-014"],
+          "branch_tag": "知己知彼",
+          "next_scene_hint": "知己知彼，才能不吃亏"
         }
       ]
     }

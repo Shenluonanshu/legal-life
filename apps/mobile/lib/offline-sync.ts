@@ -9,6 +9,7 @@
  */
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { supabase } from './supabase';
 
 const SYNC_STATE_KEY = 'sync_state';
 const LEGAL_DATA_VERSION_KEY = 'legal_data_version';
@@ -123,6 +124,14 @@ export async function checkLegalDataUpdate(): Promise<{
 // 定时同步
 // ============================================================
 
+// 存档同步处理器：由 gameStore 注册，注入本地存档读取与上传逻辑（解耦，避免循环依赖）
+type SyncHandler = (saveIds: string[]) => Promise<number>;
+let syncHandler: SyncHandler | null = null;
+
+export function registerSyncHandler(handler: SyncHandler): void {
+  syncHandler = handler;
+}
+
 /** 执行一次同步 */
 export async function performSync(): Promise<{
   success: boolean;
@@ -135,19 +144,47 @@ export async function performSync(): Promise<{
 
   state.lastSyncAttempt = Date.now();
 
-  // 这里会调用 Supabase API 执行实际的同步
-  // 由于 Supabase 客户端依赖运行时环境，实际同步逻辑在 gameStore 中实现
+  // 无待同步存档：直接收尾
+  if (state.pendingSaves.length === 0) {
+    await AsyncStorage.setItem(SYNC_STATE_KEY, JSON.stringify(state));
+    await AsyncStorage.setItem(LAST_SYNC_KEY, Date.now().toString());
+    return { success: true, synced, errors };
+  }
 
-  await AsyncStorage.setItem(SYNC_STATE_KEY, JSON.stringify(state));
+  // 同步到 Supabase 需要登录用户（game_saves.user_id 关联 auth.users）
+  const { data: sessionData } = await supabase.auth.getSession();
+  if (!sessionData.session) {
+    // 未登录：仅本地持久化，保留待同步队列，登录后自动补同步
+    await AsyncStorage.setItem(SYNC_STATE_KEY, JSON.stringify(state));
+    return { success: true, synced, errors };
+  }
+
+  // 已登录：逐条同步待处理存档（处理器由 gameStore 注册）
+  if (syncHandler) {
+    try {
+      synced = await syncHandler(state.pendingSaves);
+    } catch {
+      errors = state.pendingSaves.length;
+    }
+  }
+
+  const updated = await getSyncState();
+  if (errors === 0) updated.lastSyncSuccess = Date.now();
+  await AsyncStorage.setItem(SYNC_STATE_KEY, JSON.stringify(updated));
   await AsyncStorage.setItem(LAST_SYNC_KEY, Date.now().toString());
 
   return { success: errors === 0, synced, errors };
 }
 
-/** 判断是否应该执行同步 */
-export function shouldSync(): boolean {
-  // 距上次同步超过 5 分钟才执行
+/** 判断是否应该执行同步（距上次同步超过 5 分钟） */
+export async function shouldSync(): Promise<boolean> {
   const FIVE_MINUTES = 5 * 60 * 1000;
-  // 通过 LAST_SYNC_KEY 判断
-  return true; // 简化：始终尝试同步，实际节流在调用方处理
+  try {
+    const raw = await AsyncStorage.getItem(LAST_SYNC_KEY);
+    if (!raw) return true;
+    const last = parseInt(raw, 10);
+    return Date.now() - last > FIVE_MINUTES;
+  } catch {
+    return true;
+  }
 }

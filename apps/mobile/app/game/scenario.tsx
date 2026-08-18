@@ -15,6 +15,7 @@ import { useRouter } from 'expo-router';
 import {
   View,
   Text,
+  Image,
   TouchableOpacity,
   StyleSheet,
   ScrollView,
@@ -30,6 +31,7 @@ import {
   fetchScenarioFull,
   fetchLawDetail,
 } from '../../lib/api/gameApi';
+import { selectScenario } from '../../lib/scenarioTrigger';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
@@ -44,6 +46,7 @@ export default function ScenarioPage() {
   const { t } = useTranslation();
   const router = useRouter();
   const characterAge = useGameStore((s) => s.characterAge);
+  const characterCountry = useGameStore((s) => s.characterCountry);
   const makeChoice = useGameStore((s) => s.makeChoice);
   const addCollectedLaw = useGameStore((s) => s.addCollectedLaw);
   const applyStatChange = useGameStore((s) => s.applyStatChange);
@@ -61,68 +64,76 @@ export default function ScenarioPage() {
   const [pageState, setPageState] = useState<PageState>('narrative');
   const [selectedChoice, setSelectedChoice] = useState<ScenarioChoice | null>(null);
 
-  // 加载真实场景
-  useEffect(() => {
-    let cancelled = false;
+  // 加载场景：指定 key 走硬分支链，否则加权选择
+  const loadScenario = async (targetKey?: string) => {
+    try {
+      setLoading(true);
+      setError(null);
+      setFinished(false);
+      setPageState('narrative');
+      setSelectedChoice(null);
 
-    (async () => {
-      try {
-        setLoading(true);
-        setError(null);
-        setFinished(false);
+      // 1. 拿角色所属国家的 id
+      const countries = await fetchCountries();
+      const country = countries.find((c) => c.code === characterCountry);
+      if (!country) throw new Error(`未找到国家数据: ${characterCountry}`);
 
-        // 1. 拿 CN 的国家 id
-        const countries = await fetchCountries();
-        const cn = countries.find((c) => c.code === 'CN');
-        if (!cn) throw new Error('未找到中国国家数据');
+      // 2. 加载全部已发布场景
+      const allScenarios = await fetchScenarios({ countryId: country.id, limit: 50 });
 
-        // 2. 加载全部已发布场景
-        const allScenarios = await fetchScenarios({ countryId: cn.id, limit: 50 });
-
-        // 3. 按年龄宽松过滤 + 排除已完成
-        const eligible = allScenarios.filter((s) => {
-          if (s.minAge != null && characterAge < s.minAge) return false;
-          if (s.maxAge != null && characterAge > s.maxAge) return false;
-          if (completedScenarioIds.includes(s.id)) return false;
-          return true;
-        });
-
-        if (eligible.length === 0) {
-          if (cancelled) return;
-          // 全部场景已玩完：友好空态而非报错
-          setScenario(null);
-          setFinished(true);
-          return;
+      // 3. 选场景：优先硬分支（next_scene_key），否则加权选择
+      let picked: Scenario | null = null;
+      if (targetKey) {
+        const target = allScenarios.find((s) => s.key === targetKey);
+        // 硬分支场景需满足年龄约束且未完成，否则回退加权
+        if (target) {
+          const ageOk =
+            (target.minAge == null || characterAge >= target.minAge) &&
+            (target.maxAge == null || characterAge <= target.maxAge);
+          if (ageOk && !completedScenarioIds.includes(target.id)) picked = target;
         }
-
-        // 4. 随机选一个
-        const picked = eligible[Math.floor(Math.random() * eligible.length)]!;
-
-        // 5. 加载场景完整数据（选项 + 关联法条）
-        const full = await fetchScenarioFull(picked.id);
-        if (!full) throw new Error('场景详情加载失败');
-
-        // 6. 加载关联法条原文
-        const lawRows = (await Promise.all(
-          full.linkedLawIds.map((id) => fetchLawDetail(id))
-        )).filter((l): l is Law => l !== null);
-
-        if (cancelled) return;
-
-        setScenario(full.scenario);
-        setChoices(full.choices);
-        setLaws(lawRows);
-      } catch (e: any) {
-        if (!cancelled) setError(e?.message ?? '场景加载失败');
-      } finally {
-        if (!cancelled) setLoading(false);
       }
-    })();
 
-    return () => {
-      cancelled = true;
-    };
-  }, [characterAge]);
+      if (!picked) {
+        picked = selectScenario(allScenarios, {
+          countryId: country.id,
+          age: characterAge,
+          completedScenarioIds,
+          categoryCooldown: 3,
+        });
+      }
+
+      if (!picked) {
+        // 全部场景已玩完：友好空态而非报错
+        setScenario(null);
+        setFinished(true);
+        return;
+      }
+
+      // 4. 加载场景完整数据（选项 + 关联法条）
+      const full = await fetchScenarioFull(picked.id);
+      if (!full) throw new Error('场景详情加载失败');
+
+      // 5. 加载关联法条原文
+      const lawRows = (await Promise.all(
+        full.linkedLawIds.map((id) => fetchLawDetail(id))
+      )).filter((l): l is Law => l !== null);
+
+      setScenario(full.scenario);
+      setChoices(full.choices);
+      setLaws(lawRows);
+    } catch (e: any) {
+      setError(e?.message ?? '场景加载失败');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // 进入页面时加载首个场景
+  useEffect(() => {
+    loadScenario();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // 做出选择
   const handleChoice = (choice: ScenarioChoice) => {
@@ -146,8 +157,12 @@ export default function ScenarioPage() {
     }
   };
 
-  // 继续
+  // 继续：硬分支链则直接加载下一场景，否则返回旅程
   const handleContinue = () => {
+    if (selectedChoice?.nextSceneKey) {
+      loadScenario(selectedChoice.nextSceneKey);
+      return;
+    }
     router.push('/journey');
   };
 
@@ -193,16 +208,24 @@ export default function ScenarioPage() {
     return (
       <ScrollView style={styles.container} contentContainerStyle={styles.scrollContent}>
         <View style={styles.content}>
-          {/* AI 场景图占位 */}
-          <View style={styles.imagePlaceholder}>
-            <Text style={styles.imagePlaceholderEmoji}>🎬</Text>
-            <Text style={styles.imagePlaceholderText}>AI 场景图片</Text>
-            {scenario.imagePrompt ? (
-              <Text style={styles.imagePlaceholderHint}>
-                {scenario.imagePrompt.substring(0, 50)}...
-              </Text>
-            ) : null}
-          </View>
+          {/* 场景图片（有缓存图则显示，否则占位） */}
+          {scenario.cachedImageUrl ? (
+            <Image
+              source={{ uri: scenario.cachedImageUrl }}
+              style={styles.scenarioImage}
+              resizeMode="contain"
+            />
+          ) : (
+            <View style={styles.imagePlaceholder}>
+              <Text style={styles.imagePlaceholderEmoji}>🎬</Text>
+              <Text style={styles.imagePlaceholderText}>AI 场景图片</Text>
+              {scenario.imagePrompt ? (
+                <Text style={styles.imagePlaceholderHint}>
+                  {scenario.imagePrompt.substring(0, 50)}...
+                </Text>
+              ) : null}
+            </View>
+          )}
 
           {/* 场景标题 */}
           <Text style={styles.scenarioTitle}>{scenario.title.zh}</Text>
@@ -330,11 +353,23 @@ export default function ScenarioPage() {
             </View>
           )}
 
+          {/* ★ 下集预告 —— 分支连贯性 ★ */}
+          {selectedChoice.nextSceneHint ? (
+            <View style={styles.nextHintCard}>
+              <Text style={styles.nextHintLabel}>🔮 下集预告</Text>
+              <Text style={styles.nextHintText}>{selectedChoice.nextSceneHint}</Text>
+            </View>
+          ) : null}
+
           {/* 继续按钮 */}
           <TouchableOpacity style={styles.continueButton} onPress={handleContinue}>
-            <Text style={styles.continueButtonText}>{t('scenario.continue')} →</Text>
+            <Text style={styles.continueButtonText}>
+              {selectedChoice.nextSceneKey ? '进入下一幕 →' : `${t('scenario.continue')} →`}
+            </Text>
             <Text style={styles.continueSubtext}>
-              时光流逝 {AGE_ADVANCE[scenario.difficulty] ?? 1} 年，迎接下一个生活场景
+              {selectedChoice.nextSceneKey
+                ? '你的选择将你引向了新的人生场景'
+                : `时光流逝 ${AGE_ADVANCE[scenario.difficulty] ?? 1} 年，迎接下一个生活场景`}
             </Text>
           </TouchableOpacity>
         </View>
@@ -358,6 +393,13 @@ const styles = StyleSheet.create({
   errorEmoji: { fontSize: 48, marginBottom: 12 },
   errorText: { fontSize: 15, color: '#8b8baa', textAlign: 'center', marginBottom: 8, lineHeight: 22 },
   finishedSubtext: { fontSize: 13, color: '#6c6c8a', textAlign: 'center', marginBottom: 20 },
+
+  // 场景图片
+  scenarioImage: {
+    width: '100%', height: 260,
+    borderRadius: 16, marginBottom: 16,
+    backgroundColor: '#1a1a2e',
+  },
 
   // 图片占位
   imagePlaceholder: {
@@ -490,4 +532,13 @@ const styles = StyleSheet.create({
   },
   continueButtonText: { fontSize: 20, fontWeight: 'bold', color: '#ffffff' },
   continueSubtext: { fontSize: 12, color: 'rgba(255,255,255,0.5)', marginTop: 4 },
+
+  // 下集预告
+  nextHintCard: {
+    backgroundColor: 'rgba(251,191,36,0.08)', borderRadius: 16,
+    padding: 16, marginBottom: 16,
+    borderWidth: 1, borderColor: 'rgba(251,191,36,0.25)',
+  },
+  nextHintLabel: { fontSize: 13, fontWeight: 'bold', color: '#fbbf24', marginBottom: 8 },
+  nextHintText: { fontSize: 14, color: '#e8d9a0', lineHeight: 22, fontStyle: 'italic' },
 });

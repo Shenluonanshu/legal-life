@@ -1,0 +1,51 @@
+{
+  "country_code": "US",
+  "category": "civil",
+  "scenes": [
+    {
+      "key": "us-rent-001",
+      "title": { "zh": "押金被无理扣光", "en": "Unfair Deposit Deduction" },
+      "life_stage": "young_adult",
+      "min_age": 20,
+      "max_age": 35,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "你租了一间公寓，交了 1500 美元押金。退房时你把房间打扫得干干净净，还拍了照片。一个月后，房东只退了 200 美元，声称：『墙壁要重新刷漆扣 500，地毯要换扣 500，还有 300 清洁费。』\n\n你知道这些都是正常磨损，墙上的痕迹你搬进来时就有。但房东一口咬定要扣。\n\n你有点懵：在美国，房东能这样随便扣押金吗？",
+        "en": "You rent an apartment with a $1500 security deposit. On move-out, you clean thoroughly and take photos. A month later, the landlord returns only $200, claiming: 'Repainting the wall costs 500, replacing the carpet 500, and 300 for cleaning.' You know these are normal wear and tear — the wall marks were there when you moved in. But the landlord insists. You're confused: can a landlord deduct a deposit like this?"
+      },
+      "image_prompt": "A tenant holding a deposit receipt showing heavy deductions, an apartment door behind them, frustration, daylight, flat illustration",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "拿出入住和退房时的照片对比，指出正常磨损不能扣，要求房东提供扣款明细和收据", "en": "Show the move-in and move-out photos, point out that normal wear can't be deducted, and demand itemized receipts" },
+          "stats_effect": { "legal_awareness": 16, "wealth": 14, "knowledge": 10, "happiness": 6 },
+          "consequence": { "zh": "你拿出了入住时拍的视频和退房照片，对比证明那些痕迹搬来时就有。你要求房东提供扣款明细和收据，房东支支吾吾拿不出来。最终房东退还了大部分押金。你体会到：入住时拍视频存档，退房时对照，是保护押金最有效的方法。", "en": "You produce the move-in video and move-out photos, proving the marks existed when you arrived. You demand itemized receipts, which the landlord can't produce. In the end, the landlord returns most of the deposit. You learn: filming a walkthrough on move-in and comparing on move-out is the most effective way to protect your deposit." },
+          "is_legally_correct": true,
+          "laws_revealed": ["US-CIVIL-001"],
+          "branch_tag": "据理力争",
+          "next_scene_hint": "照片证据帮你守住了押金"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "觉得打官司太麻烦，收下 200 美元算了", "en": "Think going to court is too much trouble, and just accept the $200" },
+          "stats_effect": { "wealth": -12, "happiness": -10, "legal_awareness": -6 },
+          "consequence": { "zh": "你收下了 200 美元，心里却堵得慌。这个房东已经用同样的手段坑过好几任租客。你后来才知道，这种押金纠纷可以走小额法庭（small claims court），流程简单、费用很低。你的退让，让房东更加肆无忌惮。", "en": "You take the $200, but it leaves you bitter. This landlord has used the same trick on several tenants. You later learn that deposit disputes can go to small claims court, with a simple process and low fees. Your concession only made the landlord bolder." },
+          "is_legally_correct": false,
+          "laws_revealed": ["US-CIVIL-001"],
+          "branch_tag": "息事宁人",
+          "next_scene_hint": "退让让房东更加肆无忌惮"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "查清本州关于押金返还的期限和规定，给房东发正式书面函要求退还", "en": "Check your state's rules on deposit return deadlines, and send the landlord a formal written demand letter" },
+          "stats_effect": { "legal_awareness": 14, "knowledge": 10, "wealth": 10, "happiness": 6 },
+          "consequence": { "zh": "你查了本州的法律，发现房东必须在 21 天内退还押金并附上扣款明细，否则可能要支付双倍赔偿。你给房东发了一封正式的书面函件，房东见你懂法，很快退还了押金。你知道：在美国，各州的租客保护法律很有力，关键是你要去了解和使用。", "en": "You check your state's law and find the landlord must return the deposit within 21 days with itemized deductions, or face double damages. You send a formal written demand letter, and the landlord, seeing you know the law, quickly refunds the deposit. You know: U.S. tenant-protection laws are strong by state — the key is learning and using them." },
+          "is_legally_correct": true,
+          "laws_revealed": ["US-CIVIL-001"],
+          "branch_tag": "依法主张",
+          "next_scene_hint": "懂法让房东乖乖退押金"
+        }
+      ]
+    }
+  ]
+}

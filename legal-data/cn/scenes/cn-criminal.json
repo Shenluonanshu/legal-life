@@ -1,0 +1,186 @@
+{
+  "country_code": "CN",
+  "category": "criminal",
+  "scenes": [
+    {
+      "key": "cn-mid-003",
+      "title": { "zh": "高收益的陷阱", "en": "The Trap of High Returns" },
+      "life_stage": "middle_age",
+      "min_age": 45,
+      "max_age": 60,
+      "difficulty": 3,
+      "narrative": {
+        "zh": "你今年52岁，辛苦攒下了一笔养老钱。最近一个老同学拉你进了一个『投资群』，群里的『老师』天天推荐一个理财项目，号称『年化收益30%，稳赚不赔』，还晒出各种『到账截图』。\n\n老同学说他已经投了20万，一个月就赚了1万。你也心动了——银行利息才2%，这个诱惑太大了。\n\n但你隐约记得，新闻里总有人因为这种『高收益理财』血本无归。",
+        "en": "You're 52, and you've painstakingly saved a nest egg for retirement. Recently an old classmate pulled you into an 'investment group', where a 'teacher' daily recommends a wealth product claiming '30% annual returns, guaranteed no loss', posting various 'payment received' screenshots. Your classmate says he invested 200000 and earned 10000 in a month. You're tempted — bank interest is only 2%, and this is far too tempting. But you vaguely remember news of people losing everything to such 'high-return investments'."
+      },
+      "image_prompt": "A middle-aged person looking at a phone showing an investment group chat with profit screenshots, mixed temptation and doubt, warm home interior, illustration style",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "警觉起来：『收益过高必有诈』，不投，并提醒老同学警惕庞氏骗局", "en": "Grow alert: 'too-high returns mean a scam', refuse to invest, and warn your classmate about Ponzi schemes" },
+          "stats_effect": { "wealth": 10, "legal_awareness": 15, "knowledge": 10, "happiness": 5 },
+          "consequence": { "zh": "你没有投资，还劝老同学赶紧撤资。起初他不信，但一个月后那个『理财项目』突然爆雷，群里所有人都联系不上『老师』了。老同学这才后怕，庆幸听了你的话及时撤回了大部分本金。你深刻体会到：天上不会掉馅饼，『稳赚不赔』本身就是最大的骗局信号。", "en": "You don't invest and urge your classmate to withdraw. At first he doesn't believe you, but a month later the 'wealth product' suddenly collapses, and no one in the group can reach the 'teacher'. Your classmate is relieved he listened and withdrew most of his principal in time. You deeply appreciate: no pie falls from the sky — 'guaranteed no loss' is itself the biggest scam signal." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CRIM-006"],
+          "branch_tag": "保持警觉",
+          "next_scene_hint": "天上不会掉馅饼"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "先投5万试试水，赚了就加仓，想着『不贪心就没事』", "en": "Try it with 50000 first, add more if it pays, thinking 'as long as I'm not greedy I'll be fine'" },
+          "stats_effect": { "wealth": -15, "happiness": -15, "legal_awareness": -10, "health": -5 },
+          "consequence": { "zh": "你投了5万，第一个月还真收到了1500元『收益』，于是你把养老钱全投了进去。第二个月，平台突然无法提现，『老师』也消失了。你这才意识到这是典型的『庞氏骗局』——前期的收益，不过是拿后来人的钱补前面的人。你的养老钱几乎血本无归。", "en": "You invest 50000, and in the first month you actually receive 1500 in 'returns', so you pour in your entire retirement savings. The second month, the platform suddenly can't process withdrawals, and the 'teacher' disappears. Only then do you realize it's a classic Ponzi scheme — the early returns were just later investors' money paying earlier ones. Your retirement savings are nearly wiped out." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-CRIM-006"],
+          "branch_tag": "贪小失大",
+          "next_scene_hint": "前期的甜头，是别人的血本"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "查证这个平台是否正规持牌，向正规金融机构或警方反诈咨询后再决定", "en": "Verify whether the platform is properly licensed, and consult a formal financial institution or police anti-fraud before deciding" },
+          "stats_effect": { "legal_awareness": 13, "knowledge": 12, "wealth": 8, "happiness": 5 },
+          "consequence": { "zh": "你没有急着投，而是去查证：这个『理财平台』根本没有任何金融牌照，所谓『高收益』明显违反常识。你还拨打了反诈专线咨询，确认这就是典型的非法集资诈骗。你果断退出了那个群，还把自己的经历分享给身边的人，避免更多人上当。", "en": "You don't rush in but verify: this 'wealth platform' has no financial license whatsoever, and the 'high returns' clearly defy common sense. You call the anti-fraud hotline to confirm it's a typical illegal fundraising scam. You decisively leave the group and share your experience with others to prevent more victims." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CRIM-006"],
+          "branch_tag": "查证求证",
+          "next_scene_hint": "查证让你看穿骗局"
+        }
+      ]
+    },
+    {
+      "key": "cn-senior-001",
+      "title": { "zh": "天价保健品的骗局", "en": "The Overpriced Health Supplement Scam" },
+      "life_stage": "senior",
+      "min_age": 62,
+      "max_age": 80,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "你今年70岁，身体有些小毛病。最近小区附近开了个『健康讲座』，去了还能领鸡蛋和米。讲座上，『专家』声泪俱下地介绍一款『包治百病』的保健品，号称『诺贝尔奖技术』，原价9999元，今天只要3999元。\n\n推销员一口一个『叔叔阿姨』，还拉着你的手嘘寒问暖。周围不少老人都掏钱买了。\n\n你有点心动，但3999元对你来说不是小数目。",
+        "en": "You're 70, with some minor health issues. Recently a 'health lecture' opened near your neighborhood, with free eggs and rice for attending. At the lecture, an 'expert' tearfully introduces a 'cure-all' supplement, claiming 'Nobel Prize technology', originally 9999 yuan, today only 3999. The salesperson warmly calls you 'uncle/auntie' and holds your hand with concern. Many elderly people around you are buying. You're tempted, but 3999 yuan isn't a small sum for you."
+      },
+      "image_prompt": "Elderly people in a lecture hall, a salesperson presenting a glossy health supplement box, warm but manipulative atmosphere, illustration style",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "清醒识别：『包治百病』必是骗局，坚决不买，并提醒其他老人不要上当", "en": "Recognize clearly: 'cures everything' must be a scam, firmly refuse to buy, and warn other elderly people not to fall for it" },
+          "stats_effect": { "wealth": 10, "legal_awareness": 15, "happiness": 8, "health": 5 },
+          "consequence": { "zh": "你没有买，还悄悄提醒了身边的老人：『保健品不能治病，生病要去正规医院。』讲座上的『专家』见没人上当，草草收场。后来你听说这个团伙被市场监管部门查处了。你庆幸自己保持了清醒——所谓的『关心』，不过是掏空老人钱包的话术。", "en": "You don't buy and quietly remind nearby elderly people: 'Health supplements can't cure illness — go to a proper hospital if you're sick.' Seeing no one fall for it, the 'experts' wrap up hastily. Later you hear the gang was investigated by market regulators. You're glad you stayed clear-headed — the so-called 'care' was just a script to empty old people's wallets." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CRIM-006"],
+          "branch_tag": "清醒拒绝",
+          "next_scene_hint": "清醒让你守住了钱包"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "被『专家』和推销员的热情打动，买了好几盒保健品", "en": "Moved by the 'expert' and salesperson's warmth, buy several boxes of the supplement" },
+          "stats_effect": { "wealth": -12, "health": -5, "happiness": -8, "legal_awareness": -8 },
+          "consequence": { "zh": "你花了一万多买了好几盒保健品，回家后儿女一看，这些所谓『诺贝尔技术』的产品，不过是几块钱成本的普通食品，吃了还可能伤身体。你想退货，却发现那个讲座早就人去楼空。你这才明白：那些嘘寒问暖，不过是盯着你养老金的套路。", "en": "You spend over ten thousand on several boxes. Your children take one look and realize these 'Nobel technology' products are just ordinary food costing a few yuan, possibly even harmful. You try to return them, but the lecture hall is long gone. Only then do you understand: all that warmth was just a scheme targeting your pension." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-CRIM-006"],
+          "branch_tag": "轻信推销",
+          "next_scene_hint": "嘘寒问暖，不过是盯着你的养老金"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "先不买，回家和儿女商量，查一查这款保健品是否正规、是否有夸大宣传", "en": "Don't buy yet. Go home and discuss with your children, check whether the supplement is legitimate and whether the claims are exaggerated" },
+          "stats_effect": { "legal_awareness": 12, "knowledge": 8, "wealth": 8, "happiness": 6 },
+          "consequence": { "zh": "你没有当场掏钱，而是回家和儿女商量。儿女帮你查了这款产品，发现它只是普通食品，宣传的『包治百病』是明显的夸大和虚假宣传，可以举报。你们一起向市场监管部门投诉了那个讲座。你学会了：拿不准的事，回家和家人商量，能避开很多坑。", "en": "You don't pay on the spot but go home to discuss with your children. They help you check and find the product is just ordinary food, and the 'cures everything' claims are obvious exaggeration and false advertising — reportable. Together you file a complaint with market regulators. You learn: when unsure, going home to discuss with family helps you avoid many traps." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CRIM-006"],
+          "branch_tag": "回家商量",
+          "next_scene_hint": "和家人商量，能避开很多坑"
+        }
+      ]
+    },
+    {
+      "key": "cn-senior-002",
+      "title": { "zh": "以房养老的骗局", "en": "The Housing-for-Pension Scam" },
+      "life_stage": "senior",
+      "min_age": 62,
+      "max_age": 80,
+      "difficulty": 3,
+      "narrative": {
+        "zh": "你今年72岁，一个人住，房子是你最大的财产。最近有人向你推荐一个『以房养老』项目：把房子抵押出去，就能每月领一笔可观的养老金，房子还是你的，可以继续住。\n\n对方拿出厚厚的合同让你签字，说『这是国家政策，很靠谱』。\n\n你有点犹豫：把房子抵押出去，万一出了问题，连住的地方都没了。",
+        "en": "You're 72, living alone, and your apartment is your biggest asset. Recently someone recommended a 'housing-for-pension' program: mortgage your apartment and receive a decent monthly pension, while the house remains yours and you can keep living there. They present a thick contract for you to sign, saying 'this is national policy, very reliable'. You hesitate: mortgaging the house, if anything goes wrong, you'd lose even your home."
+      },
+      "image_prompt": "An elderly person at a table with a thick contract, a slick salesperson explaining, a property certificate on the table, worry on the elderly person's face, illustration style",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "拒绝当场签字，拿合同回家让儿女或律师看看，查清『以房养老』的政策和风险", "en": "Refuse to sign on the spot, take the contract home for your children or a lawyer to review, and check the policy and risks of 'housing-for-pension'" },
+          "stats_effect": { "wealth": 15, "legal_awareness": 15, "knowledge": 10, "happiness": 8 },
+          "consequence": { "zh": "你没有当场签字，而是把合同带回家让律师看。律师一看就发现：这不是正规的『以房养老』政策，而是一个让你抵押房产、拿钱去投高风险的骗局，一旦爆雷，你的房子就没了。你惊出一身冷汗，果断拒绝了。守住房子，就是守住晚年的底线。", "en": "You don't sign on the spot but take the contract home for a lawyer to review. The lawyer immediately finds: this isn't the legitimate 'housing-for-pension' policy, but a scam to mortgage your home and funnel the money into risky investments — if it collapses, your home is gone. You break into a cold sweat and firmly refuse. Keeping your home is keeping the bottom line of your old age." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CRIM-006"],
+          "branch_tag": "谨慎核查",
+          "next_scene_hint": "守住房子，就是守住晚年底线"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "被『国家政策』『免费领养老金』打动，签了字办了抵押", "en": "Persuaded by 'national policy' and 'free pension', sign and complete the mortgage" },
+          "stats_effect": { "wealth": -20, "happiness": -20, "legal_awareness": -12, "health": -10 },
+          "consequence": { "zh": "你签了字办了抵押，前两个月确实领到了『养老金』。但很快，对方以投资失败为由停发了，还起诉要求你腾房。你这才发现，所谓的『以房养老』其实是拿你的房子去借高利贷投资，现在债主上门，你面临无家可归的境地。幸而儿女及时介入、报警，才勉强保住了一部分权益。", "en": "You sign and complete the mortgage, and for the first two months you do receive the 'pension'. But soon they stop payments claiming investment failure, and even sue to evict you. Only then do you realize the 'housing-for-pension' actually used your home to borrow high-interest loans for investment — now creditors are at the door, and you face homelessness. Fortunately your children intervene and call the police, barely preserving part of your rights." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-CRIM-006"],
+          "branch_tag": "轻信签字",
+          "next_scene_hint": "轻信让晚年险些无家可归"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "向社区或民政部门咨询正规的『以房养老』政策，拒绝来路不明的中介", "en": "Consult the community or civil affairs department about the legitimate 'housing-for-pension' policy, and reject shady intermediaries" },
+          "stats_effect": { "legal_awareness": 14, "knowledge": 10, "wealth": 10, "happiness": 6 },
+          "consequence": { "zh": "你没有轻信中介，而是去社区和民政部门咨询了正规的『以房养老』（住房反向抵押养老保险）政策。你发现正规政策有严格的资质要求和监管，而这些上门推销的『以房养老』大多是骗局。你的谨慎，保住了自己安身立命的房子。", "en": "You don't trust the intermediary but consult the community and civil affairs department about the legitimate 'housing-for-pension' (reverse-mortgage pension insurance) policy. You find the real policy has strict qualifications and supervision, while most door-to-door 'housing-for-pension' pitches are scams. Your caution preserved the home that shelters you." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CRIM-006"],
+          "branch_tag": "正规咨询",
+          "next_scene_hint": "走正规渠道，避开骗局"
+        }
+      ]
+    },
+    {
+      "key": "cn-adult-005",
+      "title": { "zh": "网络交友的甜蜜陷阱", "en": "The Sweet Trap of Online Dating" },
+      "life_stage": "adult",
+      "min_age": 28,
+      "max_age": 45,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "你单身，最近在一个社交软件上认识了一个很聊得来的网友。对方照片帅气/漂亮，温柔体贴，每天都嘘寒问暖，还经常晒出精致的生活和投资截图。\n\n聊了几个月后，对方说：『我有个稳赚的投资渠道，带你一起赚钱。』还发来一个链接，让你注册充值。\n\n你有点心动，但又觉得哪里不对——网上的『真爱』，怎么总跟『投资』扯上关系？",
+        "en": "You're single, and recently met a charming person on a dating app. Their photos are attractive, they're gentle and considerate, care about you daily, and often post elegant lifestyle and investment screenshots. After months of chatting, they say: 'I have a guaranteed investment channel — let me help you earn money.' They send a link for you to register and deposit. You're tempted, but something feels off — why does online 'true love' always involve 'investment'?"
+      },
+      "image_prompt": "A person holding a phone with a dating app chat, on the other side a glossy lifestyle and investment screenshot, mixed romance and suspicion, evening light, illustration style",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "识别这是『杀猪盘』：网上刚认识就谈投资理财，必是诈骗，立即拉黑并举报", "en": "Recognize this as a 'pig-butchering scam': someone you just met online talking about investment is surely fraud — block immediately and report" },
+          "stats_effect": { "wealth": 12, "legal_awareness": 15, "knowledge": 10, "happiness": 5 },
+          "consequence": { "zh": "你识破了『杀猪盘』的套路：网上认识不久就谈投资、让你转账，是典型的诈骗手法。你果断拉黑并举报了对方。后来你在新闻上看到，这种『杀猪盘』诈骗团伙专门针对单身人群，用感情包装投资骗局，涉案金额巨大。你的警惕，躲过了一场精心设计的骗局。", "en": "You see through the 'pig-butchering' scheme: someone met online soon talking about investment and asking you to transfer money is a classic fraud. You decisively block and report them. Later you see in the news that such 'pig-butchering' gangs target singles, wrapping investment scams in romance, with huge sums involved. Your vigilance dodged an elaborate trap." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CRIM-006"],
+          "branch_tag": "识破套路",
+          "next_scene_hint": "你的警惕躲过了杀猪盘"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "被感情冲昏头脑，先转5000试试，想着『就当支持对象』", "en": "Overcome by emotion, transfer 5000 to try it, thinking 'it's just supporting my partner'" },
+          "stats_effect": { "wealth": -15, "happiness": -15, "legal_awareness": -10 },
+          "consequence": { "zh": "你转了5000，对方果然『帮你赚了』几百，甜言蜜语更加热烈。于是你越投越多，直到投入了十几万。当你想要提现时，对方消失了，社交账号也注销了。你这才明白，从头到尾，这个『完美恋人』就是一个诈骗团伙的剧本。", "en": "You transfer 5000, and they indeed 'earn' a few hundred for you, with even sweeter words. So you invest more and more, until you've put in over a hundred thousand. When you try to withdraw, they vanish and delete the account. Only then do you understand: from start to finish, this 'perfect lover' was a scam ring's script." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-CRIM-006"],
+          "branch_tag": "感情用事",
+          "next_scene_hint": "甜蜜的陷阱让你血本无归"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "保持理性：不见面、不核实身份，绝不转账；必要时视频验证对方身份", "en": "Stay rational: no transfer without meeting and verifying identity; if needed, video-call to verify who they are" },
+          "stats_effect": { "legal_awareness": 13, "knowledge": 10, "wealth": 8, "happiness": 5 },
+          "consequence": { "zh": "你保持了理性，提出视频通话核实身份。对方开始找各种借口推脱，甚至生气指责你『不信任』。你更加确定这有问题，果断终止了联系。你学会了一个原则：网恋可以，但涉及钱财，一定要先核实对方身份，绝不给没见过面的人转账。", "en": "You stay rational and propose a video call to verify their identity. They start making excuses and even angrily accuse you of 'distrust'. You become even more certain something's wrong and decisively end contact. You learn a principle: online dating is fine, but when money is involved, verify the other person's identity first, and never transfer to someone you've never met." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CRIM-006"],
+          "branch_tag": "保持理性",
+          "next_scene_hint": "涉及钱财，先核实身份"
+        }
+      ]
+    }
+  ]
+}

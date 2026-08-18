@@ -1,0 +1,145 @@
+{
+  "country_code": "CN",
+  "category": "traffic",
+  "scenes": [
+    {
+      "key": "cn-traffic-001",
+      "title": { "zh": "同学聚会的代价", "en": "The Cost of Reunion" },
+      "life_stage": "young_adult",
+      "min_age": 20,
+      "max_age": 35,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "高中同学聚会，大家都很开心。你本打算打车回去，但老同学小王喝了几杯啤酒后坚持要开车送你：『就喝了两杯，没事的！这条路我闭着眼都能开。』\n\n你闻到他身上明显的酒气，心里犯嘀咕。其他同学陆续走了，有的上了朋友的车，有的在叫代驾。\n\n小王已经把车发动了，在等你上车。外面下着雨，打车软件显示排队需要40分钟。",
+        "en": "High school reunion — everyone's having a great time. You planned to take a taxi, but your old friend Xiao Wang insists on driving you after a few beers: 'Just two drinks, I'm fine! I could drive this road blindfolded.' You smell alcohol on him. Other classmates are leaving — some with designated drivers, some calling rides. Xiao Wang has already started his car. It's raining. The ride app shows a 40-minute wait."
+      },
+      "image_prompt": "Night scene outside a restaurant, rain falling, a car with engine running, a person hesitating between getting in and calling a ride, neon lights reflecting on wet pavement",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "坚决不上车：『你喝酒了不能开车，我帮你叫代驾，钱我出。』", "en": "Firmly refuse: 'You've been drinking. Let me call you a designated driver — my treat.'" },
+          "stats_effect": { "legal_awareness": 15, "knowledge": 10, "happiness": 5, "wealth": -3 },
+          "consequence": { "zh": "小王开始还有点不高兴，觉得你不信任他。你打开手机给他看了酒驾的处罚标准——暂扣驾照6个月、罚款2000元，如果醉驾还要追究刑责。他沉默了，最后同意了叫代驾。路上他对你说：『谢谢你拦住我。我刚才确实喝了不少，只是自己感觉不到。』你们的友情反而更深厚了。", "en": "Xiao Wang is initially annoyed. You pull up the drunk driving penalties on your phone — 6-month license suspension, 2000 yuan fine, criminal liability if over the legal limit. He goes quiet, then agrees to the designated driver. On the way, he says: 'Thanks for stopping me. I had more than I realized.' Your friendship actually grows stronger." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-TRAFFIC-001"],
+          "branch_tag": "真正的朋友",
+          "next_scene_hint": "友情因此更深",
+          "next_scene_key": "cn-traffic-002"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "虽然担心，但还是上了车——毕竟下雨天打车太难了", "en": "Get in despite the worry — it's raining and rides are scarce" },
+          "stats_effect": { "happiness": -8, "legal_awareness": -10, "health": -15, "wealth": -5 },
+          "consequence": { "zh": "车开了不到10分钟，在一个路口被交警拦下。吹气检测结果显示小王属于饮酒驾车。驾照被暂扣6个月，罚款2000元，还要参加7天的交通安全教育。你虽然只是乘客，但那种后怕一直挥之不去——万一出了事故呢？你甚至都不敢往下想。", "en": "Within 10 minutes, you're pulled over at a checkpoint. Xiao Wang blows over the legal limit. License suspended for 6 months, 2000 yuan fine, 7-day traffic safety course. You were just a passenger, but the fear lingers — what if there had been an accident? You don't even want to think about it." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-TRAFFIC-001"],
+          "branch_tag": "侥幸心理",
+          "next_scene_hint": "有惊无险，但教训深刻"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "建议小王叫代驾，同时表示可以和他一起等，聊聊天", "en": "Suggest calling a designated driver and offer to wait together and chat" },
+          "stats_effect": { "legal_awareness": 10, "happiness": 8, "knowledge": 5, "wealth": -2 },
+          "consequence": { "zh": "你们在车上等代驾的20分钟里，回忆了很多高中往事。代驾来了之后，你坐他的车一起回家。路上你看到前方正好有交警在查酒驾——你们相视一笑，都有一种劫后余生的感觉。有时候，最好的选择不一定是『不喝酒』，而是『喝了酒就绝对不碰方向盘』。", "en": "During the 20-minute wait, you reminisce about high school. When the designated driver arrives, you ride together. Ahead, you spot a DUI checkpoint. You exchange a look of relief. Sometimes the best choice isn't 'don't drink' — it's 'if you drink, absolutely don't touch the wheel.'" },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-TRAFFIC-001"],
+          "branch_tag": "智慧朋友",
+          "next_scene_hint": "陪伴是最温暖的劝阻",
+          "next_scene_key": "cn-traffic-002"
+        }
+      ]
+    },
+    {
+      "key": "cn-traffic-002",
+      "title": { "zh": "剐蹭之后的选择", "en": "After the Fender Bender" },
+      "life_stage": "young_adult",
+      "min_age": 22,
+      "max_age": 40,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "你开车在商场停车场倒车时，不小心剐蹭了旁边一辆车的车门。你正想下车留个电话，对方车主已经气势汹汹地走过来，指着你喊：『你撞了我的车！赔5000块私了，不然我报警告你肇事逃逸！』\n\n你凑近一看，剐蹭的痕迹其实很浅，去修车行几百块就能处理。对方却一口咬定要5000，还不停用『逃逸』、『扣分』、『拘留』吓唬你。\n\n周围渐渐有人围观。你有点慌，但心里清楚：这事不能被他牵着鼻子走。",
+        "en": "Reversing in a shopping mall parking lot, you accidentally scrape the door of a neighboring car. As you step out to leave a note, the owner storms over and shouts: 'You hit my car! Pay 5000 and settle it privately, or I'll call the police and report you for hit-and-run!' You look closer — the scratch is actually shallow, a few hundred yuan at a repair shop. But the owner insists on 5000, repeatedly scaring you with words like 'hit-and-run', 'license points', 'detention'. A small crowd gathers. You're a bit panicked, but you know: you can't let him lead you by the nose."
+      },
+      "image_prompt": "A person standing by a car with a shallow scratch in a parking lot, an angry car owner gesturing, a small crowd nearby, daylight, tense atmosphere, illustration style",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "拍照固定现场证据，坚持报警或报保险处理，拒绝被『私了』威胁", "en": "Photograph the scene to preserve evidence, insist on calling the police or insurance, refuse to be threatened into a private settlement" },
+          "stats_effect": { "legal_awareness": 15, "happiness": 8, "knowledge": 10, "wealth": 5 },
+          "consequence": { "zh": "你冷静地拍下剐蹭部位、车辆位置和车牌，然后报了警。交警到场后，认定双方都有一定责任，走保险处理，你最后只需承担几百元的理赔。对方威胁的『5000块私了』、『肇事逃逸』都不攻自破。你学到：遇事不慌，按正规流程走，才能不被讹诈。", "en": "You calmly photograph the scratch, car positions, and plates, then call the police. When officers arrive, they determine both parties share some responsibility, and it goes through insurance — you only bear a few hundred yuan. The '5000 private settlement' and 'hit-and-run' threats fall apart. You learn: don't panic; following proper procedure protects you from extortion." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-TRAFFIC-008", "CN-TRAFFIC-002"],
+          "branch_tag": "依法处置",
+          "next_scene_hint": "正规流程让你免于被讹",
+          "next_scene_key": "cn-traffic-003"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "怕麻烦又怕对方纠缠，现场转5000块私了，没留任何照片和凭证", "en": "Afraid of trouble and entanglement, transfer 5000 on the spot to settle privately, leaving no photos or records" },
+          "stats_effect": { "wealth": -12, "happiness": -10, "legal_awareness": -8, "knowledge": -3 },
+          "consequence": { "zh": "你当场转了5000块，以为破财消灾。没想到几天后对方又找上门，说车还有『内伤』，再要3000，不然就报警。你这才发现，当初既没拍照也没留凭证，连对方是不是车主都无法证明。你陷入了被动：要么继续被宰，要么花更多精力去维权。", "en": "You transfer 5000 on the spot, thinking you've bought peace. Days later the owner returns claiming 'internal damage' and demands another 3000 or he'll call the police. Only then do you realize you left no photos or records — you can't even prove he was the real owner. You're now cornered: keep paying, or spend even more effort fighting back." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-TRAFFIC-008"],
+          "branch_tag": "破财消灾",
+          "next_scene_hint": "没有凭证，麻烦接踵而至"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "拍照留证、记下双方车牌和联系方式，协商私了并当场写书面协议、转账留痕", "en": "Photograph and record both plates and contact info, negotiate a private settlement with a written agreement and a traceable transfer" },
+          "stats_effect": { "legal_awareness": 12, "knowledge": 8, "happiness": 5, "wealth": -3 },
+          "consequence": { "zh": "你没有慌乱，先拍照固定了剐蹭证据，又和对方协商了一个合理价格，并写了一份简短的书面协议：『双方就本次剐蹭事故达成和解，费用结清后互不追究』，转账时也注明了用途。因为有凭有据，对方后来没有再纠缠。你学会了：即便私了，也要留痕。", "en": "You stay calm, photograph the damage, negotiate a reasonable price with the other driver, and write a short written agreement: 'Both parties reach a settlement on this scrape; no further claims after payment.' The transfer is clearly labeled. With records in hand, the other party never bothers you again. You learn: even a private settlement needs a paper trail." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-TRAFFIC-008"],
+          "branch_tag": "留痕私了",
+          "next_scene_hint": "留痕让私了也安全",
+          "next_scene_key": "cn-traffic-003"
+        }
+      ]
+    },
+    {
+      "key": "cn-traffic-003",
+      "title": { "zh": "电动车的代价", "en": "The Price of the E-Bike" },
+      "life_stage": "young_adult",
+      "min_age": 18,
+      "max_age": 35,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "早上你骑着电动车赶着上班，在一个路口为了抢最后几秒绿灯，闯了红灯。这时一位过马路的老人来不及躲闪，被你的车带倒在地，捂着膝盖呻吟。\n\n你心里一沉：你不仅闯了红灯，而且没戴头盔。周围有人停下来围观，有人拿出手机拍照，有人喊『快报警』。\n\n你下意识地想：老人看起来伤得不重，要不……先走？但这个念头一闪而过，你就知道不能这么做。",
+        "en": "Rushing to work on your e-bike one morning, you run a red light to beat the last few seconds of green. An elderly pedestrian crossing the road can't dodge in time, is knocked down by your bike, and groans clutching their knee. Your heart sinks: not only did you run the light, you weren't wearing a helmet. Bystanders stop to watch, some take photos, some shout 'call the police'. A thought flashes — the injury looks mild, maybe... just leave? But you know immediately you can't do that."
+      },
+      "image_prompt": "A person on an electric scooter stopped at a city intersection, an elderly pedestrian sitting on the ground clutching their knee, bystanders watching, red traffic light, tense daytime street scene, illustration style",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "立即停车查看伤情，拨打120和122，配合交警处理，主动承担责任", "en": "Stop immediately to check the injury, call 120 and 122, cooperate with the police, and take responsibility" },
+          "stats_effect": { "legal_awareness": 15, "happiness": 5, "knowledge": 10, "wealth": -5 },
+          "consequence": { "zh": "你立刻停车，查看老人情况，拨打了急救和报警电话。交警认定你闯红灯负主要责任，但因为你主动救助、积极配合，处理过程顺利很多。你承担了老人的医疗费。虽然破了财，但你守住了底线：肇事逃逸的后果远比这严重得多。你也下定决心：以后一定戴头盔、不闯红灯。", "en": "You stop immediately, check on the elderly person, and call for ambulance and police. Officers determine you bear primary responsibility for running the red light, but because you helped and cooperated, the process goes smoothly. You cover the medical costs. Though it costs money, you held your ground: the consequences of hit-and-run would be far worse. You resolve to always wear a helmet and never run red lights again." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-TRAFFIC-005", "CN-TRAFFIC-002"],
+          "branch_tag": "承担责任",
+          "next_scene_hint": "担当让你守住底线"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "看老人好像没大碍，趁没人注意骑上车飞快离开现场", "en": "Seeing the injury looks minor, ride away quickly while no one is watching" },
+          "stats_effect": { "wealth": -10, "happiness": -15, "legal_awareness": -15, "health": -5 },
+          "consequence": { "zh": "你趁着混乱骑车跑了。但路口有监控，围观者也拍到了你的车牌。几天后交警找到你：你不仅要为事故负全责，还因『肇事逃逸』面临更重的处罚——罚款、拘留，甚至可能构成犯罪。你追悔莫及：如果当时停下来，只是一起普通事故；一逃，性质就完全变了。", "en": "You ride away in the chaos. But there were traffic cameras, and bystanders captured your plate. Days later the police find you: not only are you fully liable for the accident, you face heavier penalties for 'hit-and-run' — fines, detention, possibly criminal charges. You regret it deeply: stopping would have been an ordinary accident; fleeing changed everything." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-TRAFFIC-005", "CN-TRAFFIC-003"],
+          "branch_tag": "肇事逃逸",
+          "next_scene_hint": "逃逸让事情彻底失控"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "停车扶起老人，主动承认闯红灯责任，协商送医并垫付检查费", "en": "Stop and help the elderly person up, admit running the red light, offer to take them to hospital and advance the checkup costs" },
+          "stats_effect": { "legal_awareness": 12, "happiness": 8, "knowledge": 8, "wealth": -8 },
+          "consequence": { "zh": "你扶起老人，诚恳道歉并承认自己闯了红灯，主动提出送医并垫付检查费。老人和家属看到你的态度，情绪缓和了很多，最终通过协商解决了赔偿，没有闹到报警。你深刻体会到：主动担责 + 诚恳沟通，往往能避免最坏的结果，也能让自己心安。", "en": "You help the elderly person up, sincerely apologize and admit you ran the red light, and offer to take them to hospital and advance the checkup costs. Seeing your attitude, the injured person and their family calm down, and the compensation is settled through negotiation without police involvement. You deeply appreciate that taking responsibility plus sincere communication often avoids the worst outcome — and lets you live with yourself." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-TRAFFIC-005", "CN-TRAFFIC-002"],
+          "branch_tag": "诚恳担责",
+          "next_scene_hint": "诚恳化解了危机"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+# ============================================================
+# 美国消费者保护（联邦层面）
+# ============================================================
+law_name: Federal Trade Commission Act & Related Laws
+law_name_en: Federal Trade Commission Act & Related Laws
+category: consumer_rights
+country_code: US
+effective_date: 1914-09-26
+source_url: https://www.ftc.gov/
+source_name: Federal Trade Commission
+articles:
+  - ref: "FTC Act §5"
+    ref_en: "FTC Act §5"
+    title: 禁止虚假广告
+    full_text: |
+      Unfair or deceptive acts or practices in or affecting commerce are
+      declared unlawful. Advertising claims must be truthful, substantiated,
+      and not misleading.
+    summary: |
+      虚假广告是违法的：
+      • 广告内容必须真实、有依据、不误导
+      • 商家不能夸大功效、虚构"限时优惠"、用虚假评价
+      • FTC 可以处罚虚假宣传的商家
+      现实提醒：看到"全网最低""科学验证""限时抢购"要留个心眼，
+      如果与事实不符，可以向 FTC 投诉。
+    keywords: [false advertising, 虚假广告, FTC, 消费者, 误导]
+    tags: [消费者权利, 虚假宣传]
+    life_stage_tags: [young_adult, adult, middle_age]
+    difficulty: 1
+
+  - ref: "FCRA §609"
+    ref_en: "FCRA §609"
+    title: 免费信用报告
+    full_text: |
+      Consumers are entitled to a free copy of their credit report once every
+      12 months from each of the three nationwide credit bureaus.
+    summary: |
+      你有权免费查信用报告：
+      • 每年可以从三大征信机构各免费获取一份信用报告
+      • 定期查看可以及时发现错误、身份被盗用
+      现实提醒：信用报告影响贷款、租房、求职，发现错误要尽快提出异议。
+      官方免费渠道是 AnnualCreditReport.com，别被"付费查信用"骗了。
+    keywords: [credit report, 信用报告, FCRA, 免费, 征信]
+    tags: [消费者权利, 信用, 金融]
+    life_stage_tags: [young_adult, adult, middle_age]
+    difficulty: 1
+
+  - ref: "Do Not Call"
+    ref_en: "Do Not Call"
+    title: 拒绝骚扰电话
+    full_text: |
+      Consumers may register their phone numbers on the National Do Not Call
+      Registry. Telemarketers generally may not call registered numbers.
+    summary: |
+      不想接推销电话？注册"勿扰名单"：
+      • 把你的电话号码登记到国家 Do Not Call 名单后，电话营销不能再打给你
+      • 违反者可能被 FTC 罚款
+      现实提醒：骗子电话往往伪装成"客服""银行"，遇到索要验证码、转账的，
+      直接挂断并报警。
+    keywords: [do not call, 骚扰电话, 电话营销, FTC, 勿扰]
+    tags: [消费者权利, 隐私, 电话骚扰]
+    life_stage_tags: [young_adult, adult, middle_age, senior]
+    difficulty: 1
+
+  - ref: "Cooling-Off Rule"
+    ref_en: "Cooling-Off Rule"
+    title: 三天冷却期
+    full_text: |
+      Under the FTC Cooling-Off Rule, consumers have three business days to
+      cancel certain sales made at home, workplace, or temporary locations
+      (e.g., home improvement, door-to-door sales).
+    summary: |
+      "三天冷静期"：
+      • 在上门销售、临时展销等场景买的商品（如装修、门对门推销），
+        你有 3 个工作日可以无理由取消
+      • 商家必须书面告知你这项权利
+      现实提醒：这是针对高压推销场景的保护，让你有时间冷静思考。
+      注意：网购、实体店购物不适用这条（但有各自的退货政策）。
+    keywords: [cooling off, 冷却期, 退货, 上门销售, FTC]
+    tags: [消费者权利, 退货, 冷静期]
+    life_stage_tags: [young_adult, adult, middle_age, senior]
+    difficulty: 2

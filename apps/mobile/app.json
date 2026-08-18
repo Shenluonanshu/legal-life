@@ -30,6 +30,13 @@
     },
     "updates": {
       "enabled": false
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "0dabcc71-d717-4123-986f-d3491e672430"
+      }
+    },
+    "owner": "shenluonanshu"
   }
 }

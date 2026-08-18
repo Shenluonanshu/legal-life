@@ -1,0 +1,357 @@
+{
+  "country_code": "CN",
+  "category": "civil",
+  "scenes": [
+    {
+      "key": "cn-civil-001",
+      "title": { "zh": "出租屋押金纠纷", "en": "Rental Deposit Dispute" },
+      "life_stage": "young_adult",
+      "min_age": 20,
+      "max_age": 35,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "你在北京租了一间单间，合同一年，交了两个月押金共6000元。一年后你决定搬家，提前30天通知了房东，还把房间打扫得干干净净。\n\n退房那天，房东来检查。他指着墙上一个不起眼的污渍（搬来时就有）说：『这个要重新刷墙，扣2000。』又指着地板上正常的磨损痕迹说：『地板有划痕，要翻新，扣2000。』\n\n最后他说：『押金只能退你2000。』你清楚地记得租房时这面墙就有污渍——但你没有当时的照片证据。",
+        "en": "You've been renting a studio in Beijing for a year, with a two-month deposit of 6000 yuan. You gave 30 days' notice and cleaned thoroughly before moving out. On inspection day, the landlord points to a faint wall stain (there when you moved in): 'This needs repainting — deduct 2000.' Then at normal floor wear: 'Floor scratches — needs refinishing — deduct 2000.' He concludes: 'I can only return 2000 of your deposit.' You clearly remember that stain was there — but you have no photos from move-in day."
+      },
+      "image_prompt": "A tense scene at an apartment doorway, a landlord pointing at a wall while a young tenant looks frustrated, moving boxes visible, afternoon light, illustration style",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "据理力争：『自然损耗不算损坏，您不能从我押金里扣。如果协商不成，我去住建委投诉。』", "en": "Stand your ground: 'Normal wear and tear is not damage. You can't deduct from my deposit. If we can't agree, I'll file a complaint with the housing authority.'" },
+          "stats_effect": { "legal_awareness": 15, "wealth": 12, "knowledge": 8, "happiness": 3 },
+          "consequence": { "zh": "房东显然没想到你会这么强硬。他犹豫了一下，嘟囔着『年轻人懂什么法律』，但最终不情愿地退还了全额押金。你学到了一课：租房一定要在入住时拍视频存档，拍摄每一个角落的细节！这是保护自己最简单也最有效的方式。", "en": "The landlord clearly didn't expect such firmness. After some grumbling about 'young people thinking they know the law,' he reluctantly returns the full deposit. Lesson learned: ALWAYS film a video walkthrough when moving in — documenting every corner! It's the simplest and most effective self-protection." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CIVIL-008"],
+          "branch_tag": "据理力争",
+          "next_scene_hint": "法律知识帮你守住了押金",
+          "next_scene_key": "cn-civil-002"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "妥协收下2000元——不想跟房东闹僵，毕竟以后可能还要打交道", "en": "Accept the 2000 yuan — don't want conflict with the landlord, might need a reference later" },
+          "stats_effect": { "wealth": -8, "happiness": -10, "legal_awareness": -5 },
+          "consequence": { "zh": "你拿着2000元离开了。两个月后你得知，同一个房东用同样的手段坑了下一位租户——而且因为没有人反抗，他越来越肆无忌惮。你现在住的房子，每次看到墙上的瑕疵都会心里一紧，默默拍照存档。", "en": "You leave with 2000 yuan. Two months later you hear the same landlord pulled the same trick on the next tenant — and with no resistance, he's getting bolder. In your new place, every wall imperfection makes you nervous. You silently photograph everything." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-CIVIL-008"],
+          "branch_tag": "息事宁人",
+          "next_scene_hint": "忍让并没有换来和平"
+        }
+      ]
+    },
+    {
+      "key": "cn-civil-002",
+      "title": { "zh": "婚前买房写谁的名字", "en": "Whose Name on the Deed" },
+      "life_stage": "adult",
+      "min_age": 25,
+      "max_age": 40,
+      "difficulty": 3,
+      "narrative": {
+        "zh": "你和对象恋爱三年，终于决定买房结婚了。你父母掏出了大半辈子的积蓄120万元作为首付，对象的父母出了30万元。剩下的贷款由你们两个人共同还。\n\n在售楼部签合同的那一刻，售楼小姐问：『房产证写谁的名字？』\n\n空气突然安静了。你对象看着你，你的父母在电话那头紧张地等着你的回答。你知道，这个答案不仅影响感情，还涉及法律上的财产归属问题。\n\n你想起来之前在手机上看到过：婚前一方父母出资买房，房子算谁的？民法典是怎么规定的？",
+        "en": "After three years together, you're finally buying a home before the wedding. Your parents contribute 1.2 million yuan — most of their life savings — as the down payment. Your partner's parents contribute 300,000. You'll share the remaining mortgage. At the sales office, the agent asks: 'Whose name should be on the deed?' The air goes still. Your partner looks at you. Your parents wait nervously on the phone. You know this answer affects more than feelings — it involves legal property rights."
+      },
+      "image_prompt": "A couple sitting at a real estate sales office, looking at a property deed form, thoughtful expressions, modern interior with model building display, warm dramatic lighting",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "坦诚沟通后决定：写两人的名字，但去公证处做婚前财产公证，明确各方出资比例和权益", "en": "After honest discussion: both names on the deed, but get a prenuptial property公证 notarizing each party's contribution ratio and rights" },
+          "stats_effect": { "legal_awareness": 20, "knowledge": 12, "happiness": 8 },
+          "consequence": { "zh": "虽然一开始双方父母都觉得『公证』这个词听起来有些刺耳，但你们耐心解释道：『这不是不信任，而是给双方的保障。万一将来有变化，不会因为财产问题变成仇人。』最终大家都理解并接受了。你们的坦诚反而让这段关系更加稳固——因为所有的事情都摆在桌面上。", "en": "Though both sets of parents initially found 'prenup' uncomfortable, you patiently explained: 'This isn't about distrust — it's protection for both sides. If things change, we won't become enemies over property.' Everyone eventually understands. Your honesty actually strengthens the relationship — everything is on the table." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CIVIL-003"],
+          "branch_tag": "坦诚务实",
+          "next_scene_hint": "坦诚让爱更坚固"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "为了感情，不加思索地说：『当然写两人的名字！』", "en": "For love, answer without hesitation: 'Of course both names!'" },
+          "stats_effect": { "happiness": 5, "legal_awareness": -10, "knowledge": -3 },
+          "consequence": { "zh": "你们开心地签了字，两家人也都满意。但多年后，当你们开始讨论财产问题时，当年的『不假思索』变成了今天争吵的导火索——谁出了多少钱、房子涨了多少应该怎么分，这些问题因为没有提前约定，变得异常复杂。", "en": "You happily sign, both families satisfied. But years later, when property discussions arise, that 'unthinking' decision becomes today's conflict — how much did each contribute, how should the appreciation be split? Without a prior agreement, these questions become incredibly complex." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-CIVIL-003", "CN-CIVIL-007"],
+          "branch_tag": "感情用事",
+          "next_scene_hint": "未来的纠纷在签字时就埋下了"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "提议咨询律师的意见后再决定——毕竟这不是小事", "en": "Suggest consulting a lawyer before deciding — this isn't a small matter" },
+          "stats_effect": { "legal_awareness": 15, "knowledge": 10, "wealth": 5, "happiness": 3 },
+          "consequence": { "zh": "你们一起咨询了一位婚姻家庭方面的律师。律师详细解释了民法典中关于夫妻共同财产的规定，并根据你们的实际情况给出了专业建议。虽然花了2000元咨询费，但避免了将来可能面临的数十万元的财产纠纷。这笔投资，可能是你做过最划算的一笔。", "en": "You consult a family law attorney together. The lawyer thoroughly explains the Civil Code provisions on marital property and gives professional advice based on your situation. Though the consultation cost 2000 yuan, it potentially avoids hundreds of thousands in future property disputes. Best investment ever." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CIVIL-003", "CN-CIVIL-007"],
+          "branch_tag": "专业理性",
+          "next_scene_hint": "花小钱，避大坑"
+        }
+      ]
+    },
+    {
+      "key": "cn-adult-001",
+      "title": { "zh": "离婚时房子怎么分", "en": "Dividing the House in Divorce" },
+      "life_stage": "adult",
+      "min_age": 28,
+      "max_age": 45,
+      "difficulty": 3,
+      "narrative": {
+        "zh": "你和配偶结婚五年了。结婚前，你用自己攒的钱付了首付，买了一套房子，房产证上只有你的名字。婚后，你们一起用工资还房贷。\n\n如今感情破裂，走到离婚这一步。对方提出：『房子虽然是你婚前买的，但婚后我们一起还贷了，房子升值部分应该有我一份。』\n\n你有点慌，也不太确定：这套婚前买的房，到底该怎么分？",
+        "en": "You and your spouse have been married five years. Before marriage, you paid the down payment on an apartment with your own savings, and the deed is in your name alone. After marriage, you repaid the mortgage together with your salaries. Now the relationship has broken down and you're heading for divorce. Your spouse argues: 'The house was bought before marriage, but we paid the mortgage together — I should have a share of its appreciation.' You're anxious and unsure: how should this pre-marital apartment actually be divided?"
+      },
+      "image_prompt": "A couple sitting apart at a table with a property deed between them, tense atmosphere, legal documents, modern apartment interior, illustration style",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "咨询律师，了解「婚前首付+婚后共同还贷」房产的分割规则，理性协商补偿", "en": "Consult a lawyer to understand the rules for dividing a 'pre-marital down payment + joint mortgage repayment' property, and negotiate compensation rationally" },
+          "stats_effect": { "legal_awareness": 18, "knowledge": 12, "wealth": 10, "happiness": 5 },
+          "consequence": { "zh": "律师告诉你：房子属于你的个人财产，但婚后共同还贷的部分及对应的增值部分，属于夫妻共同财产，需要对对方进行补偿。你们据此协商了一个合理的补偿方案，和平办理了离婚。你深刻体会到：感情可以结束，但财产要依法理清，才能好聚好散。", "en": "The lawyer explains: the house is your personal property, but the jointly-repaid portion and its corresponding appreciation are marital property requiring compensation to your spouse. Based on this, you negotiate a fair settlement and divorce amicably. You deeply appreciate: feelings can end, but property must be sorted out by law for a clean separation." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CIVIL-003", "CN-CIVIL-007"],
+          "branch_tag": "理性协商",
+          "next_scene_hint": "依法理清，才能好聚好散"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "坚决不给：『房子是我婚前买的，跟你没关系！』拒绝任何协商", "en": "Refuse firmly: 'The house was bought before marriage, it has nothing to do with you!' Reject any negotiation" },
+          "stats_effect": { "happiness": -15, "legal_awareness": -10, "wealth": -10, "knowledge": -5 },
+          "consequence": { "zh": "你态度强硬地拒绝协商，结果双方对簿公堂。法院判决的结果和律师当初说的一样——婚后共同还贷部分及增值需要补偿对方。你还额外承担了诉讼费和律师费，更重要的是，这场拉锯战让双方身心俱疲，原本还能体面分手，最后闹得两败俱伤。", "en": "You refuse to negotiate with a hard attitude, and it goes to court. The ruling matches what the lawyer would have said — the jointly-repaid portion and its appreciation must be compensated. You also bear litigation and lawyer fees, and the drawn-out battle exhausts both sides. What could have been a dignified parting ends in mutual harm." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-CIVIL-003", "CN-CIVIL-007"],
+          "branch_tag": "强硬拒绝",
+          "next_scene_hint": "意气用事让结局两败俱伤"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "和对方一起查清「婚前个人财产」和「婚后共同还贷」的区别，再谈分割", "en": "Together research the difference between 'pre-marital personal property' and 'joint mortgage repayment', then discuss division" },
+          "stats_effect": { "legal_awareness": 15, "knowledge": 12, "happiness": 8, "wealth": 8 },
+          "consequence": { "zh": "你们一起查了民法典的规定，弄清了『婚前个人财产』和『婚后共同还贷及其增值』的界限。虽然最终还是离婚了，但因为双方都清楚规则，整个过程理性平和。你发现，把法律规则摊开来讲，比互相猜忌和争吵有效得多。", "en": "Together you research the Civil Code provisions and clarify the boundary between 'pre-marital personal property' and 'joint mortgage repayment and its appreciation'. Though you still divorce, the whole process is rational and calm because both sides understand the rules. You find that laying out the legal rules openly beats suspicion and quarrels." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CIVIL-003", "CN-CIVIL-007"],
+          "branch_tag": "共同求知",
+          "next_scene_hint": "把规则摊开，胜过互相猜忌"
+        }
+      ]
+    },
+    {
+      "key": "cn-adult-002",
+      "title": { "zh": "买房定金的陷阱", "en": "The Trap of the Down Payment" },
+      "life_stage": "adult",
+      "min_age": 28,
+      "max_age": 45,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "你看中了一套房子，中介催你赶紧交5万元定金锁定房源，还拿出一份合同让你签字，说『这是标准流程』。\n\n你注意到合同上写的是『定金』，中介却口头上说『这钱随时能退』。\n\n你犹豫了：定金和订金，一字之差，法律后果可是天壤之别。",
+        "en": "You've found an apartment you like. The agent urges you to pay a 50000 yuan deposit quickly to lock in the property, handing you a contract to sign, saying 'this is standard procedure'. You notice the contract says '定金' (deposit), but the agent verbally says 'this money is refundable anytime'. You hesitate: 定金 and 订金 differ by one character, but their legal consequences are worlds apart."
+      },
+      "image_prompt": "A person signing a contract at a real estate agency desk, an agent pointing at a clause, a deposit amount visible, tense decision moment, illustration style",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "看清是「定金」还是「订金」，要求把退款条件写进合同再签字", "en": "Check whether it's '定金' (deposit) or '订金' (booking fee), and require the refund terms to be written into the contract before signing" },
+          "stats_effect": { "legal_awareness": 15, "wealth": 10, "knowledge": 10, "happiness": 5 },
+          "consequence": { "zh": "你仔细看了合同，发现写的是『定金』，而法律规定定金一旦支付，反悔就不能退。你要求把退款条件写清楚，或者改成『订金』。中介虽然有点不情愿，但最终还是改了。你庆幸自己多看了一眼——『定金』和『订金』，一字之差，可能就是几万块的教训。", "en": "You read the contract carefully and find it says '定金' — by law, once a deposit is paid, backing out means losing it. You insist the refund terms be written clearly, or change it to '订金'. The agent is reluctant but eventually complies. You're glad you looked twice — '定金' vs '订金', one character apart, could be a lesson worth tens of thousands." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CIVIL-006"],
+          "branch_tag": "仔细核查",
+          "next_scene_hint": "多看一眼，省下几万块"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "听中介口头承诺『能退』，没细看就签字交了5万定金", "en": "Trust the agent's verbal promise that 'it's refundable' and sign without reading, paying the 50000 deposit" },
+          "stats_effect": { "wealth": -15, "happiness": -10, "legal_awareness": -8, "knowledge": -5 },
+          "consequence": { "zh": "你签了字交了钱。几天后你看中了另一套更合适的房子，想退掉这笔钱，中介却翻脸：『合同上写的是定金，你反悔定金不退！』你找合同一看，白纸黑字确实是『定金』。口头承诺没有任何证据，你只能吃哑巴亏，5万块打了水漂。", "en": "You sign and pay. Days later you find a better apartment and want the money back, but the agent turns: 'The contract says deposit — you back out, no refund!' You check and indeed it says '定金' in black and white. The verbal promise has no proof, and you're stuck — 50000 yuan gone." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-CIVIL-006"],
+          "branch_tag": "轻信口头",
+          "next_scene_hint": "口头承诺没有法律效力"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "先不急着签，拍照留存合同，回去查清「定金」「订金」的法律区别", "en": "Don't rush to sign. Photograph the contract, go home and research the legal difference between '定金' and '订金'" },
+          "stats_effect": { "legal_awareness": 13, "knowledge": 10, "happiness": 5, "wealth": 5 },
+          "consequence": { "zh": "你拍照留存了合同，回家一查才发现：『定金』有担保作用，反悔不退、违约双倍返还；『订金』只是预付款，可以退。你带着这些知识回去谈判，成功把合同改成了对自己更有利的条款。学习法律知识，关键时刻真能省钱。", "en": "You photograph the contract and, back home, discover: '定金' serves as a guarantee — no refund if you back out, double return if the seller breaches; '订金' is just a prepayment and is refundable. Armed with this knowledge, you return and successfully negotiate more favorable terms. Legal knowledge really does save money at critical moments." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CIVIL-006"],
+          "branch_tag": "先查后签",
+          "next_scene_hint": "懂法让你在谈判中占据主动"
+        }
+      ]
+    },
+    {
+      "key": "cn-mid-001",
+      "title": { "zh": "谁来赡养父母", "en": "Who Supports the Aging Parents" },
+      "life_stage": "middle_age",
+      "min_age": 45,
+      "max_age": 60,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "你今年50岁，父母已经年过七旬，身体越来越差，需要人照顾。你有两个兄弟姐妹，但大家各有各的难处，都推说工作忙、离得远，赡养老人的事迟迟定不下来。\n\n母亲在一次电话里哽咽：『你们小时候，我和你爸再难也没亏待过你们……』\n\n你心里不是滋味，也想起一个法律常识：赡养父母，是每个子女的法定义务。",
+        "en": "You're 50, and your parents are over seventy with declining health, needing care. You have two siblings, but each has their own difficulties, all claiming busy work or distance, so supporting the parents remains unresolved. In one phone call your mother chokes up: 'When you were little, no matter how hard it was, your father and I never shortchanged you...' You feel awful, and recall a basic legal fact: supporting one's parents is a legal duty for every child."
+      },
+      "image_prompt": "An elderly couple sitting in a modest living room, three middle-aged adults around them with conflicted expressions, warm but heavy atmosphere, illustration style",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "主动牵头召开家庭会议，商定赡养分工：有人出钱、有人出力、有人常回家看看", "en": "Take the lead in calling a family meeting to agree on division of support: some contribute money, some contribute care, some visit often" },
+          "stats_effect": { "happiness": 15, "legal_awareness": 10, "knowledge": 8, "health": 5 },
+          "consequence": { "zh": "你主动召集了家庭会议，把赡养的事摊开来说。大家商定了明确的分工：经济条件好的多出钱，离得近的多出力，其他人常回家看看。父母脸上重新有了笑容。你明白：赡养不仅是义务，更是亲情和责任。把话说开，比互相推诿强一百倍。", "en": "You take the initiative to call a family meeting and lay out the support matter openly. Everyone agrees on a clear division: those better off contribute more money, those nearby contribute more care, others visit often. Your parents smile again. You understand: supporting parents is not just a duty but love and responsibility — talking it through beats mutual shirking a hundred times over." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CIVIL-020"],
+          "branch_tag": "主动担当",
+          "next_scene_hint": "把话说开，胜过互相推诿"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "心里愧疚，但想着『兄弟姐妹都不管，凭什么我管』，也拖着", "en": "Feel guilty, but think 'if my siblings don't care, why should I', and keep putting it off" },
+          "stats_effect": { "happiness": -15, "health": -5, "legal_awareness": -5, "knowledge": -3 },
+          "consequence": { "zh": "你们互相观望，谁也不主动。父母越来越孤单，身体也每况愈下。直到有一天，母亲在家摔倒，等被发现时已经晚了。你追悔莫及：赡养不是『别人管了我才管』，而是每个人都有的法定义务。等失去了才后悔，就太迟了。", "en": "You all watch each other, no one stepping up. Your parents grow lonelier and their health worsens. One day your mother falls at home, and by the time she's found it's too late. You regret it deeply: supporting parents isn't 'only if others do it' — it's a legal duty for each of you. Regretting after the loss is too late." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-CIVIL-020"],
+          "branch_tag": "互相推诿",
+          "next_scene_hint": "失去之后才后悔，就太迟了"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "了解「赡养老人」的法律义务和方式，用法律和情理说服兄弟姐妹一起尽责", "en": "Learn about the legal duty and forms of supporting elderly parents, and use law plus reason to persuade siblings to do their part" },
+          "stats_effect": { "legal_awareness": 13, "happiness": 10, "knowledge": 10, "health": 5 },
+          "consequence": { "zh": "你查了《民法典》第1067条，了解到赡养是成年子女的法定义务，形式包括经济供养、生活照料、精神慰藉等。你用这些道理和家人沟通，大家最终达成了赡养协议。你发现，讲清楚『这是法定义务』，比单纯的『你应该孝顺』更有说服力。", "en": "You look up Civil Code Article 1067 and learn that supporting parents is a legal duty of adult children, including financial support, daily care, and emotional comfort. You communicate with family using this reasoning, and everyone finally reaches a support agreement. You find that explaining 'this is a legal duty' persuades better than simply saying 'you should be filial'." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CIVIL-020"],
+          "branch_tag": "以法说理",
+          "next_scene_hint": "法理加情理，说服力翻倍"
+        }
+      ]
+    },
+    {
+      "key": "cn-mid-002",
+      "title": { "zh": "遗产怎么分", "en": "How the Inheritance Is Divided" },
+      "life_stage": "middle_age",
+      "min_age": 45,
+      "max_age": 60,
+      "difficulty": 3,
+      "narrative": {
+        "zh": "父亲去世了，留下了一套房子和一笔存款，但没有立遗嘱。你有一个哥哥和一个妹妹，母亲还健在。\n\n哥哥说：『我是长子，房子应该归我。』妹妹说：『我照顾爸妈最多，遗产该我多分。』大家各执一词，关系闹得很僵。\n\n你想不通：没有遗嘱，这遗产到底该怎么分？法律有没有明确的规定？",
+        "en": "Your father has passed away, leaving an apartment and some savings, but no will. You have an older brother and a younger sister; your mother is still alive. Your brother says: 'As the eldest son, the house should be mine.' Your sister says: 'I cared for mom and dad the most, so I should get more.' Everyone insists, and relations turn sour. You wonder: without a will, how should the inheritance be divided? Does the law have clear rules?"
+      },
+      "image_prompt": "Three middle-aged siblings arguing around a table with property and bank documents, an elderly mother sitting quietly, tense family meeting, illustration style",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "讲清「法定继承」规则：配偶、子女、父母都是第一顺序继承人，均等分配", "en": "Clarify the 'statutory inheritance' rules: spouse, children, and parents are all first-order heirs, dividing equally" },
+          "stats_effect": { "legal_awareness": 18, "happiness": 10, "knowledge": 12, "wealth": 10 },
+          "consequence": { "zh": "你给大家讲解了《民法典》关于法定继承的规定：配偶、子女、父母都是第一顺序继承人，一般均等分配。哥哥的『长子多分』、妹妹的『照顾多分』都没有法律依据。大家冷静下来，按照法律规定均分了遗产，母亲也保留了应有的份额。一场家庭纠纷就此化解。", "en": "You explain the Civil Code's statutory inheritance rules: spouse, children, and parents are all first-order heirs, generally dividing equally. Your brother's 'eldest son gets more' and your sister's 'more care gets more' have no legal basis. Everyone calms down and divides the estate by law, with your mother keeping her rightful share. A family dispute is resolved." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CIVIL-012", "CN-CIVIL-013"],
+          "branch_tag": "依法析产",
+          "next_scene_hint": "法律规则化解了家庭纷争"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "为了争更多遗产，和家人彻底闹翻，甚至闹上法庭", "en": "To fight for a bigger share, fall out completely with family, even taking it to court" },
+          "stats_effect": { "happiness": -20, "wealth": -5, "legal_awareness": -5, "health": -8 },
+          "consequence": { "zh": "你们为了遗产对簿公堂，打了好几年的官司。虽然法院最终按法律判决了，但诉讼费和律师费花了不少，更重要的是，兄弟姐妹从此形同陌路，逢年过节再也不来往。你后来想：为了钱，把最亲的人变成了仇人，真的值得吗？", "en": "You take the inheritance dispute to court, fighting for years. Though the court eventually rules by law, the litigation and lawyer fees are substantial — and worse, the siblings become strangers, never visiting each other during holidays again. Later you wonder: was turning your closest family into enemies really worth it for money?" },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-CIVIL-012"],
+          "branch_tag": "争产反目",
+          "next_scene_hint": "为了钱，把亲人变成了仇人"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "先确认父亲有没有留下遗嘱，再按法律和家人的实际情况协商", "en": "First check whether father left a will, then negotiate based on the law and the family's actual situation" },
+          "stats_effect": { "legal_awareness": 14, "knowledge": 12, "happiness": 8, "wealth": 8 },
+          "consequence": { "zh": "你建议先查清父亲是否立过遗嘱。确定没有遗嘱后，你提议按照法定继承均分，同时考虑到母亲年迈，大家一致同意让母亲多分一部分用于养老。这种既依法又讲情理的方案，让全家人都心服口服。", "en": "You suggest first checking whether father left a will. Confirming there is none, you propose equal division under statutory inheritance, while considering your mother's age — everyone agrees to give her a larger share for her old age. This approach, both lawful and reasonable, satisfies the whole family." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CIVIL-012", "CN-CIVIL-013"],
+          "branch_tag": "情理兼顾",
+          "next_scene_hint": "依法又讲情，全家心服口服"
+        }
+      ]
+    },
+    {
+      "key": "cn-senior-003",
+      "title": { "zh": "晚年的遗嘱", "en": "The Will in Later Life" },
+      "life_stage": "senior",
+      "min_age": 62,
+      "max_age": 80,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "你今年68岁，有一儿一女，还有两套房子和一些积蓄。最近你总在想：万一哪天走了，这些财产怎么安排，才能避免子女为钱闹矛盾？\n\n你隐约听说可以立遗嘱，但又觉得『不吉利』，而且不知道遗嘱该怎么立才有效。\n\n子女都劝你：『别想这些，您身体好着呢。』但你心里清楚，提前安排，才是对子女真正的负责。",
+        "en": "You're 68, with a son, a daughter, two apartments, and some savings. Lately you keep thinking: if something happened, how should this property be arranged to avoid the children fighting over money? You vaguely hear you can write a will, but it feels 'unlucky', and you don't know how to make one valid. Your children say: 'Don't think about that, you're healthy.' But you know in your heart: arranging things in advance is the real responsibility to your children."
+      },
+      "image_prompt": "An elderly person writing at a desk with documents and a pen, thoughtful and peaceful expression, warm lamp light, a family photo nearby, illustration style",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "咨询律师或去公证处，了解遗嘱的法定形式，立一份合法有效的遗嘱", "en": "Consult a lawyer or notary to learn the legal forms of a will and make a legally valid one" },
+          "stats_effect": { "legal_awareness": 15, "happiness": 10, "knowledge": 12, "wealth": 5 },
+          "consequence": { "zh": "你咨询了律师，了解了遗嘱的法定形式（自书、代书、打印、录音录像、公证等），并按照要求立了一份合法有效的遗嘱，还指定了遗嘱执行人。你心里踏实多了：提前把财产安排好，既尊重了自己的意愿，也避免了子女将来为遗产闹矛盾。", "en": "You consult a lawyer, learn the legal forms of a will (handwritten, written by proxy, printed, audio-video, notarized, etc.), and make a legally valid will, even appointing an executor. You feel much more at ease: arranging your property in advance respects your own wishes and prevents the children from fighting over the estate later." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CIVIL-013"],
+          "branch_tag": "依法规划",
+          "next_scene_hint": "提前安排，是对子女负责"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "觉得不吉利，不愿意立遗嘱，想着『以后再说』", "en": "Feel it's unlucky, refuse to make a will, thinking 'I'll deal with it later'" },
+          "stats_effect": { "happiness": -5, "legal_awareness": -5, "knowledge": -3 },
+          "consequence": { "zh": "你一直拖着没立遗嘱。几年后你突然生病离世，因为没留下遗嘱，子女只能按照法定继承分配财产，但他们对分配方式有分歧，最终闹上法庭。你如果在世，一定不愿意看到他们为财产反目。有些事，真的不能『以后再说』。", "en": "You keep putting off making a will. Years later you pass away suddenly. With no will, the children can only divide the estate by statutory inheritance, but they disagree over the division and end up in court. If you were alive, you would never want to see them turn against each other over property. Some things truly can't wait for 'later'." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-CIVIL-013"],
+          "branch_tag": "一拖再拖",
+          "next_scene_hint": "有些事，不能『以后再说』"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "和子女坦诚沟通自己的想法，听取意见后再决定如何立遗嘱", "en": "Talk openly with your children about your wishes, listen to their views, then decide how to make the will" },
+          "stats_effect": { "legal_awareness": 12, "happiness": 12, "knowledge": 8, "wealth": 5 },
+          "consequence": { "zh": "你主动和子女沟通了自己的想法，也倾听了他们的意见。大家对你的安排都表示理解和尊重。这种开诚布公的沟通，让家庭关系更融洽了——立遗嘱不是『不吉利』，而是对家人的爱与责任。", "en": "You openly communicate your wishes to your children and listen to their views. Everyone understands and respects your arrangement. This candid conversation brings the family closer — making a will isn't 'unlucky', it's love and responsibility toward your family." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CIVIL-013"],
+          "branch_tag": "坦诚沟通",
+          "next_scene_hint": "开诚布公，让家庭更融洽"
+        }
+      ]
+    },
+    {
+      "key": "cn-senior-004",
+      "title": { "zh": "谁来养我", "en": "Who Will Care for Me" },
+      "life_stage": "senior",
+      "min_age": 62,
+      "max_age": 85,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "你今年75岁，老伴去世了，身体也不太好，需要人照顾。你有两个儿子，但他们都在外地，平时很少回来，电话也越来越少。\n\n你不想拖累他们，但一个人生活实在吃力，有一次头晕摔了一跤，半天才爬起来。\n\n邻居劝你：『子女有赡养义务，你可以让他们给赡养费，或者起诉他们。』你心里很矛盾：法律上他们确实该养我，可我又不想和亲生儿子对簿公堂。",
+        "en": "You're 75, your spouse has passed, and your health is poor, needing care. You have two sons, but they live far away, rarely return, and call less and less. You don't want to burden them, but living alone is truly hard — once you got dizzy, fell, and took a long time to get up. A neighbor advises: 'Children have a legal duty of support — you can ask them for support payments, or even sue them.' You're torn: legally they should support you, but you don't want to take your own sons to court."
+      },
+      "image_prompt": "An elderly person sitting alone by a window, holding a phone, a fallen chair nearby suggesting a recent fall, lonely and quiet, warm but melancholic light, illustration style",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "先和儿子们好好沟通，说明自己的困难，商量赡养方案（赡养费或轮流照顾）", "en": "First communicate honestly with your sons about your difficulties and discuss a support plan (support payments or taking turns caring)" },
+          "stats_effect": { "happiness": 15, "health": 8, "legal_awareness": 8, "knowledge": 5 },
+          "consequence": { "zh": "你鼓起勇气和儿子们认真谈了一次，说出了自己的难处。他们这才意识到你过得这么艰难，很愧疚。大家商定了赡养方案：每月给你生活费，逢年过节回家，并请了人定期照顾你。你发现，很多事你不说，子女真的不知道。", "en": "You gather courage and have a serious talk with your sons, telling them your difficulties. Only then do they realize how hard your life is, and feel guilty. You agree on a support plan: monthly living expenses, returning for holidays, and hiring someone to care for you regularly. You find that many things, if you don't say them, your children truly don't know." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CIVIL-020"],
+          "branch_tag": "主动沟通",
+          "next_scene_hint": "你不说，子女真的不知道"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "不忍心麻烦儿子，一个人硬扛着，生病了也不告诉他们", "en": "Unwilling to trouble your sons, bear it alone, not even telling them when you're sick" },
+          "stats_effect": { "health": -15, "happiness": -15, "legal_awareness": -5 },
+          "consequence": { "zh": "你一直硬扛，从不跟儿子说自己的难处。直到有一天你病倒了，被邻居送进医院，儿子们才匆匆赶回来。看到你苍老的样子，他们既心疼又自责。你这才明白：赡养是子女的法定义务，你『怕麻烦他们』，反而让他们错过了尽孝的机会。", "en": "You keep bearing it alone, never telling your sons about your difficulties. One day you collapse and are taken to hospital by a neighbor; only then do your sons rush back. Seeing how frail you've become, they're heartbroken and guilty. You finally understand: support is a legal duty for children — your 'not wanting to trouble them' actually cost them the chance to be filial." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-CIVIL-020"],
+          "branch_tag": "硬扛不言",
+          "next_scene_hint": "硬扛让子女错过了尽孝的机会"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "了解自己的法定权利：缺乏劳动能力或生活困难的父母，有权要求子女给付赡养费", "en": "Learn your legal rights: parents lacking labor ability or in financial difficulty are entitled to require their children to pay support" },
+          "stats_effect": { "legal_awareness": 15, "knowledge": 10, "happiness": 8, "health": 5 },
+          "consequence": { "zh": "你通过社区普法活动了解到，《民法典》第1067条明确规定了成年子女的赡养义务，你有权要求他们给付赡养费。有了法律底气，你和儿子们沟通时更加从容。最终，即使不闹上法庭，他们也主动承担起了赡养责任。懂法，让你在维护自己权益时更有力量。", "en": "Through a community legal-awareness session, you learn that Civil Code Article 1067 clearly stipulates adult children's support duty, and you're entitled to require support payments. With this legal backing, you communicate with your sons more confidently. In the end, without going to court, they proactively take on their support responsibilities. Knowing the law empowers you to protect your rights." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CIVIL-020"],
+          "branch_tag": "依法维权",
+          "next_scene_hint": "懂法让你维护权益更有底气"
+        }
+      ]
+    }
+  ]
+}

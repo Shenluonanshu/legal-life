@@ -45,3 +45,6 @@ npm-debug.log*
 
 # Lockfile (keep in repo for pnpm)
 # pnpm-lock.yaml is committed
+
+# 场景图片源文件（已上传 Supabase Storage，不入库）
+picture/

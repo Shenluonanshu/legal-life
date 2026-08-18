@@ -1,0 +1,51 @@
+{
+  "country_code": "US",
+  "category": "consumer_rights",
+  "scenes": [
+    {
+      "key": "us-shop-001",
+      "title": { "zh": "货不对板的网购", "en": "Misleading Online Purchase" },
+      "life_stage": "young_adult",
+      "min_age": 18,
+      "max_age": 40,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "你在网上花 200 美元买了一件号称『纯羊毛』的大衣，页面写着『100% Wool，冬季保暖神器』。收到货后发现，标签显示 100% 聚酯纤维，质感也和图片差远了。\n\n你联系商家退货，客服却回复：『商品描述仅供参考，不支持无理由退货。』\n\n你很生气：这明明是虚假宣传，怎么就成了『仅供参考』？",
+        "en": "You buy a $200 coat online advertised as 'pure wool', with the page claiming '100% Wool, winter warmth miracle'. When it arrives, the tag says 100% polyester and the quality is far from the photos. You contact the seller to return it, but support replies: 'Product descriptions are for reference only; no returns without cause.' You're angry: this is clearly false advertising — how is it 'for reference only'?"
+      },
+      "image_prompt": "A person holding a coat with a 100% polyester tag, looking at a smartphone showing the product page claiming 100% wool, disappointment, warm indoor light, flat illustration",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "截图保存虚假宣传证据，依据 FTC 禁止虚假广告的规定投诉，并要求退款", "en": "Screenshot the false-advertising evidence, file a complaint citing the FTC's ban on deceptive ads, and demand a refund" },
+          "stats_effect": { "legal_awareness": 16, "wealth": 12, "knowledge": 10, "happiness": 8 },
+          "consequence": { "zh": "你截图保存了商品页面的『100% Wool』宣传，向平台和 FTC 投诉了商家的虚假宣传。平台核实后判定商家违规，给你全额退款并下架了该商品。你体会到：在美国，FTC 明确禁止虚假广告，消费者的投诉是有效武器。", "en": "You screenshot the '100% Wool' claim and file a complaint with the platform and the FTC over the false advertising. The platform verifies it, rules against the seller, refunds you in full, and delists the product. You learn: in the U.S., the FTC explicitly bans false advertising, and consumer complaints are an effective weapon." },
+          "is_legally_correct": true,
+          "laws_revealed": ["US-CONSUMER-001"],
+          "branch_tag": "依法维权",
+          "next_scene_hint": "虚假宣传敌不过你的投诉"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "自认倒霉，衣服扔到一边，以后再也不网购了", "en": "Accept the loss, toss the coat aside, and swear off online shopping" },
+          "stats_effect": { "wealth": -10, "happiness": -8, "legal_awareness": -5 },
+          "consequence": { "zh": "你自认倒霉，放弃了维权。那个商家继续用同样的虚假宣传欺骗其他消费者。后来你发现，不少人都在这家店上了当。你意识到：沉默不仅让自己受损，也纵容了不良商家继续坑人。", "en": "You accept the loss and give up. The seller continues deceiving other consumers with the same false advertising. Later you find many people have been scammed by the same store. You realize silence not only hurts yourself but lets bad sellers keep cheating others." },
+          "is_legally_correct": false,
+          "laws_revealed": ["US-CONSUMER-001"],
+          "branch_tag": "自认倒霉",
+          "next_scene_hint": "沉默纵容了不良商家"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "先查 FTC 的消费者保护规定和退款政策，再和商家有理有据地沟通", "en": "First check the FTC's consumer-protection rules and refund policies, then argue your case with the seller" },
+          "stats_effect": { "legal_awareness": 13, "knowledge": 10, "wealth": 8, "happiness": 6 },
+          "consequence": { "zh": "你查了 FTC 关于虚假广告的规定，也确认了信用卡的争议（chargeback）功能。和商家沟通时，你明确引用法律条文，商家态度立刻软化，同意退款。你学会了：遇到消费纠纷，先查清楚规则，谈判时才有底气。", "en": "You check the FTC's rules on false advertising and confirm your credit card's chargeback feature. When you argue your case citing the law, the seller immediately softens and agrees to a refund. You learn: in consumer disputes, research the rules first, and you'll negotiate with confidence." },
+          "is_legally_correct": true,
+          "laws_revealed": ["US-CONSUMER-001"],
+          "branch_tag": "有理有据",
+          "next_scene_hint": "查清规则，谈判才有底气"
+        }
+      ]
+    }
+  ]
+}

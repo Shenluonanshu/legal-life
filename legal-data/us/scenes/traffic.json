@@ -1,0 +1,51 @@
+{
+  "country_code": "US",
+  "category": "traffic",
+  "scenes": [
+    {
+      "key": "us-traffic-001",
+      "title": { "zh": "朋友要酒驾回家", "en": "Friend Wants to Drive Drunk" },
+      "life_stage": "young_adult",
+      "min_age": 21,
+      "max_age": 40,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "周末晚上，你和朋友们在酒吧聚会。散场时，喝了三杯啤酒的迈克掏出车钥匙：『我没事，就喝了一点，顺路送你们回去。』\n\n你闻到他身上的酒气，心里咯噔一下。其他朋友有的已经叫了 Uber，有的在犹豫。\n\n迈克已经朝他的车走去了。你知道，美国酒驾（DUI）的红线是血液酒精浓度 0.08%，但喝了酒开车，本身就是危险。",
+        "en": "On a weekend night, you and friends are leaving a bar. Mike, who had three beers, pulls out his car keys: 'I'm fine, just a little. I'll drop you guys home.' You smell the alcohol on him and your heart sinks. Some friends have already called an Uber, others are hesitating. Mike is already walking toward his car. You know the U.S. DUI limit is 0.08% BAC, but driving after drinking is dangerous regardless."
+      },
+      "image_prompt": "Night scene outside a bar, a friend holding car keys while another hesitates, neon lights, a rideshare car in the distance, flat illustration",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "拦住迈克：『你喝酒了不能开车，我帮你叫 Uber，车费我出』", "en": "Stop Mike: 'You've been drinking, don't drive. Let me call you an Uber — my treat'" },
+          "stats_effect": { "legal_awareness": 15, "happiness": 8, "knowledge": 10, "wealth": -3 },
+          "consequence": { "zh": "你拦住了迈克，坚持帮他叫了 Uber。起初他还有点不高兴，但路上聊开后，他反而感激你：『刚才我确实有点上头，谢谢你。』你们平安到家。你体会到：真正的朋友，会在你危险时拦住你。酒驾的代价（吊销驾照、罚款、入狱、犯罪记录）远大于几十块车费。", "en": "You stop Mike and insist on calling him an Uber. At first he's a bit annoyed, but on the ride he opens up and thanks you: 'I was a little buzzed back there, thank you.' You both get home safely. You learn: a true friend stops you when you're in danger. The cost of a DUI — license suspension, fines, jail, criminal record — far exceeds a ride fare." },
+          "is_legally_correct": true,
+          "laws_revealed": ["US-TRAFFIC-001"],
+          "branch_tag": "真正的朋友",
+          "next_scene_hint": "你拦住了危险，也守住了友情"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "虽然担心，但还是上了迈克的车，觉得『应该没事』", "en": "Get in Mike's car despite the worry, thinking 'it'll probably be fine'" },
+          "stats_effect": { "happiness": -8, "legal_awareness": -10, "health": -12, "wealth": -5 },
+          "consequence": { "zh": "你上了迈克的车。没开多远，一辆警车示意靠边停车。迈克吹了酒精测试，结果超过 0.08%，当场被逮捕。你虽然只是乘客，但那种后怕久久无法散去——如果路上出了事故呢？你下定决心：以后绝不再上喝了酒的人开的车。", "en": "You get in Mike's car. Not far down the road, a police car signals him to pull over. Mike blows over 0.08% on the breathalyzer and is arrested on the spot. You're just a passenger, but the fear lingers — what if there had been an accident? You resolve: never again ride with someone who's been drinking." },
+          "is_legally_correct": false,
+          "laws_revealed": ["US-TRAFFIC-001"],
+          "branch_tag": "侥幸心理",
+          "next_scene_hint": "侥幸差点酿成大祸"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "劝说迈克，并主动帮大家叫车，一起等车、聊天醒酒", "en": "Persuade Mike, and proactively call a ride for everyone, waiting together and chatting to sober up" },
+          "stats_effect": { "legal_awareness": 10, "happiness": 10, "knowledge": 8, "wealth": -2 },
+          "consequence": { "zh": "你不仅劝住了迈克，还主动帮大家叫了车。等车的十几分钟里，你们聊着天，迈克的酒劲也缓了一些。他后来感慨：『如果刚才自己开车，后果不敢想。』你的坚持，让一群朋友都安全回家。", "en": "Not only do you persuade Mike, you proactively call a ride for everyone. During the ten-minute wait, you chat and Mike sobers up a bit. He later reflects: 'If I had driven myself, I don't want to think about the consequences.' Your persistence got a whole group of friends home safely." },
+          "is_legally_correct": true,
+          "laws_revealed": ["US-TRAFFIC-001"],
+          "branch_tag": "照顾朋友",
+          "next_scene_hint": "你的坚持让大家都安全"
+        }
+      ]
+    }
+  ]
+}

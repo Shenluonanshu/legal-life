@@ -1,0 +1,186 @@
+{
+  "country_code": "CN",
+  "category": "education",
+  "scenes": [
+    {
+      "key": "cn-teen-001",
+      "title": { "zh": "网络世界的隐形伤害", "en": "Invisible Wounds of the Internet" },
+      "life_stage": "teen",
+      "min_age": 13,
+      "max_age": 17,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "你15岁，是班级群的管理员。最近你发现有人在群里发你的丑照，还配上了难听的外号。有人截图发到了其他群，事情越传越广。\n\n你去学校的时候，感觉有人在背后对你指指点点。你打开手机，发现有好几个不认识的号加你，发来嘲笑的消息。\n\n你感到又羞耻又愤怒。妈妈说：『别理那些无聊的人，过几天就过去了。』但你知道不会过去——互联网是有记忆的。",
+        "en": "You're 15, an admin of your class chat group. Recently, someone has been posting unflattering photos of you with mean nicknames. Screenshots have spread to other groups. At school, you feel people whispering behind your back. Strangers are adding you on social media just to send mocking messages. You feel humiliated and angry. Your mom says: 'Ignore them, it'll blow over.' But you know the internet never forgets."
+      },
+      "image_prompt": "A teenager sitting on their bed looking at a smartphone with a distressed expression, dim bedroom lighting, phone screen glowing, teenage bedroom setting, illustration style",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "截图保留所有证据，告知班主任和家长，要求平台删除相关内容", "en": "Screenshot all evidence, tell your teacher and parents, request the platform remove the content" },
+          "stats_effect": { "legal_awareness": 18, "knowledge": 10, "happiness": 8, "health": 5 },
+          "consequence": { "zh": "你妈妈陪你一起去了学校，班主任非常重视，立即展开调查。同时你们向平台提交了删除申请，平台在24小时内处理了相关内容。发照片的同学被学校给予了纪律处分，并公开道歉。你发现，当你有勇气站出来时，身边很多人都愿意支持你。而法律——未成年人保护法第130条——明确保护你不受网络欺凌。", "en": "Your mom accompanies you to school. The teacher takes it seriously and investigates immediately. You also submit removal requests to the platforms, which are processed within 24 hours. The student who posted the photos faces school discipline and publicly apologizes. You discover that when you have the courage to stand up, many people will support you. And the law — Article 130 of the Minor Protection Law — explicitly protects you from cyberbullying." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-EDU-003"],
+          "branch_tag": "勇敢面对",
+          "next_scene_hint": "正义得到了伸张"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "自己找黑客朋友帮忙『反击』——把对方的丑照也发出去", "en": "Ask a 'hacker friend' to help 'fight back' — post their embarrassing photos too" },
+          "stats_effect": { "happiness": -5, "legal_awareness": -12, "knowledge": -3, "health": -5 },
+          "consequence": { "zh": "你的反击让战火升级。对方家长报了警，警察找你谈话时，你才知道：以牙还牙在网上发别人的丑照同样违法，而且因为你主动传播，你也成了施害者。这场闹剧以双方都被处分而告终。你后悔地说：『本来我是受害者，现在我也成了欺负别人的人。』", "en": "Your counterattack escalates the war. The other parents call the police. When officers talk to you, you learn: posting someone else's embarrassing photos online is equally illegal, and by actively spreading them, you've become a perpetrator too. Both sides face disciplinary action. You regretfully say: 'I started as the victim, and now I'm also a bully.'" },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-EDU-003", "CN-CRIM-005"],
+          "branch_tag": "以暴制暴",
+          "next_scene_hint": "受害者变成了施害者"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "向一个值得信任的成年人求助——学校心理老师或你喜欢的那个老师", "en": "Ask a trusted adult for help — the school counselor or your favorite teacher" },
+          "stats_effect": { "legal_awareness": 10, "happiness": 12, "knowledge": 8, "health": 8 },
+          "consequence": { "zh": "心理老师听了你的讲述后，不仅帮你处理了网络欺凌问题，还教会了你如何调节情绪，不被那些恶意信息影响。她的话让你印象深刻：『那些发消息的人甚至不认识真实的你——他们攻击的是一个他们想象中的靶子。不要让陌生人的无聊定义了你。』你学会了：求助不是软弱，是智慧。", "en": "After hearing your story, the counselor not only helps handle the cyberbullying but also teaches you how to manage your emotions and not let those malicious messages affect you. Her words stick with you: 'Those people don't even know the real you — they're attacking an imaginary target. Don't let strangers' boredom define who you are.' You learn: asking for help isn't weakness — it's wisdom." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-EDU-003", "CN-EDU-001"],
+          "branch_tag": "智慧求助",
+          "next_scene_hint": "心理变得更强大"
+        }
+      ]
+    },
+    {
+      "key": "cn-teen-002",
+      "title": { "zh": "偷偷充值的游戏", "en": "The Secret In-Game Top-Up" },
+      "life_stage": "teen",
+      "min_age": 13,
+      "max_age": 17,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "你今年15岁。暑假里，你用妈妈的手机玩一款手游，为了抽到喜欢的角色，陆陆续续用她绑定的支付账户充了8000多元。\n\n妈妈收到银行短信后发现了，气得浑身发抖：『这钱是我攒了半年的生活费！』她带着你联系游戏公司要求退款，客服却回复：『充值属于自愿消费，且已到账使用，无法退款。』\n\n妈妈很绝望，你也又后悔又害怕。你知道，15岁的你花的这8000块，可能涉及一个关键的法律问题：未成年人花的大额钱，算不算数？",
+        "en": "You're 15. Over the summer, using your mom's phone, you kept topping up a mobile game to pull your favorite character — over 8000 yuan charged to her linked payment account. When she sees the bank SMS, she's furious: 'That was six months of living expenses!' You contact the game company for a refund, but support replies: 'Topping up is voluntary consumption, already delivered, non-refundable.' Your mom is devastated, and you're regretful and scared. You know that 8000 yuan spent by a 15-year-old raises a key legal question: is a minor's large spending even valid?"
+      },
+      "image_prompt": "A teenager holding a smartphone with a mobile game on screen, worried expression, a parent looking at a bank statement nearby, living room setting, warm light, illustration style",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "和妈妈一起整理充值记录，向平台提交「未成年人大额充值未经监护人追认」的退款申请，必要时向消协投诉", "en": "Organize the top-up records with your mom, submit a refund request citing 'minor's large top-up not ratified by guardian', escalate to consumer association if needed" },
+          "stats_effect": { "legal_awareness": 18, "happiness": 8, "knowledge": 12, "wealth": 15 },
+          "consequence": { "zh": "你们整理了完整的充值流水，向平台提交了退款申请，并援引《民法典》第145条：15岁的你实施的与年龄智力不相适应的大额充值，未经父母追认则无效。平台核实后，退回了大部分款项。妈妈松了一口气，你也上了一堂深刻的法治课：钱不是不能退，关键是要懂法、留证、敢于主张。", "en": "You compile the full top-up history and submit a refund request citing Civil Code Article 145: a 15-year-old's large top-up, disproportionate to their age and intelligence, is invalid without parental ratification. The platform verifies and refunds most of the money. Your mom breathes a sigh of relief, and you learn a profound legal lesson: refunds are possible — if you know the law, keep records, and dare to claim your rights." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CIVIL-019"],
+          "branch_tag": "依法维权",
+          "next_scene_hint": "法律帮你和家人走出了困境"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "偷偷删掉充值短信和订单记录，假装什么都没发生，想自己攒零花钱慢慢补上", "en": "Secretly delete the SMS and order records, pretend nothing happened, and try to slowly repay from your allowance" },
+          "stats_effect": { "happiness": -12, "legal_awareness": -10, "knowledge": -3, "health": -5 },
+          "consequence": { "zh": "你以为删了记录就没人知道，但银行的账单、平台的充值流水根本无法删除。妈妈最终还是发现了，比起那8000元，她更痛心你的欺骗。而且因为错过了及时主张的时机，退款难度大增。你意识到：逃避和隐瞒只会让问题变得更糟，诚实面对才是解决问题的第一步。", "en": "You think deleting records hides everything, but bank statements and platform transaction logs can't be deleted. Your mom eventually finds out — and is more hurt by the deception than the 8000 yuan. Worse, missing the window to claim makes the refund much harder. You realize avoidance and concealment only make things worse; honesty is the first step to solving any problem." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-CIVIL-019"],
+          "branch_tag": "逃避隐瞒",
+          "next_scene_hint": "隐瞒让事情雪上加霜"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "先真诚向妈妈道歉，然后一起查资料学习「未成年人充值退款」的规定和维权流程", "en": "Sincerely apologize to your mom first, then together research the rules and process for 'minor top-up refunds'" },
+          "stats_effect": { "legal_awareness": 14, "happiness": 10, "knowledge": 10, "wealth": 8 },
+          "consequence": { "zh": "你的真诚道歉让妈妈平静了下来。你们一起查到了未成年人网络游戏充值的规定，也了解了退款需要准备的材料。虽然最后只退回了一部分，但这个过程让你和妈妈的关系更近了，你也真正学会了：出了问题，坦诚沟通 + 依法解决，永远比一个人扛着强。", "en": "Your sincere apology calms your mom. Together you research the rules on minors' in-game purchases and the refund process. Though you only get a partial refund in the end, the process brings you and your mom closer, and you truly learn: when things go wrong, honest communication plus legal resolution always beats shouldering it alone." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CIVIL-019"],
+          "branch_tag": "坦诚沟通",
+          "next_scene_hint": "坦诚让你和家人更近"
+        }
+      ]
+    },
+    {
+      "key": "cn-teen-003",
+      "title": { "zh": "网贷的诱惑", "en": "The Lure of Online Loans" },
+      "life_stage": "teen",
+      "min_age": 16,
+      "max_age": 17,
+      "difficulty": 3,
+      "narrative": {
+        "zh": "你17岁，读高二。最近你很想买一部新手机，但家里条件一般。同学小杰神秘地给你看了一个APP：『这个借钱超快，我上次借了2000秒到账，就是利息高一点。』\n\n你打开APP，界面写着『极速放款，无需抵押』。你试着申请了3000元，系统立刻显示『额度5000元』。但你没注意到，年化利率高达36%，还有各种『服务费』、『砍头息』。\n\n小杰说：『先借了再说，反正能分期还。』但你隐约记得，之前新闻里有人因为校园贷利滚利，最后背上了几十万的债。",
+        "en": "You're 17, in your second year of high school. You really want a new phone, but your family is struggling. Your classmate Xiaojie mysteriously shows you an app: 'It's super fast — I borrowed 2000, instant approval, just a bit higher interest.' You open the app: 'Instant loan, no collateral.' You try applying for 3000, and it instantly shows 'limit 5000'. But you didn't notice the 36% annual rate, plus various 'service fees' and 'upfront interest deduction'. Xiaojie says: 'Just borrow it, you can pay in installments.' But you vaguely remember news about students buried in rolling debt from campus loans."
+      },
+      "image_prompt": "A high school student looking at a phone showing a loan app with flashy numbers, another student pointing at the screen, classroom corner, anxious mood, illustration style",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "坚决拒绝，告诉小杰这可能是高利贷甚至套路贷，并劝他赶紧告诉家长、停止借贷", "en": "Refuse firmly, tell Xiaojie this may be usury or even a loan scam, and urge him to tell his parents and stop borrowing" },
+          "stats_effect": { "legal_awareness": 20, "happiness": 5, "knowledge": 12, "wealth": 5 },
+          "consequence": { "zh": "你没有借钱，还提醒了小杰。虽然小杰起初不以为意，但几天后他被催收电话骚扰得受不了，终于告诉了父母，在家长帮助下还清了本金并举报了平台。你庆幸自己没有掉进坑里——高利贷和套路贷看似『救急』，实则是无底洞。", "en": "You don't borrow and you warn Xiaojie. Though he shrugs it off at first, days later the harassment calls become unbearable, and he finally tells his parents. With their help he repays the principal and reports the platform. You're glad you didn't fall in — usury and loan scams look like 'quick cash' but are bottomless pits." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CIVIL-009", "CN-CIVIL-010"],
+          "branch_tag": "清醒拒绝",
+          "next_scene_hint": "你的清醒救了自己和朋友"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "心动借了3000元，想着分期慢慢还，反正『利息高点也能接受』", "en": "Tempted, borrow 3000, planning to repay in installments — 'a bit higher interest is acceptable'" },
+          "stats_effect": { "wealth": -15, "happiness": -15, "legal_awareness": -12, "health": -8 },
+          "consequence": { "zh": "你借了3000元，实际到账只有2500（砍头息扣了500）。一个月后你还不上了，只能借新还旧，利息越滚越多。三个月后，3000元变成了1万多的债务，催收电话打到了学校和你父母那里。你后悔不已：当初的『利息高点能接受』，如今变成了压垮你的稻草。", "en": "You borrow 3000, but only 2500 actually arrives (500 deducted as 'upfront interest'). A month later you can't repay, so you borrow again to pay the old debt, and the interest snowballs. Three months on, 3000 has become over 10000 in debt, and collection calls reach your school and parents. You deeply regret it: the 'acceptable' interest has become the straw breaking your back." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-CIVIL-009", "CN-CIVIL-010"],
+          "branch_tag": "心存侥幸",
+          "next_scene_hint": "利滚利让你坠入深渊"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "先不急着借，把APP的利率、手续费条款截图保存，回家查清楚『高利贷』『砍头息』是否违法", "en": "Don't rush to borrow. Screenshot the app's interest and fee terms, go home and check whether 'usury' and 'upfront interest' are illegal" },
+          "stats_effect": { "legal_awareness": 16, "knowledge": 10, "happiness": 3, "wealth": 5 },
+          "consequence": { "zh": "你回家一查，发现这个APP的利率远超法律保护上限，属于典型的高利贷，砍头息更是违法。你把这些截图发给了小杰，还一起向网信办和公安举报了这个平台。后来这个平台被查处了。你的谨慎和求证，不仅保护了自己，也帮助了更多人。", "en": "Back home, you discover the app's interest rate far exceeds the legal protection limit — textbook usury, and the upfront interest deduction is illegal. You share the screenshots with Xiaojie and together report the platform to the internet regulator and police. The platform is later shut down. Your caution and verification protected not just yourself but many others." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CIVIL-009", "CN-CIVIL-010"],
+          "branch_tag": "谨慎求证",
+          "next_scene_hint": "求证让你看清了陷阱"
+        }
+      ]
+    },
+    {
+      "key": "cn-teen-004",
+      "title": { "zh": "兼职刷单的骗局", "en": "The Part-Time Click-Farming Scam" },
+      "life_stage": "teen",
+      "min_age": 16,
+      "max_age": 17,
+      "difficulty": 2,
+      "narrative": {
+        "zh": "暑假到了，你16岁，想靠打工赚点零花钱。你在网上看到一个兼职广告：『手机刷单，日赚300，多劳多得，学生可做！』\n\n你加了对方微信，对方把你拉进一个群，群里不断有人晒『到账截图』。对方说：『先垫付，完成任务连本带佣金一起返。』\n\n你犹豫了——不用出门、动动手指就能赚钱，太诱人了。但你也听过『刷单就是诈骗』的说法。",
+        "en": "It's summer break, you're 16, and you want to earn some pocket money. You see a part-time ad online: 'Phone click-farming, earn 300/day, more work more pay, students welcome!' You add the contact on WeChat and get pulled into a group where people constantly post 'payment received' screenshots. The contact says: 'Pay upfront first, and we'll return your principal plus commission after the task.' You hesitate — earning money with just your fingers, no going out, is so tempting. But you've also heard 'click-farming is a scam'."
+      },
+      "image_prompt": "A teenager sitting on a bed looking at a phone with a part-time job ad, a chat group full of payment screenshots on screen, dim room, mixed hope and doubt, illustration style",
+      "choices": [
+        {
+          "id": "a",
+          "text": { "zh": "拒绝垫付，并提醒自己：『凡是要你先交钱的兼职，基本都是诈骗』，拉黑对方", "en": "Refuse to pay upfront, remind yourself: 'Any part-time job that asks you to pay money first is basically a scam', and block the contact" },
+          "stats_effect": { "legal_awareness": 15, "wealth": 5, "happiness": 5, "knowledge": 8 },
+          "consequence": { "zh": "你没有垫付，果断拉黑了对方。后来你在新闻上看到，这个刷单团伙骗了上百名学生，涉案金额巨大。你庆幸自己守住了底线：真正正规的兼职，绝不会让你先垫钱。赚钱没有捷径，靠劳动和知识才是正路。", "en": "You refuse to pay upfront and block the contact. Later you see in the news that this click-farming ring scammed over a hundred students, with huge sums involved. You're glad you held your ground: a legitimate part-time job never asks you to pay money first. There's no shortcut to earning — honest work and knowledge are the right path." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CRIM-006"],
+          "branch_tag": "守住底线",
+          "next_scene_hint": "你的警惕躲过了一劫"
+        },
+        {
+          "id": "b",
+          "text": { "zh": "先垫500块试试水，反正群里那么多人都在返现", "en": "Try it with 500 first — after all, so many people in the group are getting paid back" },
+          "stats_effect": { "wealth": -10, "happiness": -12, "legal_awareness": -8 },
+          "consequence": { "zh": "你垫了500元，对方立刻返了你550元（含佣金），你尝到甜头后加大投入。第二次垫了3000元后，对方说『任务失败，需要再补一单才能解冻』，你又转了钱……直到对方把你拉黑，你才意识到被骗了。群里的『到账截图』都是托。你损失了几个月攒下的零花钱。", "en": "You pay 500, and they instantly return 550 (including commission). Tempted, you invest more. After paying 3000 the second time, they say 'task failed, pay another order to unfreeze'. You transfer more... until they block you, and you realize it was a scam. All those 'payment received' screenshots were from shills. You lost months of saved allowance." },
+          "is_legally_correct": false,
+          "laws_revealed": ["CN-CRIM-006"],
+          "branch_tag": "贪小失大",
+          "next_scene_hint": "甜头背后是陷阱"
+        },
+        {
+          "id": "c",
+          "text": { "zh": "截图保留聊天和转账记录，向家长说明情况，并拨打反诈专线96110咨询", "en": "Screenshot the chat and transfer records, tell your parents, and call the anti-fraud hotline 96110 for advice" },
+          "stats_effect": { "legal_awareness": 12, "knowledge": 8, "happiness": 6, "wealth": 3 },
+          "consequence": { "zh": "你虽然差点上当，但通过向家长和反诈中心求助，及时止损。反诈专员告诉你：刷单、点赞返利、做任务赚佣金，基本都是诈骗，还提醒你不要出租出借银行卡和账户（可能涉嫌帮信罪）。你把这些知识分享给了同学，成了班里的『反诈小达人』。", "en": "Though you almost fell for it, you stopped in time by asking your parents and the anti-fraud center for help. The specialist tells you: click-farming, like-for-cash, and task-based commissions are almost all scams, and warns you not to rent out your bank cards or accounts (which may constitute the 'aiding cybercrime' offense). You share this knowledge with classmates and become the class 'anti-fraud expert'." },
+          "is_legally_correct": true,
+          "laws_revealed": ["CN-CRIM-006", "CN-CRIM-007"],
+          "branch_tag": "及时求助",
+          "next_scene_hint": "求助让你成了反诈达人"
+        }
+      ]
+    }
+  ]
+}
