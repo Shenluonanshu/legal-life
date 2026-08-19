@@ -32,6 +32,7 @@ import {
   fetchLawDetail,
 } from '../../lib/api/gameApi';
 import { selectScenario } from '../../lib/scenarioTrigger';
+import { SCENE_IMAGES } from '../../lib/sceneImages';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
@@ -208,8 +209,14 @@ export default function ScenarioPage() {
     return (
       <ScrollView style={styles.container} contentContainerStyle={styles.scrollContent}>
         <View style={styles.content}>
-          {/* 场景图片（有缓存图则显示，否则占位） */}
-          {scenario.cachedImageUrl ? (
+          {/* 场景图片（本地打包图优先，云端 URL 兜底，否则占位） */}
+          {scenario.key && SCENE_IMAGES[scenario.key] ? (
+            <Image
+              source={SCENE_IMAGES[scenario.key]}
+              style={styles.scenarioImage}
+              resizeMode="contain"
+            />
+          ) : scenario.cachedImageUrl ? (
             <Image
               source={{ uri: scenario.cachedImageUrl }}
               style={styles.scenarioImage}
